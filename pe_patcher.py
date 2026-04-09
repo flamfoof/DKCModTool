@@ -285,7 +285,8 @@ class PEPatcher:
                 f"only {info['available_space']} bytes available"
             )
         
-        # Write mod code with NOP detection (same logic as old DKCedit)
+        # Write mod code with NOP detection (same logic as old DKCedit loader)
+        # Uses explicit index to correctly skip consumed bytes after NOP markers
         file_addr = info["next_code_raw"]
         virt_addr = info["next_code_virt"]
         space_used = info["space_used"]
@@ -293,72 +294,56 @@ class PEPatcher:
         func_idx = 0
         
         nop_buffer = [0, 0, 0, 0]
+        i = 0
         
-        for i, byte in enumerate(mod_data):
+        while i < len(mod_data):
+            byte = mod_data[i]
             # Shift NOP detection buffer
             nop_buffer = nop_buffer[1:] + [byte]
             
             # Check for NOP RAX (48 0F 1F C0) - function call marker
             if nop_buffer == [0x48, 0x0F, 0x1F, 0xC0]:
                 self.data[file_addr] = byte
-                file_addr += 1
-                virt_addr += 1
-                space_used += 1
+                file_addr += 1; virt_addr += 1; space_used += 1; i += 1
                 
-                # Read call byte from mod
-                i2 = i + 1
-                if i2 < len(mod_data):
-                    self.data[file_addr] = mod_data[i2]
-                    file_addr += 1
-                    virt_addr += 1
-                    space_used += 1
+                # Read call/jmp opcode byte
+                if i < len(mod_data):
+                    self.data[file_addr] = mod_data[i]
+                    file_addr += 1; virt_addr += 1; space_used += 1; i += 1
                 
-                # Get target from functions file
+                # Write calculated relative offset, skip 4 placeholder bytes
                 if func_idx < len(functions):
                     target = functions[func_idx]
                     func_idx += 1
                     call_offset = target - (virt_addr + 4)
                     struct.pack_into('<i', self.data, file_addr, call_offset)
-                    file_addr += 4
-                    virt_addr += 4
-                    space_used += 4
-                    # Skip 4 bytes in mod_data (placeholder)
-                    # Will be handled by loop advancement
+                    file_addr += 4; virt_addr += 4; space_used += 4; i += 4
                 
             # Check for NOP RBX (48 0F 1F C3) - variable reference marker
             elif nop_buffer == [0x48, 0x0F, 0x1F, 0xC3]:
                 self.data[file_addr] = byte
-                file_addr += 1
-                virt_addr += 1
-                space_used += 1
+                file_addr += 1; virt_addr += 1; space_used += 1; i += 1
                 
-                # Read 3 instruction bytes
-                for j in range(3):
-                    i2 = i + 1 + j
-                    if i2 < len(mod_data):
-                        self.data[file_addr] = mod_data[i2]
-                        file_addr += 1
-                        virt_addr += 1
-                        space_used += 1
+                # Read 3 instruction bytes (mov opcode + register encoding)
+                for _ in range(3):
+                    if i < len(mod_data):
+                        self.data[file_addr] = mod_data[i]
+                        file_addr += 1; virt_addr += 1; space_used += 1; i += 1
                 
-                # Get target from variables file
+                # Write calculated relative offset, skip 4 placeholder bytes
                 if var_idx < len(variables):
                     target = variables[var_idx]
                     var_idx += 1
                     var_offset = target - (virt_addr + 4)
                     struct.pack_into('<i', self.data, file_addr, var_offset)
-                    file_addr += 4
-                    virt_addr += 4
-                    space_used += 4
+                    file_addr += 4; virt_addr += 4; space_used += 4; i += 4
                 
             # Check for NOP RCX (48 0F 1F C1) - pointer replacement marker
             elif nop_buffer == [0x48, 0x0F, 0x1F, 0xC1]:
                 self.data[file_addr] = byte
-                file_addr += 1
-                virt_addr += 1
-                space_used += 1
+                file_addr += 1; virt_addr += 1; space_used += 1; i += 1
                 
-                # Get physical and virtual from functions file
+                # Patch the original code location with a jump to our code
                 if func_idx + 1 < len(functions):
                     physical_addr = functions[func_idx]
                     func_idx += 1
@@ -369,9 +354,7 @@ class PEPatcher:
                 
             else:
                 self.data[file_addr] = byte
-                file_addr += 1
-                virt_addr += 1
-                space_used += 1
+                file_addr += 1; virt_addr += 1; space_used += 1; i += 1
         
         # Update space used
         struct.pack_into('<I', self.data, info["space_used_offset"], space_used)

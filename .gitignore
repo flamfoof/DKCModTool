@@ -6,3 +6,8 @@ __pycache__/
 *.analysis.json
 *.modinfo.json
 stageBase_data.json
+
+# PyInstaller
+build/
+dist/
+*.spec
