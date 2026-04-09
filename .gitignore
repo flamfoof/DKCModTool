@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+*.pyo
+*.exe
+*.bin
+*.analysis.json
+*.modinfo.json
+stageBase_data.json
