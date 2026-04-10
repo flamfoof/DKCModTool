@@ -14,6 +14,7 @@ import shutil
 import struct
 import glob
 import time
+import tempfile
 import traceback
 
 # Ensure we can import sibling modules when running as .exe
@@ -43,6 +44,8 @@ GAME_EXE_FILE = os.path.join(BACKUP_DIR, "game_exe.txt")
 CPK_FILES = ["CommonData.cpk", "CommonData100.cpk", "CommonData2.cpk", "Data_eng.cpk"]
 # DLLs to back up alongside the exe
 DLL_FILES = ["SDL2.dll", "glew32.dll", "steam_api64.dll"]
+# Manifest tracking loose file overrides placed in the game directory
+OVERRIDES_MANIFEST = os.path.join(BACKUP_DIR, "overrides.txt")
 
 
 # ============================================================================
@@ -192,16 +195,22 @@ def backup_game_files(exe_path):
         if os.path.exists(src) and not os.path.exists(dst):
             shutil.copy2(src, dst)
     
-    # Backup CPK files
+    # Backup CPK files (check both root and assets/ subdirectory)
     for cpk in CPK_FILES:
-        src = os.path.join(game_dir, cpk)
         dst = os.path.join(assets_dir, cpk)
-        if os.path.exists(src) and not os.path.exists(dst):
+        if os.path.exists(dst):
+            print_ok(f"{cpk} backup exists")
+            continue
+        # Prefer the assets/ subdirectory copy as the source
+        src_assets = os.path.join(game_dir, "assets", cpk)
+        src_root = os.path.join(game_dir, cpk)
+        src = src_assets if os.path.exists(src_assets) else src_root
+        if os.path.exists(src):
             print_info(f"Backing up {cpk} ({os.path.getsize(src) // (1024*1024)}MB)...")
             shutil.copy2(src, dst)
             print_ok(f"{cpk} backed up")
-        elif os.path.exists(dst):
-            print_ok(f"{cpk} backup exists")
+        else:
+            print_warn(f"{cpk} not found in game directory")
 
 
 def check_files_writable(exe_path):
@@ -212,6 +221,9 @@ def check_files_writable(exe_path):
         p = os.path.join(game_dir, cpk)
         if os.path.exists(p):
             files_to_check.append(p)
+        p_assets = os.path.join(game_dir, "assets", cpk)
+        if os.path.exists(p_assets):
+            files_to_check.append(p_assets)
     
     for fpath in files_to_check:
         try:
@@ -224,10 +236,37 @@ def check_files_writable(exe_path):
     return True, None
 
 
+def clean_overrides(game_dir):
+    """Remove loose file overrides placed by a previous install."""
+    if not os.path.exists(OVERRIDES_MANIFEST):
+        return
+    with open(OVERRIDES_MANIFEST, 'r') as f:
+        paths = [line.strip() for line in f if line.strip()]
+    removed = 0
+    for path in paths:
+        if os.path.isfile(path):
+            os.remove(path)
+            removed += 1
+    # Remove empty directories (deepest first)
+    dirs = set(os.path.dirname(p) for p in paths)
+    for d in sorted(dirs, key=len, reverse=True):
+        try:
+            if os.path.isdir(d) and not os.listdir(d):
+                os.rmdir(d)
+        except OSError:
+            pass
+    os.remove(OVERRIDES_MANIFEST)
+    if removed:
+        print_ok(f"Removed {removed} loose file override(s)")
+
+
 def restore_from_backup(exe_path):
     """Restore game files from backup to start fresh before applying mods."""
     print_step("Restoring from backup...")
     game_dir = os.path.dirname(exe_path)
+    
+    # Clean up loose file overrides from previous install
+    clean_overrides(game_dir)
     
     # Restore exe
     backup_exe = os.path.join(BACKUP_DIR, os.path.basename(exe_path))
@@ -242,19 +281,27 @@ def restore_from_backup(exe_path):
     else:
         print_warn("No exe backup found - working with current exe")
     
-    # Restore CPKs
+    # Restore CPKs to both root and assets/ subdirectory
     assets_dir = os.path.join(BACKUP_DIR, "assets")
     for cpk in CPK_FILES:
         src = os.path.join(assets_dir, cpk)
-        dst = os.path.join(game_dir, cpk)
-        if os.path.exists(src):
-            print_info(f"Restoring {cpk}...")
+        if not os.path.exists(src):
+            continue
+        # Restore to root
+        dst_root = os.path.join(game_dir, cpk)
+        # Restore to assets/ subdirectory (if it exists)
+        dst_assets = os.path.join(game_dir, "assets", cpk)
+        destinations = [dst_root]
+        if os.path.isdir(os.path.join(game_dir, "assets")):
+            destinations.append(dst_assets)
+        print_info(f"Restoring {cpk}...")
+        for dst in destinations:
             try:
                 shutil.copy2(src, dst)
-                print_ok(f"{cpk} restored")
             except PermissionError:
-                print_err(f"Cannot write to {cpk} - is the game running?")
+                print_err(f"Cannot write to {dst} - is the game running?")
                 return False
+        print_ok(f"{cpk} restored")
     return True
 
 
@@ -370,52 +417,205 @@ def apply_code_mods(exe_path, code_mods):
     return count
 
 
-def apply_asset_mods(exe_path, asset_files):
-    """Replace asset files in the game's CPK archives."""
-    if not asset_files:
+def extract_vanilla_asset(asset_name):
+    """Extract the vanilla version of an asset from backup CPKs. Returns bytes or None."""
+    assets_dir = os.path.join(BACKUP_DIR, "assets")
+    for cpk_name in CPK_FILES:
+        backup_cpk = os.path.join(assets_dir, cpk_name)
+        if not os.path.exists(backup_cpk):
+            continue
+        try:
+            cpk = CPKFile(backup_cpk)
+            entry = cpk.find_file(asset_name)
+            if entry:
+                with open(backup_cpk, 'rb') as f:
+                    f.seek(entry['abs_offset'])
+                    return f.read(entry['file_size'])
+        except Exception:
+            continue
+    return None
+
+
+def merge_asset_files(vanilla_data, mod_versions):
+    """Binary merge multiple mod versions of the same file against a vanilla base.
+    
+    Each mod is diffed against vanilla to find its changes.  All diffs are then
+    combined.  If two mods change the same byte to different values, the last
+    mod in the list wins and a warning is printed.
+    
+    Args:
+        vanilla_data: bytes of the original unmodified file
+        mod_versions: list of (mod_name, file_path) tuples
+    
+    Returns:
+        (merged_bytes, change_count, conflict_count)
+    """
+    all_changes = {}  # offset -> (byte_value, mod_name)
+    conflicts = 0
+    
+    for mod_name, mod_path in mod_versions:
+        with open(mod_path, 'rb') as f:
+            mod_data = f.read()
+        
+        # Diff this mod against vanilla
+        common_len = min(len(vanilla_data), len(mod_data))
+        for i in range(common_len):
+            if vanilla_data[i] != mod_data[i]:
+                if i in all_changes:
+                    prev_val, prev_mod = all_changes[i]
+                    if prev_val != mod_data[i]:
+                        conflicts += 1
+                        print_warn(
+                            f"  Byte conflict at 0x{i:X}: "
+                            f"[{prev_mod}] 0x{prev_val:02X} vs [{mod_name}] 0x{mod_data[i]:02X} "
+                            f"(using {mod_name})"
+                        )
+                all_changes[i] = (mod_data[i], mod_name)
+        
+        # Handle mod being larger than vanilla
+        for i in range(common_len, len(mod_data)):
+            all_changes[i] = (mod_data[i], mod_name)
+    
+    # Apply all changes to a copy of the vanilla data
+    merged = bytearray(vanilla_data)
+    if all_changes:
+        max_offset = max(all_changes.keys())
+        if max_offset >= len(merged):
+            merged.extend(b'\x00' * (max_offset - len(merged) + 1))
+    for offset, (value, _) in all_changes.items():
+        merged[offset] = value
+    
+    return bytes(merged), len(all_changes), conflicts
+
+
+def apply_asset_mods(exe_path, asset_entries):
+    """Replace asset files in the game's CPK archives and create loose file overrides.
+    
+    asset_entries is a list of (mod_name, asset_path) tuples.
+    When multiple mods supply the same file, their changes are merged against
+    the vanilla base via binary diff.
+    """
+    if not asset_entries:
         return 0
     
     game_dir = os.path.dirname(exe_path)
     
-    # Build a map of filename -> asset path
-    assets_to_install = {}
-    for asset_path in asset_files:
+    # Group by filename — collect all mod versions of each asset
+    assets_by_name = {}  # filename -> [(mod_name, path), ...]
+    for mod_name, asset_path in asset_entries:
         fname = os.path.basename(asset_path)
-        if fname in assets_to_install:
-            print_warn(f"Duplicate asset: {fname} (using first found)")
-            continue
-        assets_to_install[fname] = asset_path
+        assets_by_name.setdefault(fname, []).append((mod_name, asset_path))
     
-    # Try to install each asset into the CPK files
+    # Resolve each asset to a single file path (merge if needed)
+    assets_to_install = {}  # filename -> resolved_path
+    temp_files = []  # track temp files for cleanup
+    
+    for fname, versions in assets_by_name.items():
+        if len(versions) == 1:
+            assets_to_install[fname] = versions[0][1]
+        else:
+            # Multiple mods touch the same file — merge against vanilla
+            mod_names = ", ".join(v[0] for v in versions)
+            print_info(f"Merging '{fname}' from {len(versions)} mods: {mod_names}")
+            
+            vanilla_data = extract_vanilla_asset(fname)
+            if vanilla_data is None:
+                print_err(f"Cannot merge '{fname}': vanilla version not found in backup CPKs")
+                # Fall back to last mod
+                assets_to_install[fname] = versions[-1][1]
+                continue
+            
+            merged, changes, conflicts = merge_asset_files(vanilla_data, versions)
+            
+            if conflicts:
+                print_warn(f"  {conflicts} byte conflict(s) — last mod's value used")
+            print_ok(f"  Merged {changes} changed byte(s) from {len(versions)} mods")
+            
+            # Write merged result to temp file
+            tmp = tempfile.NamedTemporaryFile(
+                delete=False, suffix=f"_{fname}", dir=tempfile.gettempdir()
+            )
+            tmp.write(merged)
+            tmp.close()
+            assets_to_install[fname] = tmp.name
+            temp_files.append(tmp.name)
+    
+    # Install resolved assets into CPK files + loose overrides
     installed = 0
-    not_found = []
+    override_paths = []
     
-    for cpk_name in CPK_FILES:
-        cpk_path = os.path.join(game_dir, cpk_name)
-        if not os.path.exists(cpk_path):
-            continue
-        
-        # Check if any of our assets are in this CPK
-        try:
-            cpk = CPKFile(cpk_path)
-        except Exception as e:
-            print_err(f"Failed to open {cpk_name}: {e}")
-            continue
-        
-        cpk_filenames = {f['name'].lower(): f['name'] for f in cpk.files}
-        
-        for asset_name, asset_path in list(assets_to_install.items()):
-            if asset_name.lower() in cpk_filenames:
-                try:
-                    result = cpk.replace_file(asset_name, asset_path)
-                    if result:
-                        print_ok(f"Asset '{asset_name}' -> {cpk_name}")
-                        installed += 1
-                        del assets_to_install[asset_name]
-                    else:
-                        print_err(f"Failed to replace '{asset_name}' in {cpk_name}")
-                except Exception as e:
-                    print_err(f"Error replacing '{asset_name}' in {cpk_name}: {e}")
+    try:
+        for cpk_name in CPK_FILES:
+            cpk_paths = []
+            cpk_root = os.path.join(game_dir, cpk_name)
+            cpk_assets = os.path.join(game_dir, "assets", cpk_name)
+            if os.path.exists(cpk_root):
+                cpk_paths.append(cpk_root)
+            if os.path.exists(cpk_assets):
+                cpk_paths.append(cpk_assets)
+            
+            if not cpk_paths:
+                continue
+            
+            try:
+                cpk = CPKFile(cpk_paths[0])
+            except Exception as e:
+                print_err(f"Failed to open {cpk_name}: {e}")
+                continue
+            
+            # Build lookup: lowercase name -> CPK entry (with dir info)
+            cpk_filenames = {f['name'].lower(): f for f in cpk.files}
+            
+            for asset_name, asset_path in list(assets_to_install.items()):
+                if asset_name.lower() in cpk_filenames:
+                    try:
+                        ok = True
+                        for cpk_path in cpk_paths:
+                            c = CPKFile(cpk_path)
+                            result = c.replace_file(asset_name, asset_path)
+                            if not result:
+                                ok = False
+                        if ok:
+                            locations = " + ".join(
+                                os.path.relpath(p, game_dir) for p in cpk_paths
+                            )
+                            print_ok(f"Asset '{asset_name}' -> {cpk_name} ({locations})")
+                            installed += 1
+                            
+                            # Create loose file overrides so the CRI middleware
+                            # picks up the modded file from disk
+                            entry_info = cpk_filenames[asset_name.lower()]
+                            dir_name = entry_info.get('dir', '')
+                            if dir_name:
+                                for base in [game_dir, os.path.join(game_dir, 'assets')]:
+                                    if not os.path.isdir(base):
+                                        continue
+                                    override_dir = os.path.join(base, dir_name)
+                                    os.makedirs(override_dir, exist_ok=True)
+                                    override_file = os.path.join(override_dir, asset_name)
+                                    shutil.copy2(asset_path, override_file)
+                                    override_paths.append(override_file)
+                                print_ok(f"Loose override: {dir_name}/{asset_name}")
+                            
+                            del assets_to_install[asset_name]
+                        else:
+                            print_err(f"Failed to replace '{asset_name}' in {cpk_name}")
+                    except Exception as e:
+                        print_err(f"Error replacing '{asset_name}' in {cpk_name}: {e}")
+    finally:
+        # Clean up temp files from merges
+        for tmp in temp_files:
+            try:
+                os.remove(tmp)
+            except OSError:
+                pass
+    
+    # Save override manifest for cleanup on next install
+    if override_paths:
+        os.makedirs(os.path.dirname(OVERRIDES_MANIFEST), exist_ok=True)
+        with open(OVERRIDES_MANIFEST, 'w') as f:
+            for p in override_paths:
+                f.write(p + '\n')
     
     # Report any assets that weren't found in any CPK
     for name in assets_to_install:
@@ -498,10 +698,11 @@ def run_installer():
         print_step(f"Injecting {len(all_codes)} code mod(s)...")
         apply_code_mods(exe_path, all_codes)
     
-    # Asset mods
+    # Asset mods — pass (mod_name, path) tuples for merge support
     all_assets = []
     for mod in mods:
-        all_assets.extend(mod['assets'])
+        for asset_path in mod['assets']:
+            all_assets.append((mod['name'], asset_path))
     if all_assets:
         print_step(f"Installing {len(all_assets)} asset file(s)...")
         apply_asset_mods(exe_path, all_assets)
