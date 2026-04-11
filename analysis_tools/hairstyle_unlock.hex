@@ -1,0 +1,23 @@
+# Hex patch to unlock hairstyles in stageBase_EN.DAT
+# Changes unlock values to 0x5A (90) which represents "unlocked by default"
+
+# Hairstyle 5 (Horror F)
+18AA4: 5A 00
+
+# Hairstyle 6 (Horror M)
+18AAC: 5A 00
+
+# Hairstyle 7 (Raiden F)
+18AB4: 5A 00
+
+# Hairstyle 9 (Samurai F)
+18AC4: 5A 00
+
+# Hairstyle 10 (Geisha M)
+18ACC: 5A 00
+
+# Hairstyle 11 (Pompadour F) - value 0x78 (120) -> 0x5A (90)
+18AD4: 5A 00
+
+# Hairstyle 11 (alternate entry) - value 0x1E (30) -> 0x5A (90)
+18B1A: 5A 00

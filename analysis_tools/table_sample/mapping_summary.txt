@@ -1,0 +1,72 @@
+======================================================================
+COMPREHENSIVE DATA MAPPING SUMMARY
+======================================================================
+
+HAIRSTYLE DATA
+----------------------------------------------------------------------
+Total hairstyles: 14
+  ID 1: Afro (F)
+    Offset: 0xBCB8, ID byte: 0x17
+  ID 2: Afro (M)
+    Offset: 0xBCD0, ID byte: 0x18
+  ID 3: Punk (F)
+    Offset: 0xBCE8, ID byte: 0x19
+  ID 4: Punk (M)
+    Offset: 0xBD00, ID byte: 0x1A
+  ID 5: Horror (F)
+    Offset: 0xBD18, ID byte: 0x1B
+  ID 6: Horror (M)
+    Offset: 0xBD30, ID byte: 0x1C
+  ID 7: Raiden (F)
+    Offset: 0xBD48, ID byte: 0x1D
+  ID 8: Raiden (M)
+    Offset: 0xBD60, ID byte: 0x1E
+  ID 9: Samurai (F)
+    Offset: 0xBD78, ID byte: 0x1F
+  ID 10: Geisha (M)
+    Offset: 0xBD90, ID byte: 0x20
+  ID 11: Pompadour (F)
+    Offset: 0xBDA8, ID byte: 0x21
+  ID 12: Pigtails (M)
+    Offset: 0xBDC4, ID byte: 0x22
+  ID 13: Prince (F)
+    Offset: 0xBDE0, ID byte: 0x23
+  ID 14: Princess (M)
+    Offset: 0xBDF8, ID byte: 0x24
+
+HAIRSTYLE UNLOCK TABLE (0x18A70)
+----------------------------------------------------------------------
+Hairstyle IDs 5-7, 9-10: Value 0x1E (30) - UNLOCKABLE
+Hairstyle ID 8: Value 0x5A (90) - UNLOCKED BY DEFAULT
+
+To unlock all hairstyles, patch these offsets in stageBase_EN.DAT:
+  0x18AA4: Change 1E 00 to 5A 00 (Hairstyle 5)
+  0x18AAC: Change 1E 00 to 5A 00 (Hairstyle 6)
+  0x18AB4: Change 1E 00 to 5A 00 (Hairstyle 7)
+  0x18AC4: Change 1E 00 to 5A 00 (Hairstyle 9)
+  0x18ACC: Change 1E 00 to 5A 00 (Hairstyle 10)
+
+WEAPON DATA
+----------------------------------------------------------------------
+Total weapons: 14
+  ID 1: Knife - ATK=4, DEF=0, MAG=0, SPD=0, HP=0
+  ID 2: Dagger - ATK=4, DEF=0, MAG=0, SPD=0, HP=0
+  ID 3: Longsword - ATK=4, DEF=0, MAG=0, SPD=0, HP=0
+  ID 4: Hand Axe - ATK=8, DEF=0, MAG=0, SPD=1, HP=0
+  ID 5: Rapier - ATK=12, DEF=0, MAG=0, SPD=0, HP=0
+  ID 6: Spear - ATK=16, DEF=0, MAG=0, SPD=0, HP=0
+  ID 7: Mace - ATK=34, DEF=0, MAG=0, SPD=3, HP=0
+  ID 8: DAT - ATK=48, DEF=0, MAG=0, SPD=0, HP=0
+  ID 9: Axe - ATK=20, DEF=0, MAG=0, SPD=4, HP=0
+  ID 10: Knuckle - ATK=32, DEF=0, MAG=12, SPD=0, HP=0
+  ID 11: Wand - ATK=34, DEF=0, MAG=0, SPD=3, HP=0
+  ID 12: Gladius - ATK=38, DEF=0, MAG=0, SPD=0, HP=0
+  ID 13: Hammer - ATK=48, DEF=0, MAG=3, SPD=3, HP=0
+  ID 14: Bow - ATK=50, DEF=1, MAG=0, SPD=0, HP=0
+
+SHIELD DATA
+----------------------------------------------------------------------
+Total shields: 3
+  ID 1: Gloves - ATK=0, DEF=5, MAG=0, SPD=0, HP=0
+  ID 2: Ring - ATK=1, DEF=15, MAG=0, SPD=0, HP=0
+  ID 3: Power - ATK=0, DEF=15, MAG=0, SPD=0, HP=0

@@ -1,0 +1,15 @@
+id,weapon_name,attack,defense,magic,speed,hp
+1,Knife,4,0,0,0,0
+2,Dagger,4,0,0,0,0
+3,Longsword,4,0,0,0,0
+4,Hand Axe,8,0,0,1,0
+5,Rapier,12,0,0,0,0
+6,Spear,16,0,0,0,0
+7,Mace,34,0,0,3,0
+8,DAT,48,0,0,0,0
+9,Axe,20,0,0,4,0
+10,Knuckle,32,0,12,0,0
+11,Wand,34,0,0,3,0
+12,Gladius,38,0,0,0,0
+13,Hammer,48,0,3,3,0
+14,Bow,50,1,0,0,0

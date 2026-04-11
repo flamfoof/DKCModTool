@@ -1,0 +1,18 @@
+======================================================================
+HAIRSTYLE DATA ANALYSIS SUMMARY
+======================================================================
+
+Hairstyles Found:
+  ID 1: Afro (M) at 0xBCD0
+  ID 4: Punk (F) at 0xBD00
+  ID 7: Horror (M) at 0xBD30
+
+Unlock Table Analysis (0x18A70):
+- Hairstyles 1-4: Value 0x5A (90) - default unlocked
+- Hairstyles 5-7, 9-10: Value 0x1E (30) - unlockable
+- Hairstyle 8: Value 0x5A (90) - default unlocked (special case)
+
+Hypothesis:
+- To unlock all hairstyles, change 0x1E to 0x5A in the table
+- Target offsets: 0x18AA4, 0x18AAC, 0x18AB4, 0x18AC4, 0x18ACC
+- These correspond to hairstyle IDs 5, 6, 7, 9, 10

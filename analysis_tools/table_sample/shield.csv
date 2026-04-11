@@ -1,0 +1,4 @@
+id,shield_name,attack,defense,magic,speed,hp
+1,Gloves,0,5,0,0,0
+2,Ring,1,15,0,0,0
+3,Power,0,15,0,0,0

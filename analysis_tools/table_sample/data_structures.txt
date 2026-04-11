@@ -1,0 +1,34 @@
+======================================================================
+DATA STRUCTURE DOCUMENTATION
+======================================================================
+
+HAIRSTYLE DATA STRUCTURE
+----------------------------------------------------------------------
+Name Table: 0xBCD0
+Pattern: 96 00 00 00 ID 04 68 00 NAME
+ID byte values: 0x18=24 (Afro M), 0x19=25 (Afro F), 0x1A=26 (Punk M), etc.
+Variant: 0x04=M, 0x05=F
+
+Hairstyle Table: 0x18A70
+Pattern: [ID, value] pairs (4 bytes each)
+FF FF 00 00 = separator
+IDs 5-10 have value 0x1E (30) except ID 8 has 0x5A (90)
+This likely represents unlock/availability status
+
+WEAPON DATA STRUCTURE
+----------------------------------------------------------------------
+Region: 0x7000-0x9800
+Stats: [att, def, mag, spd, hp] as uint16 LE (10 bytes)
+Found 17 weapons
+
+SHIELD DATA STRUCTURE
+----------------------------------------------------------------------
+Region: 0xA000-0xB000
+Stats: [att, def, mag, spd, hp] as uint16 LE (10 bytes)
+Found 9 shields
+
+ACCESSORY DATA STRUCTURE
+----------------------------------------------------------------------
+Scattered throughout file
+Stats: [att, def, mag, spd, hp] as uint16 LE (10 bytes)
+Found 1 accessories
