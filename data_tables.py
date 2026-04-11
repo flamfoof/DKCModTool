@@ -102,6 +102,16 @@ SKILL_NAMES = {
     0x13: "Item Snatch",
 }
 
+
+# --- Class Level-Up Battle Requirements ---
+# Battles required to level up each class level
+# Structure: [class_id, variant, battle_count, 0x00, 0x3E, 0x00, 0x00, 0x00]
+# Entry size: 8 bytes
+# 24 entries (12 classes x 2 variants)
+BATTLE_REQ_OFFSET = 0x1768C
+BATTLE_REQ_ENTRY_SIZE = 8
+BATTLE_REQ_ENTRY_COUNT = 24
+
 # --- Job Unlock Requirements ---
 JOB_UNLOCK_OFFSET = 0x18B60
 JOB_UNLOCK_ENTRY_SIZE = 16
