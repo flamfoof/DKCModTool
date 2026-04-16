@@ -1,0 +1,20 @@
+ID,Name,Price,Power,Stores,Type,Effect
+1,M Guard,500G,20%,"Asiana, Hallstatt, Casino Cave, Clovis, Lava Cave 3F, Daunting Mountain 1F",Protect,None
+2,M Guard+,"50,000G",60%,"Lava Cave 3F, Daunting Mountain 1F, Underground Passage",Protect,None
+3,M Guard DX,"95,000G",90%,"Aphrike, Underground Passage, Flinders",Protect,None
+4,Refresh,"5,750G",20%,"Asiana, Clovis, Lava Cave 3F, Daunting Mountain 1F",Heal,Recovers 10% ~ 30% of max HP.
+5,Refresh+,"40,000G",35%,"Daunting Mountain 1F, Aphrike",Heal,Recovers 40% ~ 60% of max HP.
+6,Refresh DX,"80,000G",50%,"Flinders, Tower of Rabble 2F",Heal,Fully heals the user.
+7,Super Cure,"25,000G",50%,"Clovis, Aphrike",Heal,Cures all the user's status ailments.
+8,Seal Magic,"20,000G",30%,"Casino Cave, Clovis, Lava Cave 3F, Aphrike",Counter,Seals the opponent's Offensive Magic.
+9,Seal Magic+,"60,000G",50%,Flinders,Counter,Seals the opponent's Offensive Magic and Defensive Magic.
+10,Shock,"145,000G",60%,Underground Passage,Counter,Stuns the opponent.
+11,Mirror,"150,000G",50%,Flinders,Counter,Damages the opponent for half the damage taken. Reflects effect back at opponent.
+12,MG Charge,"5,000G",35%,"Hallstatt, Casino Cave",Assist,Raises the user's MG by 50%.
+13,AT Charge,"6,250G",35%,Casino Cave,Assist,Raises the user's AT by 50%.
+14,DF Charge,"3,750G",35%,"Asiana, Hallstatt",Assist,Raises the user's DF by 50%.
+15,SP Charge,"2,500G",35%,"Asiana, Hallstatt",Assist,Raises the user's SP by 50%.
+16,Charge All,"120,000G",60%,Tower of Rabble 2F,Assist,Raises all the user's stats by 100%.
+17,Charm,"160,000G",70%,"Underground Passage, Tower of Rabble 2F",Counter,Seals the opponent's Attack and Counter commands.
+18,Bounce,"360,000G",0%,Tower of Rabble 2F,Counter,Causes the opponent to take the damage and effect instead.
+19,Super Bounce,2G,0%,None,Counter,Causes the opponent to take the damage amplified to 400% and effect instead.

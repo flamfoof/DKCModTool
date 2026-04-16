@@ -1,0 +1,7 @@
+Item,Effect,Sell Price
+Charm Potion,"Upon entering a Town, you can give this to a mayor to take the town as your own.","35,000G"
+Item Trickster,"A small fairy thief who steals one item or field magic from another player and gives it to you. Can randomly betray you and steal an item or a field magic from you. Will fail if all other players have no items or field magics, or it betrays you and you have no items or field magics.","1,000G"
+Money Trickster,"A small fairy thief who steals 20% of someone's money and gives it to you. Can randomly betray you and steal 20% of your money. Will fail if all other players are in debt/broke, or it betrays you and you are in debt/broke.","1,250G"
+Trap,Placed on your current space. Cannot be seen until it is landed on. Can cause effects that damage the person that lands on it or give them a Field Status Ailments.,400G
+Roadblock Rock,A large rock that can be placed on any space to prevent movement across that space.,"1,250G"
+White Arrow,"Lets you move the Big Monster to any Town, occupied or not.","9,000G"

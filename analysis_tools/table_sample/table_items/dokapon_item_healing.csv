@@ -1,0 +1,8 @@
+Item,Effect,Sell Price
+Potion,Restores 50% of Max HP.,75G
+Elixir,Restores all HP.,325G
+Panacea,"Cures poison, paralysis, footsore, fear, and stat debuffs.",700G
+Soul Mop,Cures curses.,200G
+Revival,"Automatically restores 50% of your HP after death. Works in Battles and on the World Map. Clears all Field Status Ailments, Battle Ailments, and Buffs.","5,000G"
+Deathblock,"Automatically negates all damage of an attack if the attack is enough to kill you. You keep Field Status Ailments, Battle Ailments, and Buffs. Doesn't activate on the World Map.","7,500G"
+Miracle Serum,"Cures you of all Field Status Ailments other than Wanted, including Z-Plague and Doom. Also restores all HP.","10,000G"

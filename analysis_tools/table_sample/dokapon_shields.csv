@@ -1,0 +1,57 @@
+ID,Name,AT,DF,MG,SP,HP,Locations,Price,Effect
+1,Wooden Shield,,3,,1,,Asiana (Store),10G,None​
+2,Leather Shield,,5,,2,,Asiana (Store),80G,None​
+3,Buckler,,9,,2,,Asiana (Store),700G,None​
+4,Bronze Shield,,14,,-1,,"Asiana (Store)
+Hallstatt (Store)","1,200G",None​
+5,Lead Shield,,18,,-3,,"Hallstatt (Store)
+Clovis (Store)","4,800G",None​
+6,Wabbit Shield,20,20,20,20,200,Wabbit Castle in the Clouds (Shield Space),"16,000G",None​
+7,Scale Shield,,27,,2,,"Hallstatt (Store)
+Clovis (Store) Asiana (Red Loot Space)","8,000G",None​
+8,Copper Shield,,33,,-2,,"Clovis (Store)
+Lava Cave 3F (Store) Hallstatt (Red Loot Space)","20,000G",None​
+9,Soldier Shield,,39,,,,Lava Cave 3F (Store),"25,000G",None​
+10,Furry Shield,,45,,5,,"Lava Cave 3F (Store)
+Llano (Store)","30,000G",None​
+11,Iron Shield,,51,,-3,10,Llano (Store) Clovis (Red Loot Space),"37,500G",None​
+12,Shinobi Shield,5,57,,2,,Lava Cave 3F (Locked Box),"54,000G",None​
+13,Large Shield,2,63,,-6,,"Llano (Store)
+Daunting Mountain 3F (Store)","45,000G",None​
+14,Steel Shield,,69,,-3,,Daunting Mountain 3F (Store),"67,500G",None​
+15,Warrior Shield,,75,3,3,,Lost Forest (Locked Box),"120,000G",May protect from Status Ailments.​
+16,Knight Shield,,83,,,20,"Daunting Mountain 3F (Store)
+Aphrike (Store)","90,000G",None​
+17,Black Shield,4,91,,-3,,"Gutz the Blacksmith
+Bone Knight","110,000G",None​
+18,Paladin Shield,,99,,-4,,Dark Knight Castle in the Clouds (Shield Space),"106,000G",None​
+19,Silver Shield,,107,3,,,Aphrike (Store) Llano (Red Loot Space),"126,000G",None​
+20,Mirror Shield,,115,2,,,Daunting Mountain 3F (Locked Box),"160,000G",May reflect the opponent's Offensive Magic.​
+21,Binder,2,123,,,,Gunnbjorn (Red Loot Space) Gutz the Blacksmith,"160,000G",May interrupt the opponent's attack with its own attack.​
+22,Shell Shield,,131,5,-1,,"Aphrike (Store)
+Underground Passage (Store)","146,000G",None​
+23,Golden Shield,,139,15,-10,,Pyramid 2F (Locked Box),"250,000G",None​
+24,Dokaqon Shield,,148,,,50,"Casino Cave (Casino)
+Daunting Mountain (Red Loot Space) Gutz the Blacksmith","170,000G",None​
+25,Ragnarok Shield,,156,5,,,"Underground Passage (Store)
+Flinders (Store)","190,000G",None​
+26,Moon Shield,,164,12,,,Underground Passage (Locked Box),"290,000G",None​
+27,Tower Shield,2,174,,-6,,"Casino Cave (Casino) Underground Passage (Store)
+Flinders (Store)","236,000G",None​
+28,Girly Shield,,184,,,20,Succubus Casino Cave (Casino),"410,000G",None​
+29,Dural Shield,,194,,-3,,"Flinders (Store)
+Tower of Rabble 3F (Store) Aphrike (Red Loot Space)","350,000G",None​
+30,Metal Guard,,204,,3,,"Golem
+Gutz the Blacksmith
+Underground Passage (Red Loot Space)","445,000G",May reflect the opponent's attack.​
+31,Sun Shield,,214,,,40,Tower of Rabble 3F (Locked Box) Gutz the Blacksmith,"476,000G",May fully heal the user when defending.​​
+32,Cursed Shield,10,224,5,5,,Underground Passage (Red Loot Space) Tower of Rabble (Locked Box) Gutz the Blacksmith
+2G,May inflict additional damage to the user equal to 10% of users max HP when defending.​
+33,Hero Shield,8,236,-3,,,Tower of Rabble 3F (Store),"525,000G",None​
+34,Mecha Guard,5,248,,,30,Iron Golem,"650,000G",None​
+35,Aura Shield,2,260,2,2,,Tower of Rabble 3F (Store),"850,000G",None​
+36,Athena's Shield,,270,10,,,Underworld (Locked Box) Flinders (Red Loot Space),"900,000G",None​
+37,Dragon Shield,3,282,3,3,30,Tiamat Flinders (Red Loot Space),"1,200,000G",None​
+38,Dark Shield,12,292,12,12,120,Underworld (Hidden Red Loot Space),100G,Deals damage to the wielder (equal to 2x their current level) when using Defend.​
+39,Dokapon Shield,1,310,1,1,100,Dark Dimension (Locked Box) Final Dungeon Casino Cave (Casino),15554G,May reduce the opponent's Attack or Strike damage by half. ​
+40,Demon Shield,2,333,4,,,Darkling,2G,None​

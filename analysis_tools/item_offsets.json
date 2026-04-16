@@ -1,0 +1,232 @@
+{
+  "Potion": {
+    "name_offset": "0xCE7C",
+    "price_offset": "0xCE84",
+    "price_type": "uint32"
+  },
+  "Elixir": {
+    "name_offset": "0xCE94",
+    "price_offset": "0xCE9C",
+    "price_type": "uint32"
+  },
+  "Panacea": {
+    "name_offset": "0xCEC4",
+    "price_offset": "0xCECC",
+    "price_type": "uint32"
+  },
+  "Soul Mop": {
+    "name_offset": "0xCEDC",
+    "price_offset": "0xCEE8",
+    "price_type": "uint32"
+  },
+  "Revival": {
+    "name_offset": "0xCEAC",
+    "price_offset": "0xCEB4",
+    "price_type": "uint32"
+  },
+  "Deathblock": {
+    "name_offset": "0xCFE8",
+    "price_offset": "0xCFF4",
+    "price_type": "uint32"
+  },
+  "Miracle Serum": {
+    "name_offset": "0xCEF8",
+    "price_offset": "0xCF08",
+    "price_type": "uint32"
+  },
+  "Stl-Bru": {
+    "name_offset": "0xCF18",
+    "price_offset": "0xCF20",
+    "price_type": "uint32"
+  },
+  "Phyoose": {
+    "name_offset": "0xCF30",
+    "price_offset": "0xCF38",
+    "price_type": "uint32"
+  },
+  "Invigorade": {
+    "name_offset": "0xCF48",
+    "price_offset": "0xCF54",
+    "price_type": "uint32"
+  },
+  "Jesta": {
+    "name_offset": "0xCF64",
+    "price_offset": "0xCF6C",
+    "price_type": "uint32"
+  },
+  "Magic Medicine": {
+    "name_offset": "0xCF7C",
+    "price_offset": "0xCF8A",
+    "price_type": "uint16"
+  },
+  "Cunning Disguise": {
+    "name_offset": "0xD168",
+    "price_offset": "0xD17C",
+    "price_type": "uint32"
+  },
+  "Magic Mirror": {
+    "name_offset": "0xD040",
+    "price_offset": "0xD050",
+    "price_type": "uint32"
+  },
+  "Mattock": {
+    "name_offset": "0xD060",
+    "price_offset": "0xD068",
+    "price_type": "uint32"
+  },
+  "Reveal": {
+    "name_offset": "0xCFB8",
+    "price_offset": "0xCFC0",
+    "price_type": "uint32"
+  },
+  "Rock Costume": {
+    "name_offset": "0xD098",
+    "price_offset": "0xD0A8",
+    "price_type": "uint32"
+  },
+  "Skeleton Key": {
+    "name_offset": "0xD020",
+    "price_offset": "0xD030",
+    "price_type": "uint32"
+  },
+  "Trap Dodger": {
+    "name_offset": "0xCF9C",
+    "price_offset": "0xCFA8",
+    "price_type": "uint32"
+  },
+  "Vanish": {
+    "name_offset": "0xCFD0",
+    "price_offset": "0xCFD8",
+    "price_type": "uint32"
+  },
+  "2 Spinner": {
+    "name_offset": "0xCD7C",
+    "price_offset": "0xCD88",
+    "price_type": "uint32"
+  },
+  "3 Spinner": {
+    "name_offset": "0xCD98",
+    "price_offset": "0xCDA4",
+    "price_type": "uint32"
+  },
+  "4 Spinner": {
+    "name_offset": "0xCDB4",
+    "price_offset": "0xCDC0",
+    "price_type": "uint32"
+  },
+  "5 Spinner": {
+    "name_offset": "0xCDD0",
+    "price_offset": "0xCDDC",
+    "price_type": "uint32"
+  },
+  "Super Spinner": {
+    "name_offset": "0xCDEC",
+    "price_offset": "0xCDFC",
+    "price_type": "uint32"
+  },
+  "Town Warp": {
+    "name_offset": "0xCE0C",
+    "price_offset": "0xCE18",
+    "price_type": "uint32"
+  },
+  "Store Warp": {
+    "name_offset": "0xCE28",
+    "price_offset": "0xCE34",
+    "price_type": "uint32"
+  },
+  "Guided Warp": {
+    "name_offset": "0xCE44",
+    "price_offset": "0xCE50",
+    "price_type": "uint32"
+  },
+  "Field Warp": {
+    "name_offset": "0xCE60",
+    "price_offset": "0xCE6C",
+    "price_type": "uint32"
+  },
+  "1 Crystal": {
+    "name_offset": "0xCCB4",
+    "price_offset": "0xCCC0",
+    "price_type": "uint32"
+  },
+  "2 Crystal": {
+    "name_offset": "0xCCD0",
+    "price_offset": "0xCCDC",
+    "price_type": "uint32"
+  },
+  "3 Crystal": {
+    "name_offset": "0xCCEC",
+    "price_offset": "0xCCF8",
+    "price_type": "uint32"
+  },
+  "4 Crystal": {
+    "name_offset": "0xCD08",
+    "price_offset": "0xCD14",
+    "price_type": "uint32"
+  },
+  "5 Crystal": {
+    "name_offset": "0xCD24",
+    "price_offset": "0xCD30",
+    "price_type": "uint32"
+  },
+  "6 Crystal": {
+    "name_offset": "0xCD40",
+    "price_offset": "0xCD4C",
+    "price_type": "uint32"
+  },
+  "Charm Potion": {
+    "name_offset": "0xD110",
+    "price_offset": "0xD120",
+    "price_type": "uint32"
+  },
+  "Item Trickster": {
+    "name_offset": "0xD0D0",
+    "price_offset": "0xD0E0",
+    "price_type": "uint32"
+  },
+  "Money Trickster": {
+    "name_offset": "0xD0F0",
+    "price_offset": "0xD100",
+    "price_type": "uint32"
+  },
+  "Roadblock Rock": {
+    "name_offset": "0xD078",
+    "price_offset": "0xD088",
+    "price_type": "uint32"
+  },
+  "White Arrow": {
+    "name_offset": "0xD130",
+    "price_offset": "0xD13C",
+    "price_type": "uint32"
+  },
+  "Lost Technology": {
+    "name_offset": "0xD1E0",
+    "price_offset": "0xD1F0",
+    "price_type": "uint32"
+  },
+  "Hero License": {
+    "name_offset": "0xD200",
+    "price_offset": "0xD210",
+    "price_type": "uint32"
+  },
+  "Dokapon Orb": {
+    "name_offset": "0xD2C8",
+    "price_offset": "0xD2D4",
+    "price_type": "uint32"
+  },
+  "Show Ticket": {
+    "name_offset": "0xD1C4",
+    "price_offset": "0xD1D0",
+    "price_type": "uint32"
+  },
+  "Gold Bug": {
+    "name_offset": "0xD14C",
+    "price_offset": "0xD158",
+    "price_type": "uint32"
+  },
+  "Black Diamond": {
+    "name_offset": "0xDF68",
+    "price_offset": "0xDF78",
+    "price_type": "uint32"
+  }
+}

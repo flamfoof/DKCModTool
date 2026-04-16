@@ -13,3 +13,6 @@ id,weapon_name,attack,defense,magic,speed,hp
 12,Gladius,38,0,0,0,0
 13,Hammer,48,0,3,3,0
 14,Bow,50,1,0,0,0
+15,Lance,5,5,5,0,13368
+16,Eater,15,0,0,0,14393
+17,Fist,5,5,15,0,15164

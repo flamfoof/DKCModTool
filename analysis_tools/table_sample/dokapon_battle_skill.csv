@@ -1,0 +1,47 @@
+Name,Effect,Example
+Sneak Hit,"9/10 chance to reduce the opponent's current HP by 1/2, 1/10 chance to instantly kill them. Cannot be used against Darklings or boss monsters.",Ninja Level 2
+Thunder,"Reduces the opponent's current HP by 1/2, 1/10 chance to destroy their weapon, shield or accessory.",Manticore
+Soul Fire,Increases AT by 50% every turn after using the skill.,Monk Level 2
+Celerity,Increases SP by 50%.,Giant Eyeball
+Prayer,Heals 50% of the user's total HP and cures some Status ailments.,Cleric Level 4
+Virus,"3/4 chance to reduce the opponent's AT, DF, MG and SP by 25%.",Fungalore
+Sing,3/4 chance to confuse the opponent for 1~3 turns.,Mermaid
+Glory,"Forces the opponent to give up. Has a chance to work on another adventurer who isn't a Darkling and Town Bosses, and cannot be used on certain monsters. Can work on wanted adventurers, causing the user to get bounty reward without killing the opponent.",Hero Level 2
+Howl,Inflicts Fear on the opponent.,Wear Tiger
+Heal,Recovers all HP.,Cleric Level 2
+Will Bind,Seals the opponent's Counter and Give Up command for 1~3 turns.,Assassin
+Guard,"Increases random, multiple stats by 50%.",Hero Level 4
+Afterburn,"Increases AT, DF, MG and SP by 50% for the battle, but cuts the user's HP by half afterwards.",Monk Level 4
+Restrict,1/2 chance to seal a random battle command on the opponent for 1~3 turns.,Magician Level 4
+Power Poke,"4/5 chance to reduce the opponent's current HP by 1/4, 1/5 chance to instantly kill them.",Rico Jr.
+Delete,"Destroys the opponent's Weapon, Shield, Accessory, Offensive Magic, Defensive Magic, All G, All Items, or All Field Magic. Delete cannot be used against a Darkling if it created through ????.",Darkling
+Brimstone,"Reduces the opponent's current HP by 1/4, 1/20 chance to destroy their shield.",Salamander
+Harden,9/10 chance to nullify physical attacks for 1~3 turns. Can also block some battle skills.,Robo Knight Level 4
+Quake,1/5 chance to reduce the opponent's current HP by 1/3 and stun them for 1 turn.,Crawler
+Wail,"3/5 chance to reduce the opponent's current HP by 1/8, 2/5 chance to instantly kill them.",Death Cloud
+Squeeze,2/5 chance to stun the opponent for 1~3 turns.,Worm
+Strikeout,1/2 chance to destroy the opponent's equipment.,Overlord Rico
+Waterfall,"Reduces the opponent's current HP by 1/6, 1/32 chance to destroy their weapon.",Killer Fish
+Petrify,1/2 chance to stun the opponent for 1~3 turns.,Medusa
+Tornado,"Reduces the opponent's current HP by 1/4, 1/20 chance to destroy their accessory.",Sylph
+Charge,Increases AT by 50% until a physical attack is used. Can stack.,Starting skill
+Chakra,Increase AT and MG by 50% for the battle.,Spellsword Level 2
+Overlord,1/2 chance to triple AT and 1/2 to cut it in half.,Warrior Level 4
+Tsunami,"Reduces the opponent's current HP by 1/4, 1/20 chance to destroy their weapon.",Leviathan
+Copy,Copies all of the opponent's stats that are higher than the user's.,Robo Knight Level 2
+Poison,9/10 chance to poison the opponent.,Mycopath
+Play Dumb,9/10 chance to nullify magical attacks for 1~3 turns. Can also block some battle skills.,Acrobat Level 2
+Escape,"Escapes from the battle with no risk, and will be invincible until the next turn, similar to the timeout after surrendering.",Thief Level 4
+Steal,1/4 chance to steal an item from the target (a random item from a player or drop 1 from a monster). The player must defeat the monster to receive the item.,Thief Level 2
+Rob,"1/2 to steal all gold, items and field magic from the opponent.",Halfling
+Breath,"Reduces the opponent's current HP by 1/6, 1/32 chance to destroy their shield.",Heckhound
+Debug,7/10 chance to reduce the opponent's HP to 1. Does not work against certain monsters.,Alchemist Level 4
+Decoy,1/2 chance to dodge any attack for the battle.,Ninja Level 4
+Transform,"Transform into the opponent, copying all their stats and abilities.",Doppelganger
+Muscle,Increases AT and DF by 50% for the battle.,Warrior Level 2
+Heckfire,"Reduces the opponent's current HP by 1/3, 1/10 chance to destroy their weapon, shield or accessory.",Cerberus
+Pierce,"Until the end of the battle, the user's physical attacks will ignore the opponent's DF.",Spellsword Level 4
+Meditate,Increases MG by 50% until a magical attack is used. Can stack.,Magician Level 2
+Toughen,Doubles DF.,Pixie
+Alchemy,Generates money from damage inflicts on the opponent. See Alchemist for more details.,Alchemist Level 2
+????,"Becomes another, random adventurer battle skill for each battle.",Acrobat Level 4

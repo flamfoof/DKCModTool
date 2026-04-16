@@ -1,0 +1,39 @@
+ID,Name,Buying Price,Power,Stores,Target,Effect
+1,Magma,"1,600G",1.5,"Asiana, Hallstatt, Casino Cave",One player or monster,None​
+2,Magma+,"3,800G",2.1,"Clovis, Lava Cave 3F, Daunting Mountain 1F, Aphrike",One player or monster,None​
+3,Magma DX,"17,000G",4.5,"Underground Passage, Tower of Rabble 2F",One player or monster,None​
+4,Ice,"1,200G",1.2,Casino Cave,All opposing players and monsters on chosen space,None​
+5,Ice+,"3,000G",1.8,Daunting Mountain 1F,All opposing players and monsters on chosen space,None​
+6,Ice DX,"12,000G",3.6,"Flinders, Tower of Rabble 2F",All opposing players and monsters on chosen space,None​
+7,Volt,800G,0.96,"Hallstatt, Casino Cave, Daunting Mountain 1F",All opposing players and monsters near chosen space,None​
+8,Volt+,"2,600G",1.56,"Clovis, Daunting Mountain 1F",All opposing players and monsters near chosen space,None​
+9,Volt DX,"10,000G",3.0,"Aphrike, Underground Passage, Flinders",All opposing players and monsters near chosen space,None​
+10,Flash Bomb,"40,000G",5.0,None,All opposing players and bosses on current map,None​
+11,Atrophy,300G,-,"Asiana, Hallstatt, Clovis, Aphrike, Flinders",One player or monster,Inflicts AT Down on the target.​
+12,Tenderize,280G,-,"Asiana, Clovis",One player or monster,Inflicts DF Down on the target.​
+13,Slow,100G,-,Asiana,One player or monster,Inflicts SP Down on the target.​
+14,Daze,200G,-,Asiana,One player or monster,Inflicts MG Down on the target.​
+15,Down,"4,000G",-,"Casino Cave, Lava Cave 3F, Daunting Mountain 1F, Tower of Rabble 2F",One player or monster,Inflicts All Down on the target.​
+16,Time Out,800G,-,"Hallstatt, Clovis, Lava Cave 3F, Aphrike",One player,Paralyzes the target.​
+17,Cobra Strike,200G,-,"Asiana, Hallstatt, Lava Cave 3F, Aphrike",One player or monster,Poisons the target.​
+18,Cobra Storm,2800G,-,Flinders,All opposing players on current map,Poisons all targets.​
+19,Fraidy Cat,150G,-,Asiana,One player,Makes the target Afraid.​
+20,Blistered Feet,"1,200G",-,"Asiana, Hallstatt, Lava Cave 3F, Aphrike, Underground Passage, Flinders",One player,Gives the target a Footsore.​
+21,Sleepy Time,"2,000G",-,"Daunting Mountain 1F, Tower of Rabble 2F",One player or monster,Puts the target to Sleep.​
+22,Curse,"3,000G",-,"Casino Cave, Clovis, Lava Cave 3F, Daunting Mountain 1F, Underground Passage",One player or monster,Curses the target.​
+23,Curse All,"6,000G",-,Tower of Rabble 2F,All opposing players on current map,Curses all targets.​
+24,Lock,400G,-,Hallstatt,One player,Seals the target.​
+25,Lockdown,"3,600G",-,"Casino Cave, Aphrike, Underground Passage, Flinders",All opposing players on current map,Seals all targets.​
+26,Death Call,"18,000G",-,None,One player,Dooms the target.​
+27,Squall,"1,500G",-,"Hallstatt, Aphrike",One player,"Teleports the target to a random, accessible town.​"
+28,Typhoon,"3,500G",-,Tower of Rabble 2F,All opposing players on current map,"Teleports all targets to random, accessible towns.​"
+29,Transfer,"3,200G",-,"Casino Cave, Daunting Mountain 1F",One player,Swaps the target and user's locations.​
+30,Come Here,"5,800G",-,Lava Cave 3F,All opposing players,Teleports all targets to the user's space.​
+31,Psychokinesis,"8,000G",-,None,One player or Roadblock Rock,Moves the target to a chosen space.​
+32,Conjure,"2,400G",-,"Clovis, Lava Cave 3F, Underground Passage, Flinders, Tower of Rabble 2F",An Empty Space with at least one player,Summons a monster to the target space.​
+33,Town Conjure,"8,000G",-,None,One liberated town,Summons a monster to the target town.​
+34,Conjure All,"80,000G",-,None,One liberated town,Summons monsters to all towns on the same continent as the target.​
+35,Purse Cutter,"1,500G",-,"Casino Cave, Clovis, Lava Cave 3F, Underground Passage, Flinders",One player,Destroys a few items or field magic of the target.
+36,Vacuum,"50,000G",-,None,One player,Takes a few of the target's stat points and adds them to the user.​
+37,Mix-up,"68,000G",-,None,All players,"Randomly swaps locations, inventory, money, or a piece of equipment between all targets.​"
+38,Mystery,"40,000G",-,Tower of Rabble 2F,Random,Causes a random event to occur.​

@@ -1,0 +1,35 @@
+ID,Name,AT,DF,MG,SP,HP,Locations,Price,Effect
+1,Power Gloves,5,,,,,Hobgoblin,"60,000G",None​
+2,Guard Gloves,,5,,,,Kobold King,"60,000G",None​
+3,Spirit Gloves,,,5,,,"Magician, Banshee","60,000G",None​
+4,Speed Gloves,,,,5,,Halfling,"60,000G",None​
+5,Vital Gloves,,,,,20,Casino Cave (Red Loot Space),"60,000G",None​
+6,Warm Gloves,,1,,,,"Bandit, Troll","6,000G",Prevents Paralysis from snow spaces.​
+7,Air Ring,,,,,10,"Sea Serpent, Daunting Mountain 3F (White Loot Space)","4,000G",Negates damage from being underwater.​
+8,Ring of Power,15,,,,,Sunken Shrine,"100,000G",None​
+9,Ring of Defense,,15,,,,"Clovis (Red Loot Space), Tower of Rabble (Locked Box Space)","100,000G",None​
+10,Ring of Speed,,,,15,,"Ninja, Daunting Mountain 1F (Locked Box Space)","100,000G",None​
+11,Ring of Magic,,,15,,,"Wizard, Lava Cave 3F (Locked Box Space)","100,000G",None​
+12,Dokapon Ring,15,15,15,15,,"4 Spinner, Flinders (Red Loot Space)","1,000,000G",None​
+13,Squid Ring,,,,,,"Squilla, Daunting Mountain 3F (White Loot Space), Castle in the Clouds","1,110G",Has a 1/3 chance to block negative space effects.
+14,Angel Ring,,,,,50,"Kraken, Unseelie","300,000G",It can block negative space effects. ​
+15,Fire Bracelet,,,3,,,"Heckhound, Lava Cave 2F (Locked Box Space)","24,000G","Reduces damage the user takes from Magma, Magma+, and Magma DX by 50%.​"
+16,Ice Bracelet,,,3,,,"Fenrir, Sunken Shrine (White Loot Space)","24,000G","Reduces damage the user takes from Ice, Ice+, and Ice DX by 50%.​"
+17,Elec Bracelet,,,3,,,Wisp,"24,000G","Reduces damage the user takes from Volt, Volt+, and Volt DX by 50%.​"
+18,Wind Bracelet,,,3,,,Sylph,"24,000G","Reduces damage from wind field magic by half, and blocks the effect of Squall and Typhoon. ​"
+19,Crystal Choker,,,,,,"Asiana (Red Loot Space), Casino Cave","160,000G",Randomly activates a Multi Crystal at the start of the user's turn.​
+20,Mirror Necklace,,,,,,Lich,"300,000G",Randomly negates field magic targeting the user.​
+21,Dodge Necklace,,,,,,Medusa,"200,000G",Randomly negates traps the user steps on.​
+22,Angel Choker,,,,,,Sphynx,"600,000G",33% chance to revive the user upon death.​
+23,Galoshes,,1,,1,,"Troll, Giant","3,000G",Negates the effect of poison swamp spaces.​
+24,Heart Slippers,,,,3,,"Spring Cave, Castle in the Clouds, Daunting Mountain 2F (White Loot Space), Pyramid (White Loot Space)","240,000G",Heals the user by 1 HP every space traveled.​
+25,Hero Boots,,,,3,,"Castle in the Clouds, Daunting Mountain (White Loot Space)","300,000G",Increases the user's EXP by 10 every space traveled.​
+26,Gold Shoes,,,,3,,Casino Cave,"300,000G",Increases the user's G every space traveled.​
+27,Leopard Bandana,,,3,,,Wear Tiger Sunken Shrine (White Loot Space),"120,000G",Increases G gained when defeating monsters.​
+28,Zebra Bandana,,,3,,,Minotaur Sunken Shrine (White Loot Space),"120,000G",Increases item drop rate when defeating monsters.​
+29,Nice Guy Badge,3,,,,,Underground Passage,220G,Decreases the duration of being Wanted from 7 days to 4 days.​
+30,Wallace Badge,,,,,,Wallace
+2G,Occasionally duplicates a random Item or Field Magic in the user's inventory.​
+31,Criminal Studs,30*,30*,30*,30*,300*,Robo-Sassin,"1,332G",None​
+32,Dokapon Crown,50,50,50,50,500,"Underworld (Red Loot Space, Locked Box Space)","3,000,000G",None​
+33,Overlord's Crown,300,250,200,150,,Darkling,"2,000,000G",Summons a monster when the user lands on an opposing player's Town.​

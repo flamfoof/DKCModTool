@@ -174,7 +174,7 @@ for name in weapon_names:
                             "stats_offset": stat_offset
                         })
                         found_stats = True
-                        print(f"  Found '{name}': ATK={att}, DEF={def_}, MAG={mag}, SPD={spd}, HP={hp}")
+                        print(f"  Found '{name}' at 0x{offset:X} (stats at 0x{stat_offset:X}): ATK={att}, DEF={def_}, MAG={mag}, SPD={spd}, HP={hp}")
                         break
         
         if found_stats:
@@ -212,7 +212,7 @@ for offset in range(0x7000, 0x9800, 2):
                             "name_offset": name_offset,
                             "stats_offset": offset
                         })
-                        print(f"  Found '{s}': ATK={att}, DEF={def_}, MAG={mag}, SPD={spd}, HP={hp}")
+                        print(f"  Found '{s}' at 0x{name_offset:X} (stats at 0x{offset:X}): ATK={att}, DEF={def_}, MAG={mag}, SPD={spd}, HP={hp}")
                     break
 
 # Update weapon.csv with all stats

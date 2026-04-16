@@ -1,0 +1,59 @@
+Ailment,Field Effect,Battle Effect,Caused By,Duration,Dokapon Castle Visit,Super Cure,Prayer or Temple Visit,Panacea,Soul Mop,Miracle Serum
+Blind,N/A,Attack and Strike have a higher chance to miss.,"Blind
+Underworld Staff",Battle; 2~4 turns,N/A,Yes,N/A,N/A,N/A,N/A
+Sealed Command,N/A,Can't use the sealed command in battle.,"Charm (Attack and Counter)
+Restrict (Random)
+Will Bind (Give Up and Counter)",Battle,N/A,Yes,N/A,N/A,N/A,N/A
+Confused,N/A,May randomly choose a different Battle Command,Sing,Battle,N/A,Yes,N/A,N/A,N/A,N/A
+Curse,N/A,May attack self instead of opponent when selecting Attack.,"Curse
+Curse
+Curse All
+Dream Rod",Permanent until removed,Yes,Yes,Yes,No,Yes,Yes
+Doom,"After a certain number of turns, the Reaper kill the player. Defeating the caster will remove this.",Caster cannot give up against the player.,Death Call,7~10 Days,No,No,No,No,No,Yes
+Fear,Cannot land on any space that would guarantee a battle.,N/A,"Fraidy Cat
+Howl
+Trap
+Red Loot Spaces",3~4 Days,Yes,Yes,Yes,Yes,No,Yes
+Footsore,Forced to move exactly one space per turn. Cannot use crystals or spinners.,N/A,"Blistered Feet
+Trap
+Red Loot Spaces",2~3 Days,Yes,Yes,Yes,Yes,No,Yes
+Paralysis,Forced to land on current space again.,N/A,"Time Out
+Snow Spaces",1 Day,Yes,Yes,Yes,Yes,No,Yes
+Poison,"Lose HP equal to the player's level each turn. For monsters, they lose HP equal to their level * 1.5 ~ 1.6. Cannot reduce HP below 1.",N/A,"Cobra Strike
+Cobra Storm
+Poison
+Poison Swamp Spaces
+Poison Fist
+Trap
+Red Loot Spaces",Permanent until removed,Yes,Yes,Yes,Yes,No,Yes
+Seal,"Cannot use Items, Field Magic or Dark Arts.",N/A,"Lock
+Lockdown
+Trap
+Red Loot Spaces",3~5 Days,Yes,Yes,Yes,N/A,N/A,N/A
+Sleep,Unable to do anything.,Cannot attack. Takes maximum damage from attacks.,"Sleepy Time
+Sleepy
+Sleep Bow
+Trap
+Red Loot Spaces","1~2 Days, or after taking any damage",N/A,N/A,N/A,N/A,N/A,N/A
+Stun,N/A,Cannot attack. Takes maximum damage from attacks.,"Petrify
+Quake
+Squeeze
+Shock",Battle; 1~3 turns,N/A,N/A,N/A,N/A,N/A,N/A
+Wanted,Cannot land on Building Spaces.,Cannot Give Up. Awards a bounty to killer if defeated.,Failing to Rob a Shop or Town,7 Days,No,No,No,No,No,No
+Z Plague/Plague,Lose HP equal to twice the player's level each turn. Can be passed to other players by touching them. Can reduce HP below 1.,N/A,Chimpy,Permanent until removed,Yes,Yes,No,No,No,Yes
+AT Down,The character's AT is temporarily reduced by 25%.,The character's AT is temporarily reduced by 50% (Overload only),"Atrophy
+Overload
+Trap
+Red Loot Spaces",3~5 Days (field only),Yes,Yes,Yes,Yes,No,Yes
+DF Down,The character's DF is temporarily reduced by 25%.,The character's DF is temporarily reduced by 25%.,"Tenderize
+Trap
+Red Loot Spaces",3~5 Days (field only),Yes,Yes,Yes,Yes,No,Yes
+MG Down,The character's MG is temporarily reduced by 25%.,The character's MG is temporarily reduced by 25%.,"Daze
+Trap
+Red Loot Spaces",3~5 Days (field only),Yes,Yes,Yes,Yes,No,Yes
+SP Down,The character's SP is temporarily reduced by 25%.,The character's SP is temporarily reduced by 25%.,"Slow
+Trap
+Red Loot Spaces",3~5 Days (field only),Yes,Yes,Yes,Yes,No,Yes
+All Down,"All of the character's stats, including HP, are temporarily reduced by 50%.","All of the character's stats, including HP, are temporarily reduced by 50%.","Down
+Trap
+Red Loot Spaces",3~5 Days (field only),Yes,Yes,Yes,Yes,No,Yes

@@ -1,0 +1,800 @@
+{
+  "weapons": {
+    "Knife": {
+      "name_offset": "0x07104",
+      "stats_offset": "0x0710A",
+      "attack": 0,
+      "defense": 770,
+      "magic": 0,
+      "speed": 60,
+      "hp": 0
+    },
+    "Knife (0x77F7)": {
+      "name_offset": "0x077F7",
+      "stats_offset": "0x077FD",
+      "attack": 0,
+      "defense": 512,
+      "magic": 3,
+      "speed": -12287,
+      "hp": 1132
+    },
+    "Dagger": {
+      "name_offset": "0x07128",
+      "stats_offset": "0x07139",
+      "attack": 0,
+      "defense": 0,
+      "magic": 256,
+      "speed": 0,
+      "hp": 512
+    },
+    "Dagger (0x78BF)": {
+      "name_offset": "0x078BF",
+      "stats_offset": "0x078C6",
+      "attack": 0,
+      "defense": 770,
+      "magic": 520,
+      "speed": 712,
+      "hp": 8
+    },
+    "Longsword": {
+      "name_offset": "0x0714C",
+      "stats_offset": "0x07156",
+      "attack": 0,
+      "defense": 257,
+      "magic": 0,
+      "speed": 400,
+      "hp": 0
+    },
+    "Hand Axe": {
+      "name_offset": "0x07174",
+      "stats_offset": "0x07189",
+      "attack": 0,
+      "defense": 0,
+      "magic": 0,
+      "speed": 0,
+      "hp": 1024
+    },
+    "Rapier": {
+      "name_offset": "0x0719C",
+      "stats_offset": "0x071AD",
+      "attack": 0,
+      "defense": 0,
+      "magic": 1024,
+      "speed": 0,
+      "hp": 1280
+    },
+    "Spear": {
+      "name_offset": "0x071C0",
+      "stats_offset": "0x071CE",
+      "attack": 0,
+      "defense": 24,
+      "magic": 0,
+      "speed": 0,
+      "hp": 0
+    },
+    "Spear (0x74C5)": {
+      "name_offset": "0x074C5",
+      "stats_offset": "0x074CB",
+      "attack": 768,
+      "defense": 1,
+      "magic": 28672,
+      "speed": 273,
+      "hp": 20480
+    },
+    "Spear (0x7705)": {
+      "name_offset": "0x07705",
+      "stats_offset": "0x0770B",
+      "attack": 768,
+      "defense": 4,
+      "magic": 16387,
+      "speed": 781,
+      "hp": 28160
+    },
+    "Mace": {
+      "name_offset": "0x07288",
+      "stats_offset": "0x0728D",
+      "attack": 0,
+      "defense": 256,
+      "magic": 2,
+      "speed": 24576,
+      "hp": 34
+    },
+    "Axe": {
+      "name_offset": "0x07179",
+      "stats_offset": "0x07189",
+      "attack": 0,
+      "defense": 0,
+      "magic": 0,
+      "speed": 0,
+      "hp": 1024
+    },
+    "Axe (0x76B0)": {
+      "name_offset": "0x076B0",
+      "stats_offset": "0x076BA",
+      "attack": 2,
+      "defense": 106,
+      "magic": 0,
+      "speed": 4,
+      "hp": 0
+    },
+    "Axe (0x7782)": {
+      "name_offset": "0x07782",
+      "stats_offset": "0x0778E",
+      "attack": 3,
+      "defense": 116,
+      "magic": 5,
+      "speed": 0,
+      "hp": -8
+    },
+    "Knuckle": {
+      "name_offset": "0x071EA",
+      "stats_offset": "0x071FA",
+      "attack": 0,
+      "defense": 28,
+      "magic": 0,
+      "speed": 0,
+      "hp": 2
+    },
+    "Knuckle (0x7544)": {
+      "name_offset": "0x07544",
+      "stats_offset": "0x07552",
+      "attack": 1,
+      "defense": 86,
+      "magic": 2,
+      "speed": 2,
+      "hp": 2
+    },
+    "Knuckle (0x79DD)": {
+      "name_offset": "0x079DD",
+      "stats_offset": "0x079E5",
+      "attack": 0,
+      "defense": 1024,
+      "magic": 3078,
+      "speed": 16387,
+      "hp": 3906
+    },
+    "Wand": {
+      "name_offset": "0x07216",
+      "stats_offset": "0x0721B",
+      "attack": 256,
+      "defense": 2,
+      "magic": -30716,
+      "speed": 19,
+      "hp": 8192
+    },
+    "Wand (0x732C)": {
+      "name_offset": "0x0732C",
+      "stats_offset": "0x07331",
+      "attack": 0,
+      "defense": 256,
+      "magic": 2,
+      "speed": -28672,
+      "hp": 101
+    },
+    "Gladius": {
+      "name_offset": "0x07238",
+      "stats_offset": "0x07246",
+      "attack": 0,
+      "defense": 34,
+      "magic": 0,
+      "speed": 0,
+      "hp": 3
+    },
+    "Hammer": {
+      "name_offset": "0x072B4",
+      "stats_offset": "0x072BB",
+      "attack": 256,
+      "defense": 4,
+      "magic": -8192,
+      "speed": 46,
+      "hp": 11520
+    },
+    "Hammer (0x7938)": {
+      "name_offset": "0x07938",
+      "stats_offset": "0x0793F",
+      "attack": 256,
+      "defense": 3077,
+      "magic": 515,
+      "speed": 0,
+      "hp": -23040
+    },
+    "Bow": {
+      "name_offset": "0x072DE",
+      "stats_offset": "0x072EA",
+      "attack": 0,
+      "defense": 48,
+      "magic": 0,
+      "speed": 3,
+      "hp": 3
+    },
+    "Bow (0x77AA)": {
+      "name_offset": "0x077AA",
+      "stats_offset": "0x077B6",
+      "attack": 3,
+      "defense": 118,
+      "magic": 0,
+      "speed": 0,
+      "hp": 6
+    },
+    "Katana": {
+      "name_offset": "0x074F2",
+      "stats_offset": "0x074F9",
+      "attack": 0,
+      "defense": 256,
+      "magic": 3079,
+      "speed": -32768,
+      "hp": 312
+    },
+    "Halberd": {
+      "name_offset": "0x07894",
+      "stats_offset": "0x078A2",
+      "attack": 6,
+      "defense": 146,
+      "magic": 2,
+      "speed": 0,
+      "hp": -3
+    },
+    "Saber": {
+      "name_offset": "0x07596",
+      "stats_offset": "0x075A2",
+      "attack": 1,
+      "defense": 92,
+      "magic": 1,
+      "speed": 1,
+      "hp": 1
+    },
+    "Drill Lance": {
+      "name_offset": "0x0790C",
+      "stats_offset": "0x0791E",
+      "attack": 10,
+      "defense": 164,
+      "magic": 0,
+      "speed": 0,
+      "hp": 3
+    },
+    "Soul Eater": {
+      "name_offset": "0x079B0",
+      "stats_offset": "0x079BB",
+      "attack": 256,
+      "defense": 25601,
+      "magic": 25603,
+      "speed": 0,
+      "hp": -18944
+    },
+    "Poison Fist": {
+      "name_offset": "0x07498",
+      "stats_offset": "0x074AA",
+      "attack": 0,
+      "defense": 78,
+      "magic": 0,
+      "speed": 2,
+      "hp": 2
+    },
+    "Sleep Bow": {
+      "name_offset": "0x072D8",
+      "stats_offset": "0x072EA",
+      "attack": 0,
+      "defense": 48,
+      "magic": 0,
+      "speed": 3,
+      "hp": 3
+    },
+    "Thunder Axe": {
+      "name_offset": "0x076A8",
+      "stats_offset": "0x076BA",
+      "attack": 2,
+      "defense": 106,
+      "magic": 0,
+      "speed": 4,
+      "hp": 0
+    },
+    "Dark Sword": {
+      "name_offset": "0x07988",
+      "stats_offset": "0x07993",
+      "attack": 256,
+      "defense": 25601,
+      "magic": 515,
+      "speed": 0,
+      "hp": -20224
+    }
+  },
+  "shields": {
+    "Wooden Shield": {
+      "name_offset": "0x0988C",
+      "stats_offset": "0x0989A",
+      "attack": 0,
+      "defense": 0,
+      "magic": 0,
+      "speed": 10,
+      "hp": 0
+    },
+    "Leather Shield": {
+      "name_offset": "0x098B8",
+      "stats_offset": "0x098CD",
+      "attack": 0,
+      "defense": 1280,
+      "magic": 0,
+      "speed": 0,
+      "hp": 512
+    },
+    "Buckler": {
+      "name_offset": "0x098E4",
+      "stats_offset": "0x098EC",
+      "attack": 0,
+      "defense": 0,
+      "magic": 700,
+      "speed": 0,
+      "hp": 9
+    },
+    "Bronze Shield": {
+      "name_offset": "0x09908",
+      "stats_offset": "0x09916",
+      "attack": 0,
+      "defense": 0,
+      "magic": 0,
+      "speed": 1200,
+      "hp": 0
+    },
+    "Lead Shield": {
+      "name_offset": "0x09934",
+      "stats_offset": "0x09946",
+      "attack": 0,
+      "defense": 18,
+      "magic": 0,
+      "speed": 0,
+      "hp": -3
+    },
+    "Wabbit Shield": {
+      "name_offset": "0x0995C",
+      "stats_offset": "0x09972",
+      "attack": 0,
+      "defense": 20,
+      "magic": 20,
+      "speed": 20,
+      "hp": 20
+    },
+    "Scale Shield": {
+      "name_offset": "0x09988",
+      "stats_offset": "0x099A1",
+      "attack": 0,
+      "defense": 0,
+      "magic": 512,
+      "speed": 0,
+      "hp": 1536
+    },
+    "Copper Shield": {
+      "name_offset": "0x099B4",
+      "stats_offset": "0x099CA",
+      "attack": 0,
+      "defense": 33,
+      "magic": 0,
+      "speed": 0,
+      "hp": -2
+    },
+    "Soldier Shield": {
+      "name_offset": "0x099E0",
+      "stats_offset": "0x099EF",
+      "attack": 0,
+      "defense": 0,
+      "magic": -22528,
+      "speed": 97,
+      "hp": 9984
+    },
+    "Furry Shield": {
+      "name_offset": "0x09A0C",
+      "stats_offset": "0x09A19",
+      "attack": 0,
+      "defense": 0,
+      "magic": 0,
+      "speed": 12288,
+      "hp": 117
+    },
+    "Iron Shield": {
+      "name_offset": "0x09A38",
+      "stats_offset": "0x09A4A",
+      "attack": 0,
+      "defense": 51,
+      "magic": 0,
+      "speed": 0,
+      "hp": -3
+    },
+    "Shinobi Shield": {
+      "name_offset": "0x09A60",
+      "stats_offset": "0x09A6F",
+      "attack": 0,
+      "defense": 3,
+      "magic": -4096,
+      "speed": 210,
+      "hp": 14592
+    },
+    "Large Shield": {
+      "name_offset": "0x09A8C",
+      "stats_offset": "0x09A99",
+      "attack": 0,
+      "defense": 0,
+      "magic": 0,
+      "speed": -14336,
+      "hp": 175
+    },
+    "Steel Shield": {
+      "name_offset": "0x09AB8",
+      "stats_offset": "0x09AC5",
+      "attack": 0,
+      "defense": 0,
+      "magic": 0,
+      "speed": -21504,
+      "hp": 263
+    },
+    "Warrior Shield": {
+      "name_offset": "0x09AE4",
+      "stats_offset": "0x09AF3",
+      "attack": 6400,
+      "defense": 3,
+      "magic": -16384,
+      "speed": 468,
+      "hp": 19200
+    },
+    "Knight Shield": {
+      "name_offset": "0x09B10",
+      "stats_offset": "0x09B26",
+      "attack": 1,
+      "defense": 83,
+      "magic": 0,
+      "speed": 0,
+      "hp": 0
+    },
+    "Black Shield": {
+      "name_offset": "0x09B3C",
+      "stats_offset": "0x09B49",
+      "attack": 0,
+      "defense": 0,
+      "magic": 4,
+      "speed": -20480,
+      "hp": 429
+    },
+    "Paladin Shield": {
+      "name_offset": "0x09B68",
+      "stats_offset": "0x09B77",
+      "attack": 0,
+      "defense": 4,
+      "magic": 4096,
+      "speed": 414,
+      "hp": 25344
+    },
+    "Silver Shield": {
+      "name_offset": "0x09B94",
+      "stats_offset": "0x09BAA",
+      "attack": 1,
+      "defense": 107,
+      "magic": 0,
+      "speed": 3,
+      "hp": 0
+    },
+    "Mirror Shield": {
+      "name_offset": "0x09BC0",
+      "stats_offset": "0x09BD6",
+      "attack": 2,
+      "defense": 115,
+      "magic": 0,
+      "speed": 2,
+      "hp": 0
+    },
+    "Binder": {
+      "name_offset": "0x09BEC",
+      "stats_offset": "0x09BF3",
+      "attack": 6400,
+      "defense": 3,
+      "magic": 0,
+      "speed": 625,
+      "hp": 31488
+    },
+    "Shell Shield": {
+      "name_offset": "0x09C10",
+      "stats_offset": "0x09C1D",
+      "attack": 0,
+      "defense": 0,
+      "magic": 0,
+      "speed": 20480,
+      "hp": 570
+    },
+    "Golden Shield": {
+      "name_offset": "0x09C3C",
+      "stats_offset": "0x09C52",
+      "attack": 3,
+      "defense": 139,
+      "magic": 0,
+      "speed": 15,
+      "hp": -10
+    },
+    "Dokaqon Shield": {
+      "name_offset": "0x09C68",
+      "stats_offset": "0x09C77",
+      "attack": 0,
+      "defense": 1,
+      "magic": 4096,
+      "speed": 664,
+      "hp": -27648
+    },
+    "Ragnarok Shield": {
+      "name_offset": "0x09C94",
+      "stats_offset": "0x09CAA",
+      "attack": 2,
+      "defense": 156,
+      "magic": 0,
+      "speed": 5,
+      "hp": 0
+    },
+    "Moon Shield": {
+      "name_offset": "0x09CC0",
+      "stats_offset": "0x09CD2",
+      "attack": 4,
+      "defense": 164,
+      "magic": 0,
+      "speed": 12,
+      "hp": 0
+    },
+    "Tower Shield": {
+      "name_offset": "0x09CE8",
+      "stats_offset": "0x09CF5",
+      "attack": 0,
+      "defense": 0,
+      "magic": 1,
+      "speed": -8192,
+      "hp": 921
+    },
+    "Girly Shield": {
+      "name_offset": "0x09D14",
+      "stats_offset": "0x09D21",
+      "attack": 0,
+      "defense": 0,
+      "magic": 4,
+      "speed": -28672,
+      "hp": 1601
+    },
+    "Dural Shield": {
+      "name_offset": "0x09D40",
+      "stats_offset": "0x09D4D",
+      "attack": 0,
+      "defense": 0,
+      "magic": 1,
+      "speed": 12288,
+      "hp": 1367
+    },
+    "Metal Guard": {
+      "name_offset": "0x09D6C",
+      "stats_offset": "0x09D7E",
+      "attack": 6,
+      "defense": 204,
+      "magic": 0,
+      "speed": 0,
+      "hp": 3
+    },
+    "Sun Shield": {
+      "name_offset": "0x09D94",
+      "stats_offset": "0x09D9F",
+      "attack": 3072,
+      "defense": 3,
+      "magic": 24576,
+      "speed": 1859,
+      "hp": -10752
+    },
+    "Cursed Shield": {
+      "name_offset": "0x09DBC",
+      "stats_offset": "0x09DCA",
+      "attack": 0,
+      "defense": 793,
+      "magic": 0,
+      "speed": 2,
+      "hp": 0
+    },
+    "Hero Shield": {
+      "name_offset": "0x09DE8",
+      "stats_offset": "0x09DF4",
+      "attack": 512,
+      "defense": 0,
+      "magic": 712,
+      "speed": 8,
+      "hp": 236
+    },
+    "Mecha Guard": {
+      "name_offset": "0x09E10",
+      "stats_offset": "0x09E22",
+      "attack": 9,
+      "defense": 248,
+      "magic": 5,
+      "speed": 0,
+      "hp": 0
+    },
+    "Aura Shield": {
+      "name_offset": "0x09E38",
+      "stats_offset": "0x09E4A",
+      "attack": 12,
+      "defense": 260,
+      "magic": 2,
+      "speed": 2,
+      "hp": 2
+    },
+    "Athena's Shield": {
+      "name_offset": "0x09E60",
+      "stats_offset": "0x09E76",
+      "attack": 13,
+      "defense": 270,
+      "magic": 0,
+      "speed": 10,
+      "hp": 0
+    },
+    "Dragon Shield": {
+      "name_offset": "0x09E8C",
+      "stats_offset": "0x09EA2",
+      "attack": 18,
+      "defense": 282,
+      "magic": 3,
+      "speed": 3,
+      "hp": 3
+    },
+    "Dark Shield": {
+      "name_offset": "0x09EB8",
+      "stats_offset": "0x09EC4",
+      "attack": 1124,
+      "defense": 0,
+      "magic": 100,
+      "speed": 0,
+      "hp": 292
+    },
+    "Dokapon Shield": {
+      "name_offset": "0x09EE0",
+      "stats_offset": "0x09F17",
+      "attack": 100,
+      "defense": 0,
+      "magic": 0,
+      "speed": 5,
+      "hp": 512
+    },
+    "Demon Shield": {
+      "name_offset": "0x09F0C",
+      "stats_offset": "0x09F19",
+      "attack": 0,
+      "defense": 0,
+      "magic": 5,
+      "speed": 512,
+      "hp": 0
+    }
+  },
+  "accessories": {
+    "Power Gloves": {
+      "name_offset": "0x0AAF0",
+      "stats_offset": "0x0AB05",
+      "attack": 234,
+      "defense": 1280,
+      "magic": 0,
+      "speed": 0,
+      "hp": 0
+    },
+    "Guard Gloves": {
+      "name_offset": "0x0AB20",
+      "stats_offset": "0x0AB35",
+      "attack": 234,
+      "defense": 0,
+      "magic": 1280,
+      "speed": 0,
+      "hp": 0
+    },
+    "Spirit Gloves": {
+      "name_offset": "0x0AB50",
+      "stats_offset": "0x0AB66",
+      "attack": 0,
+      "defense": 0,
+      "magic": 0,
+      "speed": 5,
+      "hp": 0
+    },
+    "Speed Gloves": {
+      "name_offset": "0x0AB80",
+      "stats_offset": "0x0AB95",
+      "attack": 234,
+      "defense": 0,
+      "magic": 0,
+      "speed": 0,
+      "hp": 1280
+    },
+    "Ring of Power": {
+      "name_offset": "0x0AC38",
+      "stats_offset": "0x0AC4E",
+      "attack": 1,
+      "defense": 15,
+      "magic": 0,
+      "speed": 0,
+      "hp": 0
+    },
+    "Ring of Defense": {
+      "name_offset": "0x0AC68",
+      "stats_offset": "0x0AC7E",
+      "attack": 1,
+      "defense": 0,
+      "magic": 15,
+      "speed": 0,
+      "hp": 0
+    },
+    "Ring of Speed": {
+      "name_offset": "0x0AC98",
+      "stats_offset": "0x0ACAE",
+      "attack": 1,
+      "defense": 0,
+      "magic": 0,
+      "speed": 0,
+      "hp": 15
+    },
+    "Ring of Magic": {
+      "name_offset": "0x0ACC8",
+      "stats_offset": "0x0ACDE",
+      "attack": 1,
+      "defense": 0,
+      "magic": 0,
+      "speed": 15,
+      "hp": 0
+    },
+    "Fire Bracelet": {
+      "name_offset": "0x0AD80",
+      "stats_offset": "0x0AD96",
+      "attack": 0,
+      "defense": 0,
+      "magic": 0,
+      "speed": 3,
+      "hp": 0
+    },
+    "Ice Bracelet": {
+      "name_offset": "0x0ADB0",
+      "stats_offset": "0x0ADC5",
+      "attack": 93,
+      "defense": 0,
+      "magic": 0,
+      "speed": 768,
+      "hp": 0
+    },
+    "Air Ring": {
+      "name_offset": "0x0AC0C",
+      "stats_offset": "0x0AC1D",
+      "attack": 15,
+      "defense": 0,
+      "magic": 0,
+      "speed": 0,
+      "hp": 0
+    },
+    "Heart Slippers": {
+      "name_offset": "0x0AF2C",
+      "stats_offset": "0x0AF41",
+      "attack": 937,
+      "defense": 0,
+      "magic": 0,
+      "speed": 0,
+      "hp": 768
+    },
+    "Hero Boots": {
+      "name_offset": "0x0AF5C",
+      "stats_offset": "0x0AF6D",
+      "attack": 1171,
+      "defense": 0,
+      "magic": 0,
+      "speed": 0,
+      "hp": 768
+    },
+    "Leopard Bandana": {
+      "name_offset": "0x0AFB4",
+      "stats_offset": "0x0AFCA",
+      "attack": 1,
+      "defense": 0,
+      "magic": 0,
+      "speed": 3,
+      "hp": 0
+    },
+    "Squid Ring": {
+      "name_offset": "0x0AD28",
+      "stats_offset": "0x0AD39",
+      "attack": 4,
+      "defense": 0,
+      "magic": 0,
+      "speed": 0,
+      "hp": 0
+    }
+  }
+}

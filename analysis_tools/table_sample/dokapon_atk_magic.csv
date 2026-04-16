@@ -1,0 +1,24 @@
+ID,Name,Price,Power,Stores,Type,Effect
+1,Scorch,"2,500G",1.95,"Asiana, Hallstatt, Casino Cave",Fire,May reduce the opponent's DF by 25%.
+2,Scorcher,"50,000G",2.65,"Clovis, Daunting Mountain 1F, Aphrike",Fire,May reduce the opponent's DF by 25%.
+3,Giga Blaze,"210,000G",3.7,"Flinders, Tower of Rabble 2F",Fire,May reduce the opponent's DF by 25%.
+4,Zap,"3,750G",2.25,"Hallstatt, Casino Cave, Clovis",Lightning,May reduce the opponent's MG by 25%.
+5,Zapper,"68,000G",3.15,"Daunting Mountain 1F, Aphrike",Lightning,May reduce the opponent's MG by 25%.
+6,Lectro Beam,"268,000G",4.45,Flinders,Lightning,May reduce the opponent's MG by 25%.
+7,Chill,"3,150G",2.1,"Hallstatt, Clovis",Ice,May reduce the opponent's AT by 25%.
+8,Chiller,"62,000G",2.9,Daunting Mountain 1F,Ice,May reduce the opponent's AT by 25%.
+9,Ice Barrage,"224,000G",4.1,Underground Passage,Ice,May reduce the opponent's AT by 25%.
+10,Gust,"5,000G",2.45,Clovis,Wind,May reduce the opponent's SP by 25%.
+11,Guster,"70,000G",3.2,Daunting Mountain 1F,Wind,May reduce the opponent's SP by 25%.
+12,F5 Storm,"286,000G",4.75,Tower of Rabble 2F,Wind,May reduce the opponent's SP by 25%.
+13,Mirror Image,"12,500G",2.4,"Casino Cave, Clovis, Lava Cave 3F, Underground Passage",Physical,None
+14,Teleport,"25,000G",3.0,"Lava Cave 3F, Aphrike",Physical,None
+15,Aurora,"320,000G",5.0,Tower of Rabble 2F,Light,May reduce all the opponent's stats by 50%.
+16,Curse,"20,000G",1.6,"Lava Cave 3F, Underground Passage",Dark,Curses the opponent.
+17,Sleepy,"140,000G",1.1,Flinders,Dark,Puts the opponent to Sleep.
+18,Blind,"15,000G",1.4,Casino Cave,Dark,Blinds the opponent.
+19,Banish,"240,000G",2.5,"Aphrike, Flinders",Dark,Kills the opponent but leaves the caster at 1 HP.
+20,Drain,"2,000G",0,"Asiana, Hallstatt, Lava Cave 3F, Underground Passage",Drain,Steals 50% of the opponent's current HP.
+21,Swap,"1,500G",0,Asiana,Drain,Swaps flat HP with the opponent.
+22,Pickpocket,500G,1.5,Asiana,Drain,Steals 25% of the opponent's G.
+23,Rust,"400,000G",3.6,Tower of Rabble 2F,Dark,Breaks a random piece of the opponent's equipment.
