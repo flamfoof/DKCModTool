@@ -26,6 +26,17 @@ python dkc_mod_tool.py analyze-dat path/to/stageBase_EN.DAT
 # Apply edited JSON back to create a modded DAT file
 python dkc_mod_tool.py apply path/to/stageBase_EN.DAT output.json modded_stageBase_EN.DAT
 
+# --- DLL-based mod pipeline (preferred) --------------------------------
+# Create a DkkStm_modded.exe sibling with ASLR + CFG disabled
+python dkc_mod_tool.py make-modded-exe path/to/DkkStm.exe
+
+# Deploy the dinput8.dll proxy into the game folder
+python dkc_mod_tool.py deploy-dll path/to/DkkStm.exe
+
+# Uninstall the proxy DLL and restore any prior dinput8.dll
+python dkc_mod_tool.py remove-dll path/to/DkkStm.exe
+
+# --- Legacy EXE-patching (kept for backwards compatibility) ------------
 # Read an existing .hex patch file
 python dkc_mod_tool.py read-hex path/to/patch.hex
 
@@ -53,12 +64,42 @@ python dkc_mod_tool.py hexdump path/to/file 0x1884E 64
 | `analyze-dat` | Display all known game data from a stageBase DAT file |
 | `extract` | Export game data to an editable JSON file |
 | `apply` | Apply edits from a JSON file back to a DAT file |
-| `patch-exe` | Add the .dkcedit section to the exe for code injection |
-| `inject` | Inject a compiled mod.bin into a patched exe |
-| `diff` | Generate a .hex patch file from the differences between two files |
-| `read-hex` | Display the contents of a .hex patch file |
+| `make-modded-exe` | Copy `DkkStm.exe` to `DkkStm_modded.exe` with ASLR + CFG disabled |
+| `deploy-dll` | Deploy `dinput8.dll` proxy into the game folder for runtime patches |
+| `remove-dll` | Remove the deployed proxy DLL and restore any pre-existing `.bak` |
+| `patch-exe` *(legacy)* | Add the `.dkcedit` section to the exe for code injection |
+| `inject` *(legacy)* | Inject a compiled `mod.bin` into a patched exe |
+| `diff` | Generate a `.hex` patch file from the differences between two files |
+| `read-hex` | Display the contents of a `.hex` patch file |
 | `scan-strings` | Find all ASCII strings in a DAT file |
 | `hexdump` | Show a hex dump of a file region |
+
+## DLL-based Mod Pipeline (v2.1+)
+
+As of April 2026 the default `DKCModInstaller` workflow no longer writes
+to `DkkStm.exe`. Instead:
+
+1. **First-time game-dir setup** creates `<stem>_modded.exe` alongside the
+   original with `DYNAMIC_BASE` + `HIGH_ENTROPY_VA` + `GUARD_CF` cleared in
+   the PE `DllCharacteristics` field. The image then always loads at its
+   preferred `ImageBase` (`0x140000000`), making heap-scan anchors and
+   VA-based RE notes stable across launches.
+2. **Install-time** deploys `Mods/ProxyDLL-Test/build/dinput8.dll` into the
+   game folder along with a renamed system `dinput8_real.dll`. The proxy
+   hooks process init, scans the private heap for decompressed DAT data
+   (anchored on the `"Thule"` string), and applies runtime patches via its
+   `runtime_patcher` module.
+3. **Asset mods** (CPK replacement + loose-file overrides) run unchanged --
+   those modify game data, not the executable.
+
+Legacy `.hex` and code-mod payloads are skipped by default. Re-run the
+installer with `--patch-exe` (or set `DKCMOD_PATCH_EXE=1`) to apply them
+the old way. Porting those payloads to the proxy DLL is the preferred
+long-term path.
+
+Launch the game via `DkkStm_modded.exe` for a deterministic memory layout
+(recommended for any debugger / RE work), or just use the normal Steam
+launcher if you only need the proxy DLL's runtime patches plus asset mods.
 
 ## Editable Game Data (stageBase_EN.DAT)
 
@@ -127,10 +168,14 @@ Use `read-hex` to inspect existing patches, or `diff` to generate new ones.
 ```
 DKCModTool/
 ├── dkc_mod_tool.py        # Main CLI entry point
-├── pe_patcher.py          # PE file analysis and section injection
+├── mod_installer.py       # Install pipeline (DLL-first, CPK assets, legacy EXE flags)
+├── pe_patcher.py          # PE file analysis, section injection, DllCharacteristics patching
 ├── stagebase_parser.py    # stageBase_EN.DAT parser and editor
 ├── data_tables.py         # Known data structure definitions
 ├── hex_gen.py             # .hex patch file generation and reading
+├── cpk_tools.py           # CPK archive read/replace for asset mods
+├── analysis_tools/        # RE mappers (equipment, monsters, class stats, skills)
+│                          # See analysis_tools/README.md for details
 └── README.md              # This file
 ```
 

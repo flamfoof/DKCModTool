@@ -39,6 +39,7 @@ from cpk_tools import CPKFile
 BACKUP_DIR = os.path.join(ROOT_DIR, "Backup")
 MODS_DIR = os.path.join(ROOT_DIR, "Mods")
 GAME_EXE_FILE = os.path.join(BACKUP_DIR, "game_exe.txt")
+MODDED_EXE_FILE = os.path.join(BACKUP_DIR, "modded_exe.txt")
 
 # Known CPK files and their backup locations
 CPK_FILES = ["CommonData.cpk", "CommonData100.cpk", "CommonData2.cpk", "Data_eng.cpk"]
@@ -46,6 +47,21 @@ CPK_FILES = ["CommonData.cpk", "CommonData100.cpk", "CommonData2.cpk", "Data_eng
 DLL_FILES = ["SDL2.dll", "glew32.dll", "steam_api64.dll"]
 # Manifest tracking loose file overrides placed in the game directory
 OVERRIDES_MANIFEST = os.path.join(BACKUP_DIR, "overrides.txt")
+
+# Proxy DLL deployment
+# Source built by Mods/ProxyDLL-Test/build.bat; see that mod's README for
+# runtime-patcher design. The installer deploys this DLL to the game folder
+# as the mod delivery vector (replacing direct EXE hex/code patching).
+PROXY_DLL_SRC      = os.path.join(MODS_DIR, "ProxyDLL-Test", "build", "dinput8.dll")
+PROXY_DLL_NAME     = "dinput8.dll"       # name the game loads
+PROXY_REAL_NAME    = "dinput8_real.dll"  # the renamed system DLL our proxy forwards to
+SYSTEM_DINPUT8     = os.path.join(os.environ.get("SystemRoot", r"C:\Windows"),
+                                  "System32", "dinput8.dll")
+
+# Modded-EXE suffix. DKCModInstaller creates <stem>_modded.exe alongside the
+# original on first-time game-dir setup, with ASLR + CFG disabled so heap
+# scanning + VA-based RE notes stay stable across launches.
+MODDED_EXE_SUFFIX  = "_modded"
 
 
 # ============================================================================
@@ -160,11 +176,24 @@ def _open_file_dialog():
 
 
 def _save_game_path(path):
-    """Save the game exe path for future use."""
+    """Save the game exe path and trigger first-time setup.
+
+    On first save (i.e. the path was not already persisted) we also create
+    a `<stem>_modded.exe` sibling with ASLR + CFG disabled, so the proxy
+    DLL's memory scanner sees a stable image base on every launch.
+    """
+    is_first_time = not os.path.exists(GAME_EXE_FILE)
     os.makedirs(BACKUP_DIR, exist_ok=True)
     with open(GAME_EXE_FILE, 'w') as f:
         f.write(path)
     print_ok(f"Game path saved: {path}")
+
+    # First-time setup: create the modded exe alongside the original.
+    # Safe to call on re-runs too (create_modded_exe is idempotent), but we
+    # only advertise it the first time to keep the UX clean.
+    if is_first_time:
+        print_info("First-time setup: preparing modded executable.")
+    create_modded_exe(path)
 
 
 # ============================================================================
@@ -303,6 +332,197 @@ def restore_from_backup(exe_path):
                 return False
         print_ok(f"{cpk} restored")
     return True
+
+
+# ============================================================================
+# Modded EXE creation  (ASLR / CFG disable)
+# ============================================================================
+
+def get_modded_exe_path(exe_path):
+    """Compute the sibling "_modded" exe path. E.g.
+    .../DkkStm.exe -> .../DkkStm_modded.exe"""
+    game_dir = os.path.dirname(exe_path)
+    stem, ext = os.path.splitext(os.path.basename(exe_path))
+    return os.path.join(game_dir, f"{stem}{MODDED_EXE_SUFFIX}{ext}")
+
+
+def _save_modded_path(path):
+    """Persist the modded exe path alongside game_exe.txt for other tools."""
+    os.makedirs(BACKUP_DIR, exist_ok=True)
+    with open(MODDED_EXE_FILE, 'w') as f:
+        f.write(path)
+
+
+def create_modded_exe(exe_path, force=False):
+    """Create a `<stem>_modded.exe` copy of the original with ASLR and CFG
+    disabled.
+
+    Rationale: the heap/memory scanners in our proxy DLL and every VA in the
+    RE notes assume the EXE loads at its preferred ImageBase (0x140000000).
+    ASLR can relocate that in practice. Disabling `DYNAMIC_BASE` +
+    `HIGH_ENTROPY_VA` in DllCharacteristics pins the image base, and clearing
+    `GUARD_CF` removes Control Flow Guard runtime checks that can interfere
+    with in-memory code patches.
+
+    The original `DkkStm.exe` is left untouched; launch the `_modded` copy
+    directly (or swap filenames) to get deterministic layout.
+
+    Returns the modded-exe path on success, None on failure.
+    """
+    if not os.path.isfile(exe_path):
+        print_err(f"Source exe not found: {exe_path}")
+        return None
+
+    modded_path = get_modded_exe_path(exe_path)
+    already_exists = os.path.exists(modded_path)
+
+    if already_exists and not force:
+        # Check whether it's already fully patched; if yes, nothing to do.
+        try:
+            pe = PEPatcher(modded_path)
+            flags = pe.get_dll_characteristics()
+            if not (flags & (pe.DLL_CHAR_DYNAMIC_BASE | pe.DLL_CHAR_HIGH_ENTROPY_VA)):
+                print_ok(f"Modded exe already present and ASLR-disabled: "
+                         f"{os.path.basename(modded_path)}")
+                _save_modded_path(modded_path)
+                return modded_path
+            print_info(f"Modded exe exists but still has ASLR flags "
+                       f"(0x{flags:04X}); re-patching.")
+        except Exception as e:
+            print_warn(f"Could not inspect existing modded exe ({e}); overwriting.")
+
+    print_step(f"Creating modded executable: {os.path.basename(modded_path)}")
+    try:
+        shutil.copy2(exe_path, modded_path)
+    except PermissionError:
+        print_err(f"Cannot write to {modded_path} -- is the game running?")
+        return None
+    except Exception as e:
+        print_err(f"Copy failed: {e}")
+        return None
+
+    try:
+        pe = PEPatcher(modded_path)
+        result = pe.patch_for_modding(disable_cfg=True)
+        pe.save()
+    except Exception as e:
+        print_err(f"PE patch failed: {e}")
+        traceback.print_exc()
+        # Leave the copy in place so the user can investigate.
+        return None
+
+    print_ok(f"DllCharacteristics: 0x{result['before']:04X} -> 0x{result['after']:04X}")
+    if result['cleared']:
+        print_info(f"Cleared flags: {', '.join(result['cleared'])}")
+    else:
+        print_info("No ASLR/CFG flags were set; modded exe is a plain copy.")
+    print_info(f"Modded exe: {modded_path}")
+    print_info("Launch this file directly (or swap filenames with the")
+    print_info("original) to run with a deterministic memory layout.")
+
+    _save_modded_path(modded_path)
+    return modded_path
+
+
+# ============================================================================
+# Proxy DLL deployment  (replaces direct EXE hex/code patching)
+# ============================================================================
+
+def deploy_proxy_dll(exe_path):
+    """Deploy the dinput8.dll proxy into the game folder.
+
+    The proxy hooks process init, scans the private heap for the decompressed
+    stageBase_EN.DAT (anchored on the "Thule" string), and applies runtime
+    patches via an opt-in runtime_patcher. This replaces modifying DkkStm.exe
+    directly with hex edits or PE section injection.
+
+    File layout after deployment:
+        <game_dir>/dinput8.dll          <- our proxy (loaded by the game)
+        <game_dir>/dinput8_real.dll     <- renamed System32 dinput8.dll
+                                           (our proxy forwards all exports here)
+        <game_dir>/dinput8.dll.bak      <- any pre-existing dinput8.dll, preserved
+
+    Returns True on success, False otherwise.
+    """
+    game_dir = os.path.dirname(exe_path)
+
+    if not os.path.isfile(PROXY_DLL_SRC):
+        print_err(f"Proxy DLL not built: {PROXY_DLL_SRC}")
+        print_info("Build it first:")
+        print_info(f"   cd {os.path.dirname(PROXY_DLL_SRC)}/..")
+        print_info("   build.bat")
+        return False
+
+    if not os.path.isfile(SYSTEM_DINPUT8):
+        print_err(f"System dinput8.dll not found: {SYSTEM_DINPUT8}")
+        print_info("Cannot forward exports without the real DLL to chain to.")
+        return False
+
+    dst_proxy = os.path.join(game_dir, PROXY_DLL_NAME)
+    dst_real  = os.path.join(game_dir, PROXY_REAL_NAME)
+
+    # Preserve any pre-existing dinput8.dll (another mod's proxy, etc.)
+    # as .bak on first install only — don't clobber our own backup on re-runs.
+    if os.path.exists(dst_proxy):
+        try:
+            # If the file currently there is already our proxy (same size +
+            # first few bytes), skip the .bak step.
+            is_ours = False
+            try:
+                if os.path.getsize(dst_proxy) == os.path.getsize(PROXY_DLL_SRC):
+                    with open(dst_proxy, 'rb') as a, open(PROXY_DLL_SRC, 'rb') as b:
+                        is_ours = a.read(256) == b.read(256)
+            except OSError:
+                pass
+            if not is_ours:
+                bak = dst_proxy + ".bak"
+                if not os.path.exists(bak):
+                    print_info(f"Backing up existing dinput8.dll -> {os.path.basename(bak)}")
+                    shutil.copy2(dst_proxy, bak)
+        except PermissionError:
+            print_err("Cannot back up existing dinput8.dll -- game may be running.")
+            return False
+
+    try:
+        print_info(f"Copying system dinput8.dll -> {PROXY_REAL_NAME}")
+        shutil.copy2(SYSTEM_DINPUT8, dst_real)
+        print_info(f"Copying proxy {PROXY_DLL_NAME}")
+        shutil.copy2(PROXY_DLL_SRC, dst_proxy)
+    except PermissionError:
+        print_err("Cannot write proxy DLL files -- game may be running.")
+        return False
+    except Exception as e:
+        print_err(f"Proxy deploy failed: {e}")
+        return False
+
+    print_ok(f"Proxy DLL deployed to {game_dir}")
+    return True
+
+
+def remove_proxy_dll(exe_path):
+    """Remove deployed proxy DLL files, restoring any pre-existing backup.
+    Idempotent; silent if nothing was installed."""
+    game_dir = os.path.dirname(exe_path)
+    dst_proxy = os.path.join(game_dir, PROXY_DLL_NAME)
+    dst_real  = os.path.join(game_dir, PROXY_REAL_NAME)
+    bak_proxy = dst_proxy + ".bak"
+
+    removed_any = False
+    for f in (dst_proxy, dst_real):
+        if os.path.isfile(f):
+            try:
+                os.remove(f)
+                removed_any = True
+            except OSError:
+                pass
+    if os.path.isfile(bak_proxy):
+        try:
+            shutil.move(bak_proxy, dst_proxy)
+            print_info(f"Restored original dinput8.dll from .bak")
+        except OSError:
+            pass
+    if removed_any:
+        print_ok("Proxy DLL removed")
 
 
 # ============================================================================
@@ -628,45 +848,66 @@ def apply_asset_mods(exe_path, asset_entries):
 # Main Installer Flow
 # ============================================================================
 
-def run_installer():
-    """Main installation flow."""
+def run_installer(patch_exe_directly=False):
+    """Main installation flow.
+
+    Default pipeline (DLL-based, preferred):
+      1. Locate game exe (triggers first-time modded-exe creation)
+      2. Discover mods
+      3. Back up original files
+      4. Restore-from-backup to start clean
+      5. Deploy dinput8.dll proxy into the game folder
+      6. Install asset mods (CPK replacement + loose overrides)
+
+    Hex edits and code mods that would modify `DkkStm.exe` are SKIPPED by
+    default -- those belong in the proxy DLL's runtime_patcher now. Set
+    `patch_exe_directly=True` to run the legacy EXE-patching flow for
+    mods that still ship .hex or code_mods payloads.
+    """
     print_header("DKCModTool Installer v2.0")
     print_info("Dokapon Kingdom: Connect Mod Installer")
     print_info(f"Root: {ROOT_DIR}")
-    
-    # 1. Find game exe
+    if patch_exe_directly:
+        print_warn("Legacy mode: hex edits and code mods WILL modify DkkStm.exe")
+    else:
+        print_info("DLL-based pipeline: patches applied via dinput8.dll proxy")
+
+    # 1. Find game exe  (also creates <stem>_modded.exe on first-time setup)
     print_step("Locating game executable...")
     exe_path = find_game_exe()
     if not exe_path:
         print_err("No game executable selected. Aborting.")
         return False
-    
+
     # 2. Discover mods
     print_step("Scanning for mods...")
     mods = discover_mods()
     if not mods:
         print_warn("No mods found in Mods/ directory.")
-        return False
-    
-    print_info(f"Found {len(mods)} mod(s):")
-    total_assets = 0
-    total_hex = 0
-    total_codes = 0
+        # Deploying the proxy DLL alone still has value (runtime patches
+        # baked into it). Continue rather than abort.
+
+    total_assets = total_hex = total_codes = 0
     for mod in mods:
-        na = len(mod['assets'])
-        nh = len(mod['hex_edits'])
-        nc = len(mod['code_mods'])
-        total_assets += na
-        total_hex += nh
-        total_codes += nc
+        na = len(mod['assets']); nh = len(mod['hex_edits']); nc = len(mod['code_mods'])
+        total_assets += na; total_hex += nh; total_codes += nc
         print_info(f"  [{mod['name']}] {na} assets, {nh} hex edits, {nc} code mods")
-    
-    print_info(f"\n   Total: {total_assets} assets, {total_hex} hex edits, {total_codes} code mods")
-    
+    if mods:
+        print_info(f"\n   Total: {total_assets} assets, {total_hex} hex edits, "
+                   f"{total_codes} code mods")
+
+    # Warn about skipped mod channels when running the DLL-first pipeline.
+    if not patch_exe_directly and (total_hex or total_codes):
+        print_warn(
+            f"Skipping {total_hex} hex edit(s) and {total_codes} code mod(s): "
+            f"these modify DkkStm.exe directly. Port them to the proxy DLL's "
+            f"runtime_patcher, or re-run with --patch-exe to apply them."
+        )
+
     # 3. Backup
     backup_game_files(exe_path)
-    
-    # 4. Check files are writable
+
+    # 4. Check files are writable (includes exe when we're in legacy mode)
     print_step("Checking file access...")
     writable, locked_file = check_files_writable(exe_path)
     if not writable:
@@ -674,46 +915,55 @@ def run_installer():
         print_info("Close the game and any programs using it, then try again.")
         return False
     print_ok("All game files are writable")
-    
+
     # 5. Restore from backup (fresh start)
     if not restore_from_backup(exe_path):
         return False
-    
-    # 5. Apply mods in order: hex edits -> code mods -> assets
-    # (Hex edits first, as they patch the raw exe before code injection)
-    
-    # Hex edits
-    all_hex = []
-    for mod in mods:
-        all_hex.extend(mod['hex_edits'])
-    if all_hex:
-        print_step(f"Applying {len(all_hex)} hex edit file(s)...")
-        apply_hex_edits(exe_path, all_hex)
-    
-    # Code mods
-    all_codes = []
-    for mod in mods:
-        all_codes.extend(mod['code_mods'])
-    if all_codes:
-        print_step(f"Injecting {len(all_codes)} code mod(s)...")
-        apply_code_mods(exe_path, all_codes)
-    
-    # Asset mods — pass (mod_name, path) tuples for merge support
-    all_assets = []
-    for mod in mods:
-        for asset_path in mod['assets']:
-            all_assets.append((mod['name'], asset_path))
+
+    # 6. Re-assert modded-exe (idempotent) — ensures it exists after restore.
+    create_modded_exe(exe_path)
+
+    # 7. Apply mods
+    if patch_exe_directly:
+        # --- Legacy path: modifies DkkStm.exe ---
+        all_hex = [h for mod in mods for h in mod['hex_edits']]
+        if all_hex:
+            print_step(f"Applying {len(all_hex)} hex edit file(s)...")
+            apply_hex_edits(exe_path, all_hex)
+        all_codes = [c for mod in mods for c in mod['code_mods']]
+        if all_codes:
+            print_step(f"Injecting {len(all_codes)} code mod(s)...")
+            apply_code_mods(exe_path, all_codes)
+    else:
+        # --- DLL-based path: deploys dinput8.dll proxy ---
+        print_step("Deploying proxy DLL...")
+        if not deploy_proxy_dll(exe_path):
+            print_err("Proxy DLL deployment failed. CPK assets will still install.")
+
+    # Asset mods — always applied (CPK data, not EXE)
+    all_assets = [(mod['name'], p) for mod in mods for p in mod['assets']]
     if all_assets:
         print_step(f"Installing {len(all_assets)} asset file(s)...")
         apply_asset_mods(exe_path, all_assets)
-    
+
     print_header("Installation Complete!")
+    if not patch_exe_directly:
+        print_info("Launch the game via DkkStm_modded.exe for a deterministic")
+        print_info("memory layout, or use the normal Steam launcher if you")
+        print_info("only need the proxy DLL's runtime patches + asset mods.")
     return True
 
 
 def main():
+    # Legacy EXE-patching mode: only active if the user passes --patch-exe
+    # or sets DKCMOD_PATCH_EXE=1 in the environment. All other invocations
+    # route through the DLL proxy.
+    patch_exe_directly = (
+        "--patch-exe" in sys.argv
+        or os.environ.get("DKCMOD_PATCH_EXE", "").lower() in ("1", "true", "yes")
+    )
     try:
-        success = run_installer()
+        success = run_installer(patch_exe_directly=patch_exe_directly)
     except Exception as e:
         print_err(f"Unexpected error: {e}")
         traceback.print_exc()

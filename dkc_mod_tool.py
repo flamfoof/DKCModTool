@@ -12,12 +12,18 @@ Commands:
     analyze-dat <dat_path>              Analyze a stageBase .DAT file
     extract <dat_path> [output.json]    Extract game data to JSON
     apply <dat_path> <input.json> [out] Apply JSON edits to a DAT file
-    patch-exe <exe_path>                Add .dkcedit section to exe
-    inject <exe_path> <mod_dir>         Inject a code mod into patched exe
+    patch-exe <exe_path>                Add .dkcedit section to exe  [LEGACY]
+    inject <exe_path> <mod_dir>         Inject a code mod into patched exe  [LEGACY]
     diff <original> <modified> [out]    Generate .hex patch from two files
     read-hex <hex_file>                 Describe a .hex patch file
     scan-strings <dat_path> [min_len]   Scan a DAT file for text strings
     hexdump <file> <offset> <length>    Hex dump a region of a file
+    make-modded-exe <exe_path>          Copy exe to <stem>_modded.exe + disable ASLR/CFG
+    deploy-dll <exe_path>               Deploy dinput8.dll proxy to game folder
+    remove-dll <exe_path>               Remove deployed proxy DLL + restore any .bak
+
+The LEGACY commands modify DkkStm.exe directly. Prefer `make-modded-exe`
+plus `deploy-dll` for a non-destructive, DLL-based mod pipeline.
 """
 import sys
 import os
@@ -284,6 +290,42 @@ def cmd_hexdump(args):
         print(f"  0x{addr:06X}: {hex_str:<48} {ascii_str}")
 
 
+def cmd_make_modded_exe(args):
+    """Copy <exe> to <stem>_modded.exe and disable ASLR + CFG on the copy.
+
+    Leaves the original exe untouched. Reuses the logic from
+    `mod_installer.create_modded_exe` so the behaviour matches what the
+    installer does during first-time game-dir setup.
+    """
+    if len(args) < 1:
+        print("Usage: make-modded-exe <exe_path> [--force]")
+        return
+    from mod_installer import create_modded_exe
+    force = "--force" in args
+    modded = create_modded_exe(args[0], force=force)
+    if modded:
+        print(f"[+] Ready: {modded}")
+
+
+def cmd_deploy_dll(args):
+    """Deploy the dinput8.dll proxy into the game folder."""
+    if len(args) < 1:
+        print("Usage: deploy-dll <exe_path>")
+        return
+    from mod_installer import deploy_proxy_dll
+    ok = deploy_proxy_dll(args[0])
+    sys.exit(0 if ok else 1)
+
+
+def cmd_remove_dll(args):
+    """Remove the deployed proxy DLL and restore any pre-existing .bak."""
+    if len(args) < 1:
+        print("Usage: remove-dll <exe_path>")
+        return
+    from mod_installer import remove_proxy_dll
+    remove_proxy_dll(args[0])
+
+
 def main():
     if len(sys.argv) < 2:
         print(__doc__)
@@ -303,6 +345,9 @@ def main():
         "read-hex": cmd_read_hex,
         "scan-strings": cmd_scan_strings,
         "hexdump": cmd_hexdump,
+        "make-modded-exe": cmd_make_modded_exe,
+        "deploy-dll": cmd_deploy_dll,
+        "remove-dll": cmd_remove_dll,
     }
     
     if command in commands:

@@ -364,6 +364,104 @@ class PEPatcher:
         
         return True
     
+    # ------------------------------------------------------------------
+    # DllCharacteristics / ASLR control
+    # ------------------------------------------------------------------
+    #
+    # DllCharacteristics is a u16 at optional-header offset 0x46 for both
+    # PE32 and PE32+. The bit layout (PE/COFF spec):
+    #
+    #   0x0020  HIGH_ENTROPY_VA        64-bit high-entropy ASLR
+    #   0x0040  DYNAMIC_BASE           ASLR
+    #   0x0080  FORCE_INTEGRITY        code signature enforcement
+    #   0x0100  NX_COMPAT              DEP
+    #   0x0200  NO_ISOLATION
+    #   0x0400  NO_SEH
+    #   0x0800  NO_BIND
+    #   0x1000  APPCONTAINER
+    #   0x2000  WDM_DRIVER
+    #   0x4000  GUARD_CF               Control Flow Guard
+    #   0x8000  TERMINAL_SERVER_AWARE
+    DLL_CHAR_HIGH_ENTROPY_VA     = 0x0020
+    DLL_CHAR_DYNAMIC_BASE        = 0x0040
+    DLL_CHAR_FORCE_INTEGRITY     = 0x0080
+    DLL_CHAR_NX_COMPAT           = 0x0100
+    DLL_CHAR_GUARD_CF            = 0x4000
+    DLL_CHAR_TERMINAL_SERVER_AWARE = 0x8000
+    DLL_CHAR_FLAG_NAMES = {
+        0x0020: "HIGH_ENTROPY_VA",
+        0x0040: "DYNAMIC_BASE",
+        0x0080: "FORCE_INTEGRITY",
+        0x0100: "NX_COMPAT",
+        0x0200: "NO_ISOLATION",
+        0x0400: "NO_SEH",
+        0x0800: "NO_BIND",
+        0x1000: "APPCONTAINER",
+        0x2000: "WDM_DRIVER",
+        0x4000: "GUARD_CF",
+        0x8000: "TERMINAL_SERVER_AWARE",
+    }
+
+    @property
+    def dll_characteristics_offset(self):
+        """File offset of the DllCharacteristics u16 field."""
+        return self.opt_offset + 0x46
+
+    def get_dll_characteristics(self):
+        """Return the current DllCharacteristics u16 value."""
+        return struct.unpack_from('<H', self.data, self.dll_characteristics_offset)[0]
+
+    def set_dll_characteristics(self, value):
+        """Write a new u16 to DllCharacteristics. Caller must call save()."""
+        struct.pack_into('<H', self.data, self.dll_characteristics_offset, value & 0xFFFF)
+
+    def describe_dll_characteristics(self, value=None):
+        """Return a list of flag names active in `value` (defaults to current)."""
+        if value is None:
+            value = self.get_dll_characteristics()
+        return [name for bit, name in self.DLL_CHAR_FLAG_NAMES.items() if value & bit]
+
+    def patch_for_modding(self, disable_cfg=True):
+        """Apply mod-friendly PE flag changes.
+
+        Clears ASLR bits (DYNAMIC_BASE + HIGH_ENTROPY_VA) so the image always
+        loads at its preferred ImageBase, making VA-based RE notes stable
+        across launches. Optionally clears GUARD_CF (Control Flow Guard),
+        which otherwise runtime-checks indirect calls and can interfere with
+        in-memory patching.
+
+        NX_COMPAT (DEP) is intentionally left ON -- disabling it would make
+        heap pages executable but is not needed for data-side patching and
+        weakens the binary unnecessarily.
+
+        Returns a dict summarising the change:
+            {
+              "before":       0x8160,
+              "after":        0x8100,
+              "cleared":      ["HIGH_ENTROPY_VA", "DYNAMIC_BASE"],
+              "before_flags": [...],
+              "after_flags":  [...],
+            }
+        Caller must invoke save() to persist.
+        """
+        before = self.get_dll_characteristics()
+        mask = self.DLL_CHAR_HIGH_ENTROPY_VA | self.DLL_CHAR_DYNAMIC_BASE
+        if disable_cfg:
+            mask |= self.DLL_CHAR_GUARD_CF
+        after = before & ~mask
+        cleared = [
+            name for bit, name in self.DLL_CHAR_FLAG_NAMES.items()
+            if (before & bit) and not (after & bit)
+        ]
+        self.set_dll_characteristics(after)
+        return {
+            "before":       before,
+            "after":        after,
+            "cleared":      cleared,
+            "before_flags": self.describe_dll_characteristics(before),
+            "after_flags":  self.describe_dll_characteristics(after),
+        }
+
     def save(self, filepath=None):
         """Save the modified PE file."""
         filepath = filepath or self.filepath
