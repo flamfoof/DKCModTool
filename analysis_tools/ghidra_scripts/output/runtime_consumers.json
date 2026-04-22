@@ -1,0 +1,171 @@
+{
+  "dat_loader_ea": "0x1402A2240",
+  "callers": [
+    {
+      "name": "FUN_140093930",
+      "entry": "140093930"
+    }
+  ],
+  "slots_ranked": [
+    {
+      "slot_ea": "0x1408A8910",
+      "written_by": [
+        {
+          "caller": "FUN_140093930",
+          "instr_ea": "140093adc"
+        }
+      ],
+      "instr_sample": "MOV qword ptr [0x1408a8910],RAX",
+      "block": ".data",
+      "read_xref_count": 21,
+      "read_fn_count": 18,
+      "top_readers": [
+        {
+          "fn": "FUN_140250890",
+          "entry": "140250890",
+          "reads": 4
+        },
+        {
+          "fn": "FUN_140255e50",
+          "entry": "140255e50",
+          "reads": 1
+        },
+        {
+          "fn": "FUN_140284210",
+          "entry": "140284210",
+          "reads": 1
+        },
+        {
+          "fn": "FUN_140286c20",
+          "entry": "140286c20",
+          "reads": 1
+        },
+        {
+          "fn": "FUN_140289280",
+          "entry": "140289280",
+          "reads": 1
+        },
+        {
+          "fn": "FUN_14028a3c0",
+          "entry": "14028a3c0",
+          "reads": 1
+        },
+        {
+          "fn": "FUN_140290f30",
+          "entry": "140290f30",
+          "reads": 1
+        },
+        {
+          "fn": "FUN_1400c56c0",
+          "entry": "1400c56c0",
+          "reads": 1
+        },
+        {
+          "fn": "FUN_1402bbca0",
+          "entry": "1402bbca0",
+          "reads": 1
+        },
+        {
+          "fn": "FUN_14012e1d0",
+          "entry": "14012e1d0",
+          "reads": 1
+        },
+        {
+          "fn": "FUN_140136b90",
+          "entry": "140136b90",
+          "reads": 1
+        },
+        {
+          "fn": "FUN_140165d20",
+          "entry": "140165d20",
+          "reads": 1
+        },
+        {
+          "fn": "FUN_140167600",
+          "entry": "140167600",
+          "reads": 1
+        },
+        {
+          "fn": "FUN_140181460",
+          "entry": "140181460",
+          "reads": 1
+        },
+        {
+          "fn": "FUN_1401a6f90",
+          "entry": "1401a6f90",
+          "reads": 1
+        }
+      ]
+    },
+    {
+      "slot_ea": "0x140ABCD80",
+      "written_by": [
+        {
+          "caller": "FUN_140093930",
+          "instr_ea": "140093a2b"
+        }
+      ],
+      "instr_sample": "ADD qword ptr [0x140abcd80],0x8",
+      "block": ".data",
+      "read_xref_count": 2,
+      "read_fn_count": 2,
+      "top_readers": [
+        {
+          "fn": "FUN_14020cc50",
+          "entry": "14020cc50",
+          "reads": 1
+        },
+        {
+          "fn": "FUN_140093930",
+          "entry": "140093930",
+          "reads": 1
+        }
+      ]
+    },
+    {
+      "slot_ea": "0x1404FBBBC",
+      "written_by": [
+        {
+          "caller": "FUN_140093930",
+          "instr_ea": "140093ad2"
+        }
+      ],
+      "instr_sample": "MOV dword ptr [0x1404fbbbc],0x1",
+      "block": ".data",
+      "read_xref_count": 2,
+      "read_fn_count": 2,
+      "top_readers": [
+        {
+          "fn": "FUN_140254c40",
+          "entry": "140254c40",
+          "reads": 1
+        },
+        {
+          "fn": "FUN_140250d80",
+          "entry": "140250d80",
+          "reads": 1
+        }
+      ]
+    },
+    {
+      "slot_ea": "0x1408A8480",
+      "written_by": [
+        {
+          "caller": "FUN_140093930",
+          "instr_ea": "140093b88"
+        }
+      ],
+      "instr_sample": "MOV qword ptr [0x1408a8480],RAX",
+      "block": ".data",
+      "read_xref_count": 1,
+      "read_fn_count": 1,
+      "top_readers": [
+        {
+          "fn": "FUN_1402275d0",
+          "entry": "1402275d0",
+          "reads": 1
+        }
+      ]
+    }
+  ]
+}

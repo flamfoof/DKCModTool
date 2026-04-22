@@ -1,0 +1,478 @@
+{
+  "field_skills_table": {
+    "tag": "7B 00 00 00",
+    "start_offset": "0x14638",
+    "record_layout": "[7B 00 00 00 id chance 00 00][name null-term, padded to 4-byte]",
+    "chance_byte_offset_in_header": 5,
+    "status": "UI-DISPLAY ONLY - confirmed experimentally that patching the chance byte does NOT change in-game trigger rate. Real trigger logic is hardcoded in DkkStm.exe.",
+    "entries": [
+      {
+        "class": "warrior",
+        "header_offset": "0x14638",
+        "id": 1,
+        "vanilla_chance": 20,
+        "skill_name": "War Cry"
+      },
+      {
+        "class": "magician",
+        "header_offset": "0x14648",
+        "id": 2,
+        "vanilla_chance": 100,
+        "skill_name": "Mage Combo"
+      },
+      {
+        "class": "thief",
+        "header_offset": "0x1465c",
+        "id": 3,
+        "vanilla_chance": 100,
+        "skill_name": "Pickpocket"
+      },
+      {
+        "class": "cleric",
+        "header_offset": "0x14670",
+        "id": 4,
+        "vanilla_chance": 20,
+        "skill_name": "Holy Aura"
+      },
+      {
+        "class": "spellsword",
+        "header_offset": "0x14684",
+        "id": 5,
+        "vanilla_chance": 33,
+        "skill_name": "Barrier"
+      },
+      {
+        "class": "alchemist",
+        "header_offset": "0x14694",
+        "id": 6,
+        "vanilla_chance": 25,
+        "skill_name": "Duplicate"
+      },
+      {
+        "class": "ninja",
+        "header_offset": "0x146a8",
+        "id": 7,
+        "vanilla_chance": 100,
+        "skill_name": "Item Combo"
+      },
+      {
+        "class": "monk",
+        "header_offset": "0x146bc",
+        "id": 8,
+        "vanilla_chance": 100,
+        "skill_name": "Fire Up"
+      },
+      {
+        "class": "acrobat",
+        "header_offset": "0x146cc",
+        "id": 9,
+        "vanilla_chance": 50,
+        "skill_name": "Play Dead"
+      },
+      {
+        "class": "robo_knight",
+        "header_offset": "0x146e0",
+        "id": 10,
+        "vanilla_chance": 20,
+        "skill_name": "GOTO"
+      },
+      {
+        "class": "hero",
+        "header_offset": "0x146f0",
+        "id": 11,
+        "vanilla_chance": 100,
+        "skill_name": "Full Combo"
+      },
+      {
+        "class": "darkling",
+        "header_offset": "0x14704",
+        "id": 12,
+        "vanilla_chance": 100,
+        "skill_name": "Dark Arts"
+      }
+    ]
+  },
+  "battle_skills_table": {
+    "tag": "7A 00 00 00",
+    "start_offset": "0x14724",
+    "end_offset": "0x14A3C",
+    "record_layout": "[7A 00 00 00 id accuracy effectiveness flag][name null-term, padded to 4-byte]",
+    "byte_meaning": {
+      "id": "sequential 1..46",
+      "accuracy": "trigger % 0-100 (verified vs wiki)",
+      "effectiveness": "skill-specific (damage %, stat-boost %, ...)",
+      "flag": "0x01=buff, 0x02=attack, 0x03=status/debuff, 0x04=heal"
+    },
+    "status": "Byte layout decoded and matches wiki values. Runtime effect of patching NOT verified. May be UI-only like the 7B table.",
+    "entries": [
+      {
+        "header_offset": "0x14724",
+        "id": 1,
+        "accuracy": 100,
+        "effectiveness": 25,
+        "flag": "0x1",
+        "skill_name": "Charge"
+      },
+      {
+        "header_offset": "0x14734",
+        "id": 2,
+        "accuracy": 100,
+        "effectiveness": 50,
+        "flag": "0x1",
+        "skill_name": "Muscle"
+      },
+      {
+        "header_offset": "0x14744",
+        "id": 3,
+        "accuracy": 50,
+        "effectiveness": 38,
+        "flag": "0x1",
+        "skill_name": "Overload"
+      },
+      {
+        "header_offset": "0x14758",
+        "id": 4,
+        "accuracy": 100,
+        "effectiveness": 25,
+        "flag": "0x1",
+        "skill_name": "Meditate"
+      },
+      {
+        "header_offset": "0x1476c",
+        "id": 5,
+        "accuracy": 100,
+        "effectiveness": 0,
+        "flag": "0x1",
+        "skill_name": "Celerity"
+      },
+      {
+        "header_offset": "0x14780",
+        "id": 6,
+        "accuracy": 100,
+        "effectiveness": 0,
+        "flag": "0x1",
+        "skill_name": "Toughen"
+      },
+      {
+        "header_offset": "0x14790",
+        "id": 7,
+        "accuracy": 100,
+        "effectiveness": 50,
+        "flag": "0x1",
+        "skill_name": "Chakra"
+      },
+      {
+        "header_offset": "0x147a0",
+        "id": 8,
+        "accuracy": 100,
+        "effectiveness": 55,
+        "flag": "0x1",
+        "skill_name": "Soul Fire"
+      },
+      {
+        "header_offset": "0x147b4",
+        "id": 9,
+        "accuracy": 100,
+        "effectiveness": 70,
+        "flag": "0x1",
+        "skill_name": "Afterburn"
+      },
+      {
+        "header_offset": "0x147c8",
+        "id": 10,
+        "accuracy": 100,
+        "effectiveness": 75,
+        "flag": "0x1",
+        "skill_name": "Guard"
+      },
+      {
+        "header_offset": "0x147d8",
+        "id": 11,
+        "accuracy": 90,
+        "effectiveness": 0,
+        "flag": "0x2",
+        "skill_name": "Poison"
+      },
+      {
+        "header_offset": "0x147e8",
+        "id": 12,
+        "accuracy": 75,
+        "effectiveness": 0,
+        "flag": "0x2",
+        "skill_name": "Virus"
+      },
+      {
+        "header_offset": "0x147f8",
+        "id": 13,
+        "accuracy": 50,
+        "effectiveness": 65,
+        "flag": "0x3",
+        "skill_name": "Restrict"
+      },
+      {
+        "header_offset": "0x1480c",
+        "id": 14,
+        "accuracy": 75,
+        "effectiveness": 0,
+        "flag": "0x3",
+        "skill_name": "Sing"
+      },
+      {
+        "header_offset": "0x1481c",
+        "id": 15,
+        "accuracy": 100,
+        "effectiveness": 0,
+        "flag": "0x3",
+        "skill_name": "Howl"
+      },
+      {
+        "header_offset": "0x1482c",
+        "id": 16,
+        "accuracy": 40,
+        "effectiveness": 0,
+        "flag": "0x2",
+        "skill_name": "Squeeze"
+      },
+      {
+        "header_offset": "0x1483c",
+        "id": 17,
+        "accuracy": 50,
+        "effectiveness": 0,
+        "flag": "0x3",
+        "skill_name": "Petrify"
+      },
+      {
+        "header_offset": "0x1484c",
+        "id": 18,
+        "accuracy": 100,
+        "effectiveness": 0,
+        "flag": "0x3",
+        "skill_name": "Will Bind"
+      },
+      {
+        "header_offset": "0x14860",
+        "id": 19,
+        "accuracy": 100,
+        "effectiveness": 15,
+        "flag": "0x1",
+        "skill_name": "Steal"
+      },
+      {
+        "header_offset": "0x14870",
+        "id": 20,
+        "accuracy": 50,
+        "effectiveness": 0,
+        "flag": "0x2",
+        "skill_name": "Rob"
+      },
+      {
+        "header_offset": "0x1487c",
+        "id": 21,
+        "accuracy": 100,
+        "effectiveness": 10,
+        "flag": "0x1",
+        "skill_name": "Escape"
+      },
+      {
+        "header_offset": "0x1488c",
+        "id": 22,
+        "accuracy": 100,
+        "effectiveness": 35,
+        "flag": "0x1",
+        "skill_name": "Glory"
+      },
+      {
+        "header_offset": "0x1489c",
+        "id": 23,
+        "accuracy": 100,
+        "effectiveness": 60,
+        "flag": "0x4",
+        "skill_name": "Heal"
+      },
+      {
+        "header_offset": "0x148ac",
+        "id": 24,
+        "accuracy": 100,
+        "effectiveness": 65,
+        "flag": "0x4",
+        "skill_name": "Prayer"
+      },
+      {
+        "header_offset": "0x148bc",
+        "id": 25,
+        "accuracy": 100,
+        "effectiveness": 80,
+        "flag": "0x1",
+        "skill_name": "Pierce"
+      },
+      {
+        "header_offset": "0x148cc",
+        "id": 26,
+        "accuracy": 100,
+        "effectiveness": 30,
+        "flag": "0x1",
+        "skill_name": "Alchemy"
+      },
+      {
+        "header_offset": "0x148dc",
+        "id": 27,
+        "accuracy": 10,
+        "effectiveness": 85,
+        "flag": "0x2",
+        "skill_name": "Sneak Hit"
+      },
+      {
+        "header_offset": "0x148f0",
+        "id": 28,
+        "accuracy": 20,
+        "effectiveness": 0,
+        "flag": "0x2",
+        "skill_name": "Power Poke"
+      },
+      {
+        "header_offset": "0x14904",
+        "id": 29,
+        "accuracy": 40,
+        "effectiveness": 0,
+        "flag": "0x2",
+        "skill_name": "Wail"
+      },
+      {
+        "header_offset": "0x14914",
+        "id": 30,
+        "accuracy": 70,
+        "effectiveness": 96,
+        "flag": "0x3",
+        "skill_name": "Debug"
+      },
+      {
+        "header_offset": "0x14924",
+        "id": 31,
+        "accuracy": 80,
+        "effectiveness": 90,
+        "flag": "0x1",
+        "skill_name": "Decoy"
+      },
+      {
+        "header_offset": "0x14934",
+        "id": 32,
+        "accuracy": 90,
+        "effectiveness": 95,
+        "flag": "0x1",
+        "skill_name": "Play Dumb"
+      },
+      {
+        "header_offset": "0x14948",
+        "id": 33,
+        "accuracy": 100,
+        "effectiveness": 40,
+        "flag": "0x1",
+        "skill_name": "????"
+      },
+      {
+        "header_offset": "0x14958",
+        "id": 34,
+        "accuracy": 100,
+        "effectiveness": 99,
+        "flag": "0x1",
+        "skill_name": "Copy"
+      },
+      {
+        "header_offset": "0x14968",
+        "id": 35,
+        "accuracy": 100,
+        "effectiveness": 0,
+        "flag": "0x1",
+        "skill_name": "Transform"
+      },
+      {
+        "header_offset": "0x1497c",
+        "id": 36,
+        "accuracy": 90,
+        "effectiveness": 96,
+        "flag": "0x1",
+        "skill_name": "Harden"
+      },
+      {
+        "header_offset": "0x1498c",
+        "id": 37,
+        "accuracy": 100,
+        "effectiveness": 0,
+        "flag": "0x3",
+        "skill_name": "Breath"
+      },
+      {
+        "header_offset": "0x1499c",
+        "id": 38,
+        "accuracy": 100,
+        "effectiveness": 0,
+        "flag": "0x3",
+        "skill_name": "Waterfall"
+      },
+      {
+        "header_offset": "0x149b0",
+        "id": 39,
+        "accuracy": 100,
+        "effectiveness": 0,
+        "flag": "0x3",
+        "skill_name": "Brimstone"
+      },
+      {
+        "header_offset": "0x149c4",
+        "id": 40,
+        "accuracy": 100,
+        "effectiveness": 0,
+        "flag": "0x3",
+        "skill_name": "Tornado"
+      },
+      {
+        "header_offset": "0x149d4",
+        "id": 41,
+        "accuracy": 100,
+        "effectiveness": 0,
+        "flag": "0x3",
+        "skill_name": "Tsunami"
+      },
+      {
+        "header_offset": "0x149e4",
+        "id": 42,
+        "accuracy": 100,
+        "effectiveness": 0,
+        "flag": "0x3",
+        "skill_name": "Thunder"
+      },
+      {
+        "header_offset": "0x149f4",
+        "id": 43,
+        "accuracy": 100,
+        "effectiveness": 0,
+        "flag": "0x3",
+        "skill_name": "Heckfire"
+      },
+      {
+        "header_offset": "0x14a08",
+        "id": 44,
+        "accuracy": 20,
+        "effectiveness": 0,
+        "flag": "0x3",
+        "skill_name": "Quake"
+      },
+      {
+        "header_offset": "0x14a18",
+        "id": 45,
+        "accuracy": 100,
+        "effectiveness": 0,
+        "flag": "0x3",
+        "skill_name": "Delete"
+      },
+      {
+        "header_offset": "0x14a28",
+        "id": 46,
+        "accuracy": 15,
+        "effectiveness": 0,
+        "flag": "0x3",
+        "skill_name": "Strikeout"
+      }
+    ]
+  }
+}

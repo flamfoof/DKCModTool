@@ -710,7 +710,7 @@
   "battle_req_table": {
     "offset": "0x1768C",
     "entry_size": 8,
-    "entry_count": 21,
+    "entry_count": 24,
     "fields": {
       "class_id": {
         "offset_in_entry": 0,
@@ -739,7 +739,9 @@
         "entry_index": 0,
         "offset": "0x1768C",
         "offset_int": 95884,
-        "battles_per_level": 7
+        "battles_per_level": 7,
+        "marker": "0x3E",
+        "regular_format": true
       },
       {
         "class": "warrior",
@@ -749,7 +751,9 @@
         "entry_index": 1,
         "offset": "0x17694",
         "offset_int": 95892,
-        "battles_per_level": 7
+        "battles_per_level": 7,
+        "marker": "0x3E",
+        "regular_format": true
       },
       {
         "class": "magician",
@@ -759,7 +763,9 @@
         "entry_index": 2,
         "offset": "0x1769C",
         "offset_int": 95900,
-        "battles_per_level": 7
+        "battles_per_level": 7,
+        "marker": "0x3E",
+        "regular_format": true
       },
       {
         "class": "magician",
@@ -769,7 +775,9 @@
         "entry_index": 3,
         "offset": "0x176A4",
         "offset_int": 95908,
-        "battles_per_level": 7
+        "battles_per_level": 7,
+        "marker": "0x3E",
+        "regular_format": true
       },
       {
         "class": "thief",
@@ -779,7 +787,9 @@
         "entry_index": 4,
         "offset": "0x176AC",
         "offset_int": 95916,
-        "battles_per_level": 7
+        "battles_per_level": 7,
+        "marker": "0x3E",
+        "regular_format": true
       },
       {
         "class": "thief",
@@ -789,7 +799,9 @@
         "entry_index": 5,
         "offset": "0x176B4",
         "offset_int": 95924,
-        "battles_per_level": 7
+        "battles_per_level": 7,
+        "marker": "0x3E",
+        "regular_format": true
       },
       {
         "class": "cleric",
@@ -799,7 +811,9 @@
         "entry_index": 6,
         "offset": "0x176BC",
         "offset_int": 95932,
-        "battles_per_level": 7
+        "battles_per_level": 7,
+        "marker": "0x3E",
+        "regular_format": true
       },
       {
         "class": "cleric",
@@ -809,7 +823,9 @@
         "entry_index": 7,
         "offset": "0x176C4",
         "offset_int": 95940,
-        "battles_per_level": 7
+        "battles_per_level": 7,
+        "marker": "0x3E",
+        "regular_format": true
       },
       {
         "class": "spellsword",
@@ -819,7 +835,9 @@
         "entry_index": 8,
         "offset": "0x176CC",
         "offset_int": 95948,
-        "battles_per_level": 8
+        "battles_per_level": 8,
+        "marker": "0x3E",
+        "regular_format": true
       },
       {
         "class": "spellsword",
@@ -829,7 +847,9 @@
         "entry_index": 9,
         "offset": "0x176D4",
         "offset_int": 95956,
-        "battles_per_level": 8
+        "battles_per_level": 8,
+        "marker": "0x3E",
+        "regular_format": true
       },
       {
         "class": "alchemist",
@@ -839,7 +859,9 @@
         "entry_index": 10,
         "offset": "0x176DC",
         "offset_int": 95964,
-        "battles_per_level": 8
+        "battles_per_level": 8,
+        "marker": "0x3E",
+        "regular_format": true
       },
       {
         "class": "alchemist",
@@ -849,7 +871,9 @@
         "entry_index": 11,
         "offset": "0x176E4",
         "offset_int": 95972,
-        "battles_per_level": 8
+        "battles_per_level": 8,
+        "marker": "0x3E",
+        "regular_format": true
       },
       {
         "class": "ninja",
@@ -859,7 +883,9 @@
         "entry_index": 12,
         "offset": "0x176EC",
         "offset_int": 95980,
-        "battles_per_level": 8
+        "battles_per_level": 8,
+        "marker": "0x3E",
+        "regular_format": true
       },
       {
         "class": "ninja",
@@ -869,7 +895,9 @@
         "entry_index": 13,
         "offset": "0x176F4",
         "offset_int": 95988,
-        "battles_per_level": 8
+        "battles_per_level": 8,
+        "marker": "0x3E",
+        "regular_format": true
       },
       {
         "class": "monk",
@@ -879,7 +907,9 @@
         "entry_index": 14,
         "offset": "0x176FC",
         "offset_int": 95996,
-        "battles_per_level": 8
+        "battles_per_level": 8,
+        "marker": "0x3E",
+        "regular_format": true
       },
       {
         "class": "monk",
@@ -889,7 +919,9 @@
         "entry_index": 15,
         "offset": "0x17704",
         "offset_int": 96004,
-        "battles_per_level": 8
+        "battles_per_level": 8,
+        "marker": "0x3E",
+        "regular_format": true
       },
       {
         "class": "acrobat",
@@ -899,7 +931,9 @@
         "entry_index": 16,
         "offset": "0x1770C",
         "offset_int": 96012,
-        "battles_per_level": 7
+        "battles_per_level": 7,
+        "marker": "0x3E",
+        "regular_format": true
       },
       {
         "class": "acrobat",
@@ -909,7 +943,9 @@
         "entry_index": 17,
         "offset": "0x17714",
         "offset_int": 96020,
-        "battles_per_level": 7
+        "battles_per_level": 7,
+        "marker": "0x3E",
+        "regular_format": true
       },
       {
         "class": "robo_knight",
@@ -919,7 +955,9 @@
         "entry_index": 18,
         "offset": "0x1771C",
         "offset_int": 96028,
-        "battles_per_level": 10
+        "battles_per_level": 10,
+        "marker": "0x3E",
+        "regular_format": true
       },
       {
         "class": "robo_knight",
@@ -929,7 +967,9 @@
         "entry_index": 19,
         "offset": "0x17724",
         "offset_int": 96036,
-        "battles_per_level": 10
+        "battles_per_level": 10,
+        "marker": "0x3E",
+        "regular_format": true
       },
       {
         "class": "hero",
@@ -939,7 +979,49 @@
         "entry_index": 20,
         "offset": "0x1772C",
         "offset_int": 96044,
-        "battles_per_level": 10
+        "battles_per_level": 10,
+        "marker": "0x3E",
+        "regular_format": true
+      },
+      {
+        "class": "hero",
+        "class_index": 10,
+        "variant": "female",
+        "variant_index": 1,
+        "entry_index": 21,
+        "offset": "0x17734",
+        "offset_int": 96052,
+        "battles_per_level": 10,
+        "marker": "0x2E",
+        "regular_format": false,
+        "note": "irregular byte layout (marker != 0x3E); byte 2 still holds battles_per_level. Flagged as anomaly."
+      },
+      {
+        "class": "darkling",
+        "class_index": 11,
+        "variant": "male",
+        "variant_index": 0,
+        "entry_index": 22,
+        "offset": "0x1773C",
+        "offset_int": 96060,
+        "battles_per_level": 10,
+        "marker": "0x1F4",
+        "regular_format": false,
+        "note": "irregular byte layout (marker != 0x3E); byte 2 still holds battles_per_level. Flagged as anomaly."
+      },
+      {
+        "class": "darkling",
+        "class_index": 11,
+        "variant": "female",
+        "variant_index": 1,
+        "entry_index": 23,
+        "offset": "0x17744",
+        "offset_int": 96068,
+        "battles_per_level": 44,
+        "marker": "0x2E",
+        "regular_format": false,
+        "note": "irregular byte layout (marker != 0x3E); byte 2 still holds battles_per_level. Flagged as anomaly.",
+        "anomaly": "Darkling F vanilla battles=44 - likely a sentinel. Most mods write 10 here to match Darkling M."
       }
     ]
   },

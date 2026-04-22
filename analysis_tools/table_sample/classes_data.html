@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dokapon Kingdom: Complete Job Encyclopedia</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #34495e;
+            --accent: #e67e22;
+            --bg: #f4f7f6;
+            --text: #333;
+            --warrior: #e74c3c;
+            --magician: #9b59b6;
+            --thief: #2ecc71;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+        .wrapper {
+            max-width: 1100px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        h1 { text-align: center; color: var(--primary); border-bottom: 4px solid var(--accent); padding-bottom: 10px; }
+        h2 { color: var(--secondary); margin-top: 30px; border-left: 5px solid var(--accent); padding-left: 15px; }
+        
+        .job-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 0.9em;
+        }
+        .job-table th {
+            background-color: var(--primary);
+            color: white;
+            padding: 12px;
+            text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+        }
+        .job-table td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+        .job-name { font-weight: bold; text-align: left !important; color: var(--primary); }
+        
+        .stat-tag {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.85em;
+            font-weight: bold;
+            color: white;
+        }
+        .hp { background: #27ae60; }
+        .at { background: #c0392b; }
+        .df { background: #2980b9; }
+        .mg { background: #8e44ad; }
+        .sp { background: #f39c12; }
+
+        .mastery-box {
+            background: #fff3cd;
+            border: 1px solid #ffeeba;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="wrapper">
+    <h1>Dokapon Kingdom Job Registry</h1>
+
+    <div class="mastery-box">
+        <strong>Mastery Tip:</strong> Once a job reaches Level 6, the "Mastery Bonus" becomes a permanent addition to your stats every time you level up, regardless of your future job choice.
+    </div>
+
+    <h2>Standard Jobs (Available from Start)</h2>
+    <table class="job-table">
+        <thead>
+            <tr>
+                <th>Job Name</th>
+                <th>Base Stats (HP/AT/DF/MG/SP)</th>
+                <th>Auto-Gains per Level</th>
+                <th>Mastery Bonus</th>
+                <th>Field Skill</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="job-name">Warrior</td>
+                <td>50 / 5 / 4 / 1 / 2</td>
+                <td>+10 HP, +2 AT, +1 DF</td>
+                <td><span class="stat-tag at">+1 AT</span></td>
+                <td>War Cry (AT Up)</td>
+            </tr>
+            <tr>
+                <td class="job-name">Magician</td>
+                <td>40 / 5 / 2 / 3 / 3</td>
+                <td>+10 HP, +1 MG, +1 SP, +1 DF</td>
+                <td><span class="stat-tag mg">+1 MG</span></td>
+                <td>Fiery Spirit (MG Up)</td>
+            </tr>
+            <tr>
+                <td class="job-name">Thief</td>
+                <td>40 / 4 / 2 / 1 / 5</td>
+                <td>+10 HP, +1 AT, +2 SP</td>
+                <td><span class="stat-tag sp">+1 SP</span></td>
+                <td>Steal (Random Item)</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Advanced Jobs (Unlockable)</h2>
+    <table class="job-table">
+        <thead>
+            <tr>
+                <th>Job Name</th>
+                <th>Requirement</th>
+                <th>Auto-Gains per Level</th>
+                <th>Mastery Bonus</th>
+                <th>Field Skill</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="job-name">Cleric</td>
+                <td>Priest (Mastered)</td>
+                <td>+20 HP, +1 DF, +1 MG</td>
+                <td><span class="stat-tag hp">+10 HP</span></td>
+                <td>Prayer (Cure Status)</td>
+            </tr>
+            <tr>
+                <td class="job-name">Monk</td>
+                <td>Warrior + Priest</td>
+                <td>+20 HP, +1 AT, +1 DF</td>
+                <td><span class="stat-tag hp">+10 HP</span></td>
+                <td>Charge (Next AT Up)</td>
+            </tr>
+            <tr>
+                <td class="job-name">Ninja</td>
+                <td>Warrior + Thief</td>
+                <td>+10 HP, +2 AT, +1 SP</td>
+                <td><span class="stat-tag at">+1 AT</span></td>
+                <td>Sneak (Invisible)</td>
+            </tr>
+            <tr>
+                <td class="job-name">Spellsword</td>
+                <td>Warrior + Magician</td>
+                <td>+10 HP, +1 AT, +1 MG, +1 DF</td>
+                <td><span class="stat-tag df">+1 DF</span></td>
+                <td>Pierce (Ignore DF)</td>
+            </tr>
+            <tr>
+                <td class="job-name">Alchemist</td>
+                <td>Thief + Magician</td>
+                <td>+10 HP, +1 MG, +2 SP</td>
+                <td><span class="stat-tag mg">+1 MG</span></td>
+                <td>Alchemy (Get Gold)</td>
+            </tr>
+            <tr>
+                <td class="job-name">Acrobat</td>
+                <td>Show Ticket</td>
+                <td>+10 HP, +1 AT, +1 DF, +1 SP</td>
+                <td><span class="stat-tag sp">+1 SP</span></td>
+                <td>Play Dead (Avoid Loss)</td>
+            </tr>
+            <tr>
+                <td class="job-name">Robo Knight</td>
+                <td>Lost Technology</td>
+                <td>+10 HP, +2 AT, +2 DF</td>
+                <td><span class="stat-tag df">+1 DF</span></td>
+                <td>Overdrive (High Stats)</td>
+            </tr>
+            <tr>
+                <td class="job-name">Hero</td>
+                <td>Hero License</td>
+                <td>+20 HP, +1 AT, +1 DF, +1 MG, +1 SP</td>
+                <td><span class="stat-tag at">+1 AT</span></td>
+                <td>Justice (All Stats Up)</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>General Job Mechanics</h2>
+    <ul>
+        <li><strong>Salary:</strong> Your weekly pay increases by a multiplier every time your job levels up.</li>
+        <li><strong>Item Slots:</strong> Different jobs can carry different amounts of Items and Field Magic (usually 5 to 10 slots).</li>
+        <li><strong>Weapon Proficiency:</strong> Jobs gain a <strong>1.3x damage bonus</strong> when using their preferred weapon types (e.g., Warriors with Swords).</li>
+    </ul>
+</div>
+
+</body>
+</html>

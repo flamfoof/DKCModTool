@@ -1,0 +1,79 @@
+{
+  "target_fn": "0x1402A2860",
+  "target_name": "FUN_1402a2860",
+  "strings": [
+    {
+      "string": "_EN",
+      "ea": "0x1404BA790",
+      "xref_ea": "1402a29de"
+    }
+  ],
+  "callees": [
+    {
+      "ea": "0x1403F9BD0",
+      "name": "FUN_1403f9bd0",
+      "size": 360,
+      "from": "1402a28d8"
+    },
+    {
+      "ea": "0x1400790D0",
+      "name": "FUN_1400790d0",
+      "size": 406,
+      "from": "1402a28e1"
+    },
+    {
+      "ea": "0x14002DCD0",
+      "name": "FUN_14002dcd0",
+      "size": 340,
+      "from": "1402a2903"
+    },
+    {
+      "ea": "0x14006ADC0",
+      "name": "FUN_14006adc0",
+      "size": 513,
+      "from": "1402a29d9"
+    },
+    {
+      "ea": "0x140069610",
+      "name": "FUN_140069610",
+      "size": 522,
+      "from": "1402a29e8"
+    },
+    {
+      "ea": "0x14002DC70",
+      "name": "FUN_14002dc70",
+      "size": 93,
+      "from": "1402a2a6b"
+    },
+    {
+      "ea": "0x1400795F0",
+      "name": "FUN_1400795f0",
+      "size": 167,
+      "from": "1402a2a84"
+    },
+    {
+      "ea": "0x1402B2F00",
+      "name": "FUN_1402b2f00",
+      "size": 2035,
+      "from": "1402a2a9b"
+    },
+    {
+      "ea": "0x140078F20",
+      "name": "FUN_140078f20",
+      "size": 249,
+      "from": "1402a2ac0"
+    },
+    {
+      "ea": "0x1403F5710",
+      "name": "__security_check_cookie",
+      "size": 30,
+      "from": "1402a2ade"
+    },
+    {
+      "ea": "0x14003B420",
+      "name": "FUN_14003b420",
+      "size": 16,
+      "from": "1402a2aff"
+    }
+  ]
+}

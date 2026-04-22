@@ -31,13 +31,23 @@ Bag Capacity Entries (offset 0x175D8, 8 bytes each, 22 entries = 11 classes x 2 
   byte  7:    uint8     magic_slots
   Note: Classes 0-10 (warrior through hero). Darkling (11) has no bag entry.
 
-Battle Requirement Entries (offset 0x1768C, 8 bytes each):
+Battle Requirement Entries (offset 0x1768C, 8 bytes each, 24 logical slots):
   byte  0:    uint8     class_id
   byte  1:    uint8     variant (0=male, 1=female)
   byte  2:    uint8     battles_per_level
-  byte  3:    uint8     padding (0)
-  bytes 4-7:  uint32 LE marker (0x3E = 62)
-  Note: Includes classes 0-11 (warrior through darkling), M/F variants.
+  byte  3:    uint8     padding (0 for clean entries, 0x01 for irregular)
+  bytes 4-7:  uint32 LE marker (0x3E for clean entries, varies for irregular)
+
+  IRREGULARITY (discovered Apr 2026): Only the first 21 entries (indices 0-20,
+  ending at Hero male 0x1772C) have the clean 0x3E marker. The last 3 slots
+  hold different byte layouts but still store battles_per_level at byte 2:
+    idx 21 (Hero F)     0x17734  marker=0x2E  battles=10
+    idx 22 (Darkling M) 0x1773C  marker=0x01F4 (header-like) battles=10
+    idx 23 (Darkling F) 0x17744  marker=0x2E  battles=44  ***OUTLIER***
+  Darkling F's vanilla 44 is likely a sentinel - Darkling is never a
+  player-selectable class. Most mods write battles=10 here to match Darkling M.
+  The build script in DKC-Class-Stats-Editor writes all 24 slots blindly at
+  byte+2, which works despite the marker irregularity.
 
 Assignable Points in DkkStm.exe:
 =================================
@@ -177,37 +187,56 @@ def scan_bag_entries(data):
 
 
 def scan_battle_req_entries(data):
-    """Scan all battle requirement entries."""
+    """Scan all 24 logical battle-requirement slots (12 classes x M/F).
+
+    Entries 0-20 (Warrior M through Hero M) have the clean 0x3E marker format.
+    Entries 21-23 (Hero F, Darkling M, Darkling F) have irregular markers but
+    byte 2 still holds battles_per_level in the form the build script writes.
+    """
     entries = []
-    # Scan until we hit a different marker or run out
-    for i in range(30):  # scan up to 30 entries
+    BATTLE_REQ_LOGICAL_SLOTS = 24  # 12 classes x 2 variants
+    for i in range(BATTLE_REQ_LOGICAL_SLOTS):
         offset = BATTLE_REQ_OFFSET + i * BATTLE_REQ_ENTRY_SIZE
         if offset + BATTLE_REQ_ENTRY_SIZE > len(data):
             break
 
         raw = data[offset:offset + BATTLE_REQ_ENTRY_SIZE]
-        class_id = raw[0]
-        variant = raw[1]
+        byte0 = raw[0]
+        byte1 = raw[1]
         battles = raw[2]
         padding = raw[3]
         marker = struct.unpack_from("<I", raw, 4)[0]
 
-        # Stop if marker is not 0x3E
-        if marker != 0x3E:
-            break
+        regular = (marker == 0x3E)
 
-        class_name = CLASS_ORDER[class_id] if class_id < len(CLASS_ORDER) else f"class_{class_id}"
+        # Derive logical class/variant from slot index (not from byte 0/1 which
+        # are unreliable in the irregular tail region).
+        class_idx = i // 2
+        variant_idx = i % 2
+        class_name = CLASS_ORDER[class_idx] if class_idx < len(CLASS_ORDER) else f"class_{class_idx}"
 
         entry = {
             "class": class_name,
-            "class_index": class_id,
-            "variant": "male" if variant == 0 else "female",
-            "variant_index": variant,
+            "class_index": class_idx,
+            "variant": "male" if variant_idx == 0 else "female",
+            "variant_index": variant_idx,
             "entry_index": i,
             "offset": f"0x{offset:05X}",
             "offset_int": offset,
             "battles_per_level": battles,
+            "marker": f"0x{marker:X}",
+            "regular_format": regular,
         }
+        if not regular:
+            entry["note"] = (
+                "irregular byte layout (marker != 0x3E); byte 2 still holds "
+                "battles_per_level. Flagged as anomaly."
+            )
+        if class_name == "darkling" and variant_idx == 1 and battles == 44:
+            entry["anomaly"] = (
+                "Darkling F vanilla battles=44 - likely a sentinel. Most mods "
+                "write 10 here to match Darkling M."
+            )
         entries.append(entry)
     return entries
 

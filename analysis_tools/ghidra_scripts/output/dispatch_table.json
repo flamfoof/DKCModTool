@@ -1,0 +1,138 @@
+{
+  "table_base": "0x1404A5F58",
+  "stride_bytes": 24,
+  "entry_count": 13,
+  "stop_reason": "slot0 is NULL at entry 13",
+  "entries": [
+    {
+      "index": 0,
+      "entry_ea": "0x1404A5F58",
+      "handler_ea": "0x14002E030",
+      "handler_name": "FUN_14002e030",
+      "handler_size": 3,
+      "slot1_hex": "0x1404B1441",
+      "slot2_hex": "0x1",
+      "slot1_symbol": "DAT_1404b1441"
+    },
+    {
+      "index": 1,
+      "entry_ea": "0x1404A5F70",
+      "handler_ea": "0x1402A27D0",
+      "handler_name": null,
+      "handler_size": null,
+      "slot1_hex": "0x1404B1441",
+      "slot2_hex": "0x2",
+      "slot1_symbol": "DAT_1404b1441"
+    },
+    {
+      "index": 2,
+      "entry_ea": "0x1404A5F88",
+      "handler_ea": "0x1402A27E0",
+      "handler_name": null,
+      "handler_size": null,
+      "slot1_hex": "0x1404B1441",
+      "slot2_hex": "0x3",
+      "slot1_symbol": "DAT_1404b1441"
+    },
+    {
+      "index": 3,
+      "entry_ea": "0x1404A5FA0",
+      "handler_ea": "0x1402A2830",
+      "handler_name": null,
+      "handler_size": null,
+      "slot1_hex": "0x1404B1441",
+      "slot2_hex": "0x4",
+      "slot1_symbol": "DAT_1404b1441"
+    },
+    {
+      "index": 4,
+      "entry_ea": "0x1404A5FB8",
+      "handler_ea": "0x1402A2850",
+      "handler_name": null,
+      "handler_size": null,
+      "slot1_hex": "0x1404B1441",
+      "slot2_hex": "0x5",
+      "slot1_symbol": "DAT_1404b1441"
+    },
+    {
+      "index": 5,
+      "entry_ea": "0x1404A5FD0",
+      "handler_ea": "0x1402A2860",
+      "handler_name": "FUN_1402a2860",
+      "handler_size": 676,
+      "slot1_hex": "0x1404B1441",
+      "slot2_hex": "0x6",
+      "slot1_symbol": "DAT_1404b1441"
+    },
+    {
+      "index": 6,
+      "entry_ea": "0x1404A5FE8",
+      "handler_ea": "0x1402A5D30",
+      "handler_name": "FUN_1402a5d30",
+      "handler_size": 178,
+      "slot1_hex": "0x1404B1441",
+      "slot2_hex": "0x7",
+      "slot1_symbol": "DAT_1404b1441"
+    },
+    {
+      "index": 7,
+      "entry_ea": "0x1404A6000",
+      "handler_ea": "0x1402A5DF0",
+      "handler_name": "FUN_1402a5df0",
+      "handler_size": 27,
+      "slot1_hex": "0x1404B1441",
+      "slot2_hex": "0x8",
+      "slot1_symbol": "DAT_1404b1441"
+    },
+    {
+      "index": 8,
+      "entry_ea": "0x1404A6018",
+      "handler_ea": "0x1402A5E10",
+      "handler_name": null,
+      "handler_size": null,
+      "slot1_hex": "0x1404B1441",
+      "slot2_hex": "0x9",
+      "slot1_symbol": "DAT_1404b1441"
+    },
+    {
+      "index": 9,
+      "entry_ea": "0x1404A6030",
+      "handler_ea": "0x1402A5EB0",
+      "handler_name": null,
+      "handler_size": null,
+      "slot1_hex": "0x1404B1441",
+      "slot2_hex": "0xA",
+      "slot1_symbol": "DAT_1404b1441"
+    },
+    {
+      "index": 10,
+      "entry_ea": "0x1404A6048",
+      "handler_ea": "0x1402A5EF0",
+      "handler_name": null,
+      "handler_size": null,
+      "slot1_hex": "0x1404B1441",
+      "slot2_hex": "0xB",
+      "slot1_symbol": "DAT_1404b1441"
+    },
+    {
+      "index": 11,
+      "entry_ea": "0x1404A6060",
+      "handler_ea": "0x1402A5F10",
+      "handler_name": null,
+      "handler_size": null,
+      "slot1_hex": "0x1404B1441",
+      "slot2_hex": "0xC",
+      "slot1_symbol": "DAT_1404b1441"
+    },
+    {
+      "index": 12,
+      "entry_ea": "0x1404A6078",
+      "handler_ea": "0x1402A5F30",
+      "handler_name": "FUN_1402a5f30",
+      "handler_size": 53,
+      "slot1_hex": "0x1404B1441",
+      "slot2_hex": "0xD",
+      "slot1_symbol": "DAT_1404b1441"
+    }
+  ]
+}

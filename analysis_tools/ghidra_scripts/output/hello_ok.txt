@@ -1,0 +1,3 @@
+program=DkkStm.exe
+image_base=0x140000000
+function_count=9967

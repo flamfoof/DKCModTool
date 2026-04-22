@@ -1,0 +1,3766 @@
+{
+  "dat_path": "H:\\Connect Mod Installer v2.0.0\\Backup\\assets\\stageBase_EN.DAT",
+  "dat_size": 725600,
+  "generated_by": "find_unmapped_fields.py",
+  "equipment": {
+    "weapons": {
+      "entries": [
+        {
+          "name": "Knife",
+          "item_id": 1,
+          "data_offset": "0x0710C",
+          "unmapped": {
+            "+12": 1,
+            "+13": 0
+          },
+          "trail_u16": 1,
+          "trail_i16": 1,
+          "trail_hex": "0100"
+        },
+        {
+          "name": "Dagger",
+          "item_id": 2,
+          "data_offset": "0x07130",
+          "unmapped": {
+            "+12": 2,
+            "+13": 1
+          },
+          "trail_u16": 258,
+          "trail_i16": 258,
+          "trail_hex": "0201"
+        },
+        {
+          "name": "Longsword",
+          "item_id": 3,
+          "data_offset": "0x07158",
+          "unmapped": {
+            "+12": 3,
+            "+13": 2
+          },
+          "trail_u16": 515,
+          "trail_i16": 515,
+          "trail_hex": "0302"
+        },
+        {
+          "name": "Hand Axe",
+          "item_id": 4,
+          "data_offset": "0x07180",
+          "unmapped": {
+            "+12": 4,
+            "+13": 3
+          },
+          "trail_u16": 772,
+          "trail_i16": 772,
+          "trail_hex": "0403"
+        },
+        {
+          "name": "Rapier",
+          "item_id": 5,
+          "data_offset": "0x071A4",
+          "unmapped": {
+            "+12": 5,
+            "+13": 4
+          },
+          "trail_u16": 1029,
+          "trail_i16": 1029,
+          "trail_hex": "0504"
+        },
+        {
+          "name": "Spear",
+          "item_id": 6,
+          "data_offset": "0x071C8",
+          "unmapped": {
+            "+12": 6,
+            "+13": 5
+          },
+          "trail_u16": 1286,
+          "trail_i16": 1286,
+          "trail_hex": "0605"
+        },
+        {
+          "name": "Brass Knuckle",
+          "item_id": 7,
+          "data_offset": "0x071F4",
+          "unmapped": {
+            "+12": 8,
+            "+13": 6
+          },
+          "trail_u16": 1544,
+          "trail_i16": 1544,
+          "trail_hex": "0806"
+        },
+        {
+          "name": "Fairy Wand",
+          "item_id": 8,
+          "data_offset": "0x0721C",
+          "unmapped": {
+            "+12": 7,
+            "+13": 7
+          },
+          "trail_u16": 1799,
+          "trail_i16": 1799,
+          "trail_hex": "0707"
+        },
+        {
+          "name": "Gladius",
+          "item_id": 9,
+          "data_offset": "0x07240",
+          "unmapped": {
+            "+12": 9,
+            "+13": 8
+          },
+          "trail_u16": 2057,
+          "trail_i16": 2057,
+          "trail_hex": "0908"
+        },
+        {
+          "name": "Dragon Guandao",
+          "item_id": 10,
+          "data_offset": "0x0726C",
+          "unmapped": {
+            "+12": 10,
+            "+13": 9
+          },
+          "trail_u16": 2314,
+          "trail_i16": 2314,
+          "trail_hex": "0a09"
+        },
+        {
+          "name": "Mace",
+          "item_id": 11,
+          "data_offset": "0x07290",
+          "unmapped": {
+            "+12": 11,
+            "+13": 10
+          },
+          "trail_u16": 2571,
+          "trail_i16": 2571,
+          "trail_hex": "0b0a"
+        },
+        {
+          "name": "Smith's Hammer",
+          "item_id": 12,
+          "data_offset": "0x072BC",
+          "unmapped": {
+            "+12": 12,
+            "+13": 11
+          },
+          "trail_u16": 2828,
+          "trail_i16": 2828,
+          "trail_hex": "0c0b"
+        },
+        {
+          "name": "Sleep Bow",
+          "item_id": 13,
+          "data_offset": "0x072E4",
+          "unmapped": {
+            "+12": 14,
+            "+13": 12
+          },
+          "trail_u16": 3086,
+          "trail_i16": 3086,
+          "trail_hex": "0e0c"
+        },
+        {
+          "name": "Sabre",
+          "item_id": 14,
+          "data_offset": "0x07308",
+          "unmapped": {
+            "+12": 13,
+            "+13": 13
+          },
+          "trail_u16": 3341,
+          "trail_i16": 3341,
+          "trail_hex": "0d0d"
+        },
+        {
+          "name": "Crimson Wand",
+          "item_id": 15,
+          "data_offset": "0x07334",
+          "unmapped": {
+            "+12": 15,
+            "+13": 14
+          },
+          "trail_u16": 3599,
+          "trail_i16": 3599,
+          "trail_hex": "0f0e"
+        },
+        {
+          "name": "Trident",
+          "item_id": 16,
+          "data_offset": "0x07358",
+          "unmapped": {
+            "+12": 16,
+            "+13": 15
+          },
+          "trail_u16": 3856,
+          "trail_i16": 3856,
+          "trail_hex": "100f"
+        },
+        {
+          "name": "Battlefist",
+          "item_id": 17,
+          "data_offset": "0x07380",
+          "unmapped": {
+            "+12": 17,
+            "+13": 16
+          },
+          "trail_u16": 4113,
+          "trail_i16": 4113,
+          "trail_hex": "1110"
+        },
+        {
+          "name": "Dream Rod",
+          "item_id": 18,
+          "data_offset": "0x073A8",
+          "unmapped": {
+            "+12": 20,
+            "+13": 17
+          },
+          "trail_u16": 4372,
+          "trail_i16": 4372,
+          "trail_hex": "1411"
+        },
+        {
+          "name": "Pistol Crossbow",
+          "item_id": 19,
+          "data_offset": "0x073D4",
+          "unmapped": {
+            "+12": 19,
+            "+13": 18
+          },
+          "trail_u16": 4627,
+          "trail_i16": 4627,
+          "trail_hex": "1312"
+        },
+        {
+          "name": "Scimitar",
+          "item_id": 20,
+          "data_offset": "0x073FC",
+          "unmapped": {
+            "+12": 18,
+            "+13": 19
+          },
+          "trail_u16": 4882,
+          "trail_i16": 4882,
+          "trail_hex": "1213"
+        },
+        {
+          "name": "Silver Sword",
+          "item_id": 21,
+          "data_offset": "0x07428",
+          "unmapped": {
+            "+12": 22,
+            "+13": 20
+          },
+          "trail_u16": 5142,
+          "trail_i16": 5142,
+          "trail_hex": "1614"
+        },
+        {
+          "name": "Battleaxe",
+          "item_id": 22,
+          "data_offset": "0x07450",
+          "unmapped": {
+            "+12": 21,
+            "+13": 21
+          },
+          "trail_u16": 5397,
+          "trail_i16": 5397,
+          "trail_hex": "1515"
+        },
+        {
+          "name": "Thunder Blade",
+          "item_id": 23,
+          "data_offset": "0x0747C",
+          "unmapped": {
+            "+12": 23,
+            "+13": 22
+          },
+          "trail_u16": 5655,
+          "trail_i16": 5655,
+          "trail_hex": "1716"
+        },
+        {
+          "name": "Poison Fist",
+          "item_id": 24,
+          "data_offset": "0x074A4",
+          "unmapped": {
+            "+12": 24,
+            "+13": 23
+          },
+          "trail_u16": 5912,
+          "trail_i16": 5912,
+          "trail_hex": "1817"
+        },
+        {
+          "name": "Long Spear",
+          "item_id": 25,
+          "data_offset": "0x074CC",
+          "unmapped": {
+            "+12": 25,
+            "+13": 24
+          },
+          "trail_u16": 6169,
+          "trail_i16": 6169,
+          "trail_hex": "1918"
+        },
+        {
+          "name": "Ichimonji Katana",
+          "item_id": 26,
+          "data_offset": "0x074FC",
+          "unmapped": {
+            "+12": 27,
+            "+13": 25
+          },
+          "trail_u16": 6427,
+          "trail_i16": 6427,
+          "trail_hex": "1b19"
+        },
+        {
+          "name": "Crossbow",
+          "item_id": 27,
+          "data_offset": "0x07524",
+          "unmapped": {
+            "+12": 26,
+            "+13": 26
+          },
+          "trail_u16": 6682,
+          "trail_i16": 6682,
+          "trail_hex": "1a1a"
+        },
+        {
+          "name": "Chi Knuckle",
+          "item_id": 28,
+          "data_offset": "0x0754C",
+          "unmapped": {
+            "+12": 29,
+            "+13": 27
+          },
+          "trail_u16": 6941,
+          "trail_i16": 6941,
+          "trail_hex": "1d1b"
+        },
+        {
+          "name": "Warhammer",
+          "item_id": 29,
+          "data_offset": "0x07574",
+          "unmapped": {
+            "+12": 28,
+            "+13": 28
+          },
+          "trail_u16": 7196,
+          "trail_i16": 7196,
+          "trail_hex": "1c1c"
+        },
+        {
+          "name": "Cyber Saber",
+          "item_id": 30,
+          "data_offset": "0x0759C",
+          "unmapped": {
+            "+12": 30,
+            "+13": 29
+          },
+          "trail_u16": 7454,
+          "trail_i16": 7454,
+          "trail_hex": "1e1d"
+        },
+        {
+          "name": "Estoc",
+          "item_id": 31,
+          "data_offset": "0x075C0",
+          "unmapped": {
+            "+12": 31,
+            "+13": 30
+          },
+          "trail_u16": 7711,
+          "trail_i16": 7711,
+          "trail_hex": "1f1e"
+        },
+        {
+          "name": "Longbow",
+          "item_id": 32,
+          "data_offset": "0x075E4",
+          "unmapped": {
+            "+12": 32,
+            "+13": 31
+          },
+          "trail_u16": 7968,
+          "trail_i16": 7968,
+          "trail_hex": "201f"
+        },
+        {
+          "name": "Flambard",
+          "item_id": 33,
+          "data_offset": "0x0760C",
+          "unmapped": {
+            "+12": 33,
+            "+13": 32
+          },
+          "trail_u16": 8225,
+          "trail_i16": 8225,
+          "trail_hex": "2120"
+        },
+        {
+          "name": "Crimson Candle",
+          "item_id": 34,
+          "data_offset": "0x07638",
+          "unmapped": {
+            "+12": 34,
+            "+13": 33
+          },
+          "trail_u16": 8482,
+          "trail_i16": 8482,
+          "trail_hex": "2221"
+        },
+        {
+          "name": "Dokaqon Sword",
+          "item_id": 35,
+          "data_offset": "0x07664",
+          "unmapped": {
+            "+12": 35,
+            "+13": 34
+          },
+          "trail_u16": 8739,
+          "trail_i16": 8739,
+          "trail_hex": "2322"
+        },
+        {
+          "name": "Repeater",
+          "item_id": 36,
+          "data_offset": "0x0768C",
+          "unmapped": {
+            "+12": 36,
+            "+13": 35
+          },
+          "trail_u16": 8996,
+          "trail_i16": 8996,
+          "trail_hex": "2423"
+        },
+        {
+          "name": "Thunder Axe",
+          "item_id": 37,
+          "data_offset": "0x076B4",
+          "unmapped": {
+            "+12": 37,
+            "+13": 36
+          },
+          "trail_u16": 9253,
+          "trail_i16": 9253,
+          "trail_hex": "2524"
+        },
+        {
+          "name": "Knitten Mitten",
+          "item_id": 38,
+          "data_offset": "0x076E0",
+          "unmapped": {
+            "+12": 38,
+            "+13": 37
+          },
+          "trail_u16": 9510,
+          "trail_i16": 9510,
+          "trail_hex": "2625"
+        },
+        {
+          "name": "Exorcism Spear",
+          "item_id": 39,
+          "data_offset": "0x0770C",
+          "unmapped": {
+            "+12": 40,
+            "+13": 38
+          },
+          "trail_u16": 9768,
+          "trail_i16": 9768,
+          "trail_hex": "2826"
+        },
+        {
+          "name": "Shamshir",
+          "item_id": 40,
+          "data_offset": "0x07734",
+          "unmapped": {
+            "+12": 41,
+            "+13": 39
+          },
+          "trail_u16": 10025,
+          "trail_i16": 10025,
+          "trail_hex": "2927"
+        },
+        {
+          "name": "Dancing Blade",
+          "item_id": 41,
+          "data_offset": "0x07760",
+          "unmapped": {
+            "+12": 39,
+            "+13": 40
+          },
+          "trail_u16": 10279,
+          "trail_i16": 10279,
+          "trail_hex": "2728"
+        },
+        {
+          "name": "Great Axe",
+          "item_id": 42,
+          "data_offset": "0x07788",
+          "unmapped": {
+            "+12": 42,
+            "+13": 41
+          },
+          "trail_u16": 10538,
+          "trail_i16": 10538,
+          "trail_hex": "2a29"
+        },
+        {
+          "name": "Elven Bow",
+          "item_id": 43,
+          "data_offset": "0x077B0",
+          "unmapped": {
+            "+12": 43,
+            "+13": 42
+          },
+          "trail_u16": 10795,
+          "trail_i16": 10795,
+          "trail_hex": "2b2a"
+        },
+        {
+          "name": "Maul",
+          "item_id": 44,
+          "data_offset": "0x077D4",
+          "unmapped": {
+            "+12": 44,
+            "+13": 43
+          },
+          "trail_u16": 11052,
+          "trail_i16": 11052,
+          "trail_hex": "2c2b"
+        },
+        {
+          "name": "Combat Knife",
+          "item_id": 45,
+          "data_offset": "0x07800",
+          "unmapped": {
+            "+12": 45,
+            "+13": 44
+          },
+          "trail_u16": 11309,
+          "trail_i16": 11309,
+          "trail_hex": "2d2c"
+        },
+        {
+          "name": "Greatsword",
+          "item_id": 46,
+          "data_offset": "0x07828",
+          "unmapped": {
+            "+12": 46,
+            "+13": 45
+          },
+          "trail_u16": 11566,
+          "trail_i16": 11566,
+          "trail_hex": "2e2d"
+        },
+        {
+          "name": "Arbalest",
+          "item_id": 47,
+          "data_offset": "0x07850",
+          "unmapped": {
+            "+12": 47,
+            "+13": 46
+          },
+          "trail_u16": 11823,
+          "trail_i16": 11823,
+          "trail_hex": "2f2e"
+        },
+        {
+          "name": "Partisan",
+          "item_id": 48,
+          "data_offset": "0x07878",
+          "unmapped": {
+            "+12": 48,
+            "+13": 47
+          },
+          "trail_u16": 12080,
+          "trail_i16": 12080,
+          "trail_hex": "302f"
+        },
+        {
+          "name": "Halberd",
+          "item_id": 49,
+          "data_offset": "0x0789C",
+          "unmapped": {
+            "+12": 49,
+            "+13": 48
+          },
+          "trail_u16": 12337,
+          "trail_i16": 12337,
+          "trail_hex": "3130"
+        },
+        {
+          "name": "Deadly Dagger",
+          "item_id": 50,
+          "data_offset": "0x078C8",
+          "unmapped": {
+            "+12": 50,
+            "+13": 49
+          },
+          "trail_u16": 12594,
+          "trail_i16": 12594,
+          "trail_hex": "3231"
+        },
+        {
+          "name": "Rune Staff",
+          "item_id": 51,
+          "data_offset": "0x078F0",
+          "unmapped": {
+            "+12": 51,
+            "+13": 50
+          },
+          "trail_u16": 12851,
+          "trail_i16": 12851,
+          "trail_hex": "3332"
+        },
+        {
+          "name": "Drill Lance",
+          "item_id": 52,
+          "data_offset": "0x07918",
+          "unmapped": {
+            "+12": 53,
+            "+13": 51
+          },
+          "trail_u16": 13109,
+          "trail_i16": 13109,
+          "trail_hex": "3533"
+        },
+        {
+          "name": "Toy Hammer",
+          "item_id": 53,
+          "data_offset": "0x07940",
+          "unmapped": {
+            "+12": 56,
+            "+13": 52
+          },
+          "trail_u16": 13368,
+          "trail_i16": 13368,
+          "trail_hex": "3834"
+        },
+        {
+          "name": "Dragonslayer",
+          "item_id": 54,
+          "data_offset": "0x0796C",
+          "unmapped": {
+            "+12": 55,
+            "+13": 53
+          },
+          "trail_u16": 13623,
+          "trail_i16": 13623,
+          "trail_hex": "3735"
+        },
+        {
+          "name": "Dark Sword",
+          "item_id": 55,
+          "data_offset": "0x07994",
+          "unmapped": {
+            "+12": 52,
+            "+13": 54
+          },
+          "trail_u16": 13876,
+          "trail_i16": 13876,
+          "trail_hex": "3436"
+        },
+        {
+          "name": "Soul Eater",
+          "item_id": 56,
+          "data_offset": "0x079BC",
+          "unmapped": {
+            "+12": 54,
+            "+13": 55
+          },
+          "trail_u16": 14134,
+          "trail_i16": 14134,
+          "trail_hex": "3637"
+        },
+        {
+          "name": "Aura Knuckle",
+          "item_id": 57,
+          "data_offset": "0x079E8",
+          "unmapped": {
+            "+12": 57,
+            "+13": 56
+          },
+          "trail_u16": 14393,
+          "trail_i16": 14393,
+          "trail_hex": "3938"
+        },
+        {
+          "name": "Underworld Staff",
+          "item_id": 58,
+          "data_offset": "0x07A18",
+          "unmapped": {
+            "+12": 58,
+            "+13": 57
+          },
+          "trail_u16": 14650,
+          "trail_i16": 14650,
+          "trail_hex": "3a39"
+        },
+        {
+          "name": "Divine Fist",
+          "item_id": 59,
+          "data_offset": "0x07A40",
+          "unmapped": {
+            "+12": 59,
+            "+13": 58
+          },
+          "trail_u16": 14907,
+          "trail_i16": 14907,
+          "trail_hex": "3b3a"
+        },
+        {
+          "name": "No-Recoil Cannon",
+          "item_id": 60,
+          "data_offset": "0x07A70",
+          "unmapped": {
+            "+12": 60,
+            "+13": 59
+          },
+          "trail_u16": 15164,
+          "trail_i16": 15164,
+          "trail_hex": "3c3b"
+        },
+        {
+          "name": "Great Tempest",
+          "item_id": 61,
+          "data_offset": "0x07A9C",
+          "unmapped": {
+            "+12": 61,
+            "+13": 60
+          },
+          "trail_u16": 15421,
+          "trail_i16": 15421,
+          "trail_hex": "3d3c"
+        },
+        {
+          "name": "Dokapon Sword",
+          "item_id": 62,
+          "data_offset": "0x07AC8",
+          "unmapped": {
+            "+12": 62,
+            "+13": 61
+          },
+          "trail_u16": 15678,
+          "trail_i16": 15678,
+          "trail_hex": "3e3d"
+        },
+        {
+          "name": "Flare Lance",
+          "item_id": 63,
+          "data_offset": "0x07AF0",
+          "unmapped": {
+            "+12": 64,
+            "+13": 62
+          },
+          "trail_u16": 15936,
+          "trail_i16": 15936,
+          "trail_hex": "403e"
+        },
+        {
+          "name": "Nihilist Sword",
+          "item_id": 64,
+          "data_offset": "0x07B1C",
+          "unmapped": {
+            "+12": 65,
+            "+13": 63
+          },
+          "trail_u16": 16193,
+          "trail_i16": 16193,
+          "trail_hex": "413f"
+        },
+        {
+          "name": "Draco Blade",
+          "item_id": 65,
+          "data_offset": "0x07B44",
+          "unmapped": {
+            "+12": 67,
+            "+13": 66
+          },
+          "trail_u16": 16963,
+          "trail_i16": 16963,
+          "trail_hex": "4342"
+        },
+        {
+          "name": "Chevalier",
+          "item_id": 66,
+          "data_offset": "0x07B6C",
+          "unmapped": {
+            "+12": 63,
+            "+13": 64
+          },
+          "trail_u16": 16447,
+          "trail_i16": 16447,
+          "trail_hex": "3f40"
+        },
+        {
+          "name": "Punisher",
+          "item_id": 67,
+          "data_offset": "0x07B94",
+          "unmapped": {
+            "+12": 66,
+            "+13": 65
+          },
+          "trail_u16": 16706,
+          "trail_i16": 16706,
+          "trail_hex": "4241"
+        }
+      ],
+      "columns": {
+        "+12": {
+          "count": 67,
+          "distinct": 67,
+          "min": 1,
+          "max": 67,
+          "nonzero_count": 67,
+          "top": [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              3,
+              1
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              5,
+              1
+            ],
+            [
+              6,
+              1
+            ],
+            [
+              8,
+              1
+            ],
+            [
+              7,
+              1
+            ]
+          ],
+          "kind": "byte_var"
+        },
+        "+13": {
+          "count": 67,
+          "distinct": 67,
+          "min": 0,
+          "max": 66,
+          "nonzero_count": 66,
+          "top": [
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              3,
+              1
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              5,
+              1
+            ],
+            [
+              6,
+              1
+            ],
+            [
+              7,
+              1
+            ]
+          ],
+          "kind": "byte_var"
+        },
+        "trail_u16": {
+          "count": 67,
+          "distinct": 67,
+          "min": 1,
+          "max": 16963,
+          "nonzero_count": 67,
+          "top": [
+            [
+              1,
+              1
+            ],
+            [
+              258,
+              1
+            ],
+            [
+              515,
+              1
+            ],
+            [
+              772,
+              1
+            ],
+            [
+              1029,
+              1
+            ],
+            [
+              1286,
+              1
+            ],
+            [
+              1544,
+              1
+            ],
+            [
+              1799,
+              1
+            ]
+          ],
+          "kind": "byte_var"
+        }
+      }
+    },
+    "shields": {
+      "entries": [
+        {
+          "name": "Wooden Shield",
+          "item_id": 1,
+          "data_offset": "0x0989C",
+          "unmapped": {
+            "+12": 1,
+            "+13": 0
+          },
+          "trail_u16": 1,
+          "trail_i16": 1,
+          "trail_hex": "0100"
+        },
+        {
+          "name": "Leather Shield",
+          "item_id": 2,
+          "data_offset": "0x098C8",
+          "unmapped": {
+            "+12": 2,
+            "+13": 1
+          },
+          "trail_u16": 258,
+          "trail_i16": 258,
+          "trail_hex": "0201"
+        },
+        {
+          "name": "Buckler",
+          "item_id": 3,
+          "data_offset": "0x098EC",
+          "unmapped": {
+            "+12": 3,
+            "+13": 2
+          },
+          "trail_u16": 515,
+          "trail_i16": 515,
+          "trail_hex": "0302"
+        },
+        {
+          "name": "Bronze Shield",
+          "item_id": 4,
+          "data_offset": "0x09918",
+          "unmapped": {
+            "+12": 4,
+            "+13": 3
+          },
+          "trail_u16": 772,
+          "trail_i16": 772,
+          "trail_hex": "0403"
+        },
+        {
+          "name": "Lead Shield",
+          "item_id": 5,
+          "data_offset": "0x09940",
+          "unmapped": {
+            "+12": 5,
+            "+13": 4
+          },
+          "trail_u16": 1029,
+          "trail_i16": 1029,
+          "trail_hex": "0504"
+        },
+        {
+          "name": "Wabbit Shield",
+          "item_id": 6,
+          "data_offset": "0x0996C",
+          "unmapped": {
+            "+12": 8,
+            "+13": 5
+          },
+          "trail_u16": 1288,
+          "trail_i16": 1288,
+          "trail_hex": "0805"
+        },
+        {
+          "name": "Scale Shield",
+          "item_id": 7,
+          "data_offset": "0x09998",
+          "unmapped": {
+            "+12": 6,
+            "+13": 6
+          },
+          "trail_u16": 1542,
+          "trail_i16": 1542,
+          "trail_hex": "0606"
+        },
+        {
+          "name": "Copper Shield",
+          "item_id": 8,
+          "data_offset": "0x099C4",
+          "unmapped": {
+            "+12": 7,
+            "+13": 7
+          },
+          "trail_u16": 1799,
+          "trail_i16": 1799,
+          "trail_hex": "0707"
+        },
+        {
+          "name": "Soldier Shield",
+          "item_id": 9,
+          "data_offset": "0x099F0",
+          "unmapped": {
+            "+12": 9,
+            "+13": 8
+          },
+          "trail_u16": 2057,
+          "trail_i16": 2057,
+          "trail_hex": "0908"
+        },
+        {
+          "name": "Furry Shield",
+          "item_id": 10,
+          "data_offset": "0x09A1C",
+          "unmapped": {
+            "+12": 10,
+            "+13": 9
+          },
+          "trail_u16": 2314,
+          "trail_i16": 2314,
+          "trail_hex": "0a09"
+        },
+        {
+          "name": "Iron Shield",
+          "item_id": 11,
+          "data_offset": "0x09A44",
+          "unmapped": {
+            "+12": 11,
+            "+13": 10
+          },
+          "trail_u16": 2571,
+          "trail_i16": 2571,
+          "trail_hex": "0b0a"
+        },
+        {
+          "name": "Shinobi Shield",
+          "item_id": 12,
+          "data_offset": "0x09A70",
+          "unmapped": {
+            "+12": 13,
+            "+13": 11
+          },
+          "trail_u16": 2829,
+          "trail_i16": 2829,
+          "trail_hex": "0d0b"
+        },
+        {
+          "name": "Large Shield",
+          "item_id": 13,
+          "data_offset": "0x09A9C",
+          "unmapped": {
+            "+12": 12,
+            "+13": 12
+          },
+          "trail_u16": 3084,
+          "trail_i16": 3084,
+          "trail_hex": "0c0c"
+        },
+        {
+          "name": "Steel Shield",
+          "item_id": 14,
+          "data_offset": "0x09AC8",
+          "unmapped": {
+            "+12": 14,
+            "+13": 13
+          },
+          "trail_u16": 3342,
+          "trail_i16": 3342,
+          "trail_hex": "0e0d"
+        },
+        {
+          "name": "Warrior Shield",
+          "item_id": 15,
+          "data_offset": "0x09AF4",
+          "unmapped": {
+            "+12": 15,
+            "+13": 14
+          },
+          "trail_u16": 3599,
+          "trail_i16": 3599,
+          "trail_hex": "0f0e"
+        },
+        {
+          "name": "Knight Shield",
+          "item_id": 16,
+          "data_offset": "0x09B20",
+          "unmapped": {
+            "+12": 16,
+            "+13": 15
+          },
+          "trail_u16": 3856,
+          "trail_i16": 3856,
+          "trail_hex": "100f"
+        },
+        {
+          "name": "Black Shield",
+          "item_id": 17,
+          "data_offset": "0x09B4C",
+          "unmapped": {
+            "+12": 17,
+            "+13": 16
+          },
+          "trail_u16": 4113,
+          "trail_i16": 4113,
+          "trail_hex": "1110"
+        },
+        {
+          "name": "Paladin Shield",
+          "item_id": 18,
+          "data_offset": "0x09B78",
+          "unmapped": {
+            "+12": 18,
+            "+13": 17
+          },
+          "trail_u16": 4370,
+          "trail_i16": 4370,
+          "trail_hex": "1211"
+        },
+        {
+          "name": "Silver Shield",
+          "item_id": 19,
+          "data_offset": "0x09BA4",
+          "unmapped": {
+            "+12": 19,
+            "+13": 18
+          },
+          "trail_u16": 4627,
+          "trail_i16": 4627,
+          "trail_hex": "1312"
+        },
+        {
+          "name": "Mirror Shield",
+          "item_id": 20,
+          "data_offset": "0x09BD0",
+          "unmapped": {
+            "+12": 22,
+            "+13": 19
+          },
+          "trail_u16": 4886,
+          "trail_i16": 4886,
+          "trail_hex": "1613"
+        },
+        {
+          "name": "Binder",
+          "item_id": 21,
+          "data_offset": "0x09BF4",
+          "unmapped": {
+            "+12": 21,
+            "+13": 20
+          },
+          "trail_u16": 5141,
+          "trail_i16": 5141,
+          "trail_hex": "1514"
+        },
+        {
+          "name": "Shell Shield",
+          "item_id": 22,
+          "data_offset": "0x09C20",
+          "unmapped": {
+            "+12": 20,
+            "+13": 21
+          },
+          "trail_u16": 5396,
+          "trail_i16": 5396,
+          "trail_hex": "1415"
+        },
+        {
+          "name": "Golden Shield",
+          "item_id": 23,
+          "data_offset": "0x09C4C",
+          "unmapped": {
+            "+12": 24,
+            "+13": 22
+          },
+          "trail_u16": 5656,
+          "trail_i16": 5656,
+          "trail_hex": "1816"
+        },
+        {
+          "name": "Dokaqon Shield",
+          "item_id": 24,
+          "data_offset": "0x09C78",
+          "unmapped": {
+            "+12": 23,
+            "+13": 23
+          },
+          "trail_u16": 5911,
+          "trail_i16": 5911,
+          "trail_hex": "1717"
+        },
+        {
+          "name": "Ragnarok Shield",
+          "item_id": 25,
+          "data_offset": "0x09CA4",
+          "unmapped": {
+            "+12": 25,
+            "+13": 24
+          },
+          "trail_u16": 6169,
+          "trail_i16": 6169,
+          "trail_hex": "1918"
+        },
+        {
+          "name": "Moon Shield",
+          "item_id": 26,
+          "data_offset": "0x09CCC",
+          "unmapped": {
+            "+12": 27,
+            "+13": 25
+          },
+          "trail_u16": 6427,
+          "trail_i16": 6427,
+          "trail_hex": "1b19"
+        },
+        {
+          "name": "Tower Shield",
+          "item_id": 27,
+          "data_offset": "0x09CF8",
+          "unmapped": {
+            "+12": 26,
+            "+13": 26
+          },
+          "trail_u16": 6682,
+          "trail_i16": 6682,
+          "trail_hex": "1a1a"
+        },
+        {
+          "name": "Girly Shield",
+          "item_id": 28,
+          "data_offset": "0x09D24",
+          "unmapped": {
+            "+12": 28,
+            "+13": 27
+          },
+          "trail_u16": 6940,
+          "trail_i16": 6940,
+          "trail_hex": "1c1b"
+        },
+        {
+          "name": "Dural Shield",
+          "item_id": 29,
+          "data_offset": "0x09D50",
+          "unmapped": {
+            "+12": 29,
+            "+13": 28
+          },
+          "trail_u16": 7197,
+          "trail_i16": 7197,
+          "trail_hex": "1d1c"
+        },
+        {
+          "name": "Metal Guard",
+          "item_id": 30,
+          "data_offset": "0x09D78",
+          "unmapped": {
+            "+12": 31,
+            "+13": 29
+          },
+          "trail_u16": 7455,
+          "trail_i16": 7455,
+          "trail_hex": "1f1d"
+        },
+        {
+          "name": "Sun Shield",
+          "item_id": 31,
+          "data_offset": "0x09DA0",
+          "unmapped": {
+            "+12": 32,
+            "+13": 30
+          },
+          "trail_u16": 7712,
+          "trail_i16": 7712,
+          "trail_hex": "201e"
+        },
+        {
+          "name": "Cursed Shield",
+          "item_id": 32,
+          "data_offset": "0x09DCC",
+          "unmapped": {
+            "+12": 30,
+            "+13": 31
+          },
+          "trail_u16": 7966,
+          "trail_i16": 7966,
+          "trail_hex": "1e1f"
+        },
+        {
+          "name": "Hero Shield",
+          "item_id": 33,
+          "data_offset": "0x09DF4",
+          "unmapped": {
+            "+12": 33,
+            "+13": 32
+          },
+          "trail_u16": 8225,
+          "trail_i16": 8225,
+          "trail_hex": "2120"
+        },
+        {
+          "name": "Mecha Guard",
+          "item_id": 34,
+          "data_offset": "0x09E1C",
+          "unmapped": {
+            "+12": 34,
+            "+13": 33
+          },
+          "trail_u16": 8482,
+          "trail_i16": 8482,
+          "trail_hex": "2221"
+        },
+        {
+          "name": "Aura Shield",
+          "item_id": 35,
+          "data_offset": "0x09E44",
+          "unmapped": {
+            "+12": 35,
+            "+13": 34
+          },
+          "trail_u16": 8739,
+          "trail_i16": 8739,
+          "trail_hex": "2322"
+        },
+        {
+          "name": "Athena's Shield",
+          "item_id": 36,
+          "data_offset": "0x09E70",
+          "unmapped": {
+            "+12": 37,
+            "+13": 35
+          },
+          "trail_u16": 8997,
+          "trail_i16": 8997,
+          "trail_hex": "2523"
+        },
+        {
+          "name": "Dragon Shield",
+          "item_id": 37,
+          "data_offset": "0x09E9C",
+          "unmapped": {
+            "+12": 38,
+            "+13": 36
+          },
+          "trail_u16": 9254,
+          "trail_i16": 9254,
+          "trail_hex": "2624"
+        },
+        {
+          "name": "Dark Shield",
+          "item_id": 38,
+          "data_offset": "0x09EC4",
+          "unmapped": {
+            "+12": 36,
+            "+13": 37
+          },
+          "trail_u16": 9508,
+          "trail_i16": 9508,
+          "trail_hex": "2425"
+        },
+        {
+          "name": "Dokapon Shield",
+          "item_id": 39,
+          "data_offset": "0x09EF0",
+          "unmapped": {
+            "+12": 41,
+            "+13": 38
+          },
+          "trail_u16": 9769,
+          "trail_i16": 9769,
+          "trail_hex": "2926"
+        },
+        {
+          "name": "Demon Shield",
+          "item_id": 40,
+          "data_offset": "0x09F1C",
+          "unmapped": {
+            "+12": 45,
+            "+13": 39
+          },
+          "trail_u16": 10029,
+          "trail_i16": 10029,
+          "trail_hex": "2d27"
+        }
+      ],
+      "columns": {
+        "+12": {
+          "count": 40,
+          "distinct": 40,
+          "min": 1,
+          "max": 45,
+          "nonzero_count": 40,
+          "top": [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              3,
+              1
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              5,
+              1
+            ],
+            [
+              8,
+              1
+            ],
+            [
+              6,
+              1
+            ],
+            [
+              7,
+              1
+            ]
+          ],
+          "kind": "byte_var"
+        },
+        "+13": {
+          "count": 40,
+          "distinct": 40,
+          "min": 0,
+          "max": 39,
+          "nonzero_count": 39,
+          "top": [
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              3,
+              1
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              5,
+              1
+            ],
+            [
+              6,
+              1
+            ],
+            [
+              7,
+              1
+            ]
+          ],
+          "kind": "byte_var"
+        },
+        "trail_u16": {
+          "count": 40,
+          "distinct": 40,
+          "min": 1,
+          "max": 10029,
+          "nonzero_count": 40,
+          "top": [
+            [
+              1,
+              1
+            ],
+            [
+              258,
+              1
+            ],
+            [
+              515,
+              1
+            ],
+            [
+              772,
+              1
+            ],
+            [
+              1029,
+              1
+            ],
+            [
+              1288,
+              1
+            ],
+            [
+              1542,
+              1
+            ],
+            [
+              1799,
+              1
+            ]
+          ],
+          "kind": "byte_var"
+        }
+      }
+    },
+    "accessories": {
+      "entries": [
+        {
+          "name": "Power Gloves",
+          "item_id": 1,
+          "data_offset": "0x0AB00",
+          "unmapped": {
+            "+12": 1,
+            "+13": 0
+          },
+          "trail_u16": 1,
+          "trail_i16": 1,
+          "trail_hex": "0100"
+        },
+        {
+          "name": "Guard Gloves",
+          "item_id": 2,
+          "data_offset": "0x0AB30",
+          "unmapped": {
+            "+12": 4,
+            "+13": 1
+          },
+          "trail_u16": 260,
+          "trail_i16": 260,
+          "trail_hex": "0401"
+        },
+        {
+          "name": "Spirit Gloves",
+          "item_id": 3,
+          "data_offset": "0x0AB60",
+          "unmapped": {
+            "+12": 5,
+            "+13": 2
+          },
+          "trail_u16": 517,
+          "trail_i16": 517,
+          "trail_hex": "0502"
+        },
+        {
+          "name": "Speed Gloves",
+          "item_id": 4,
+          "data_offset": "0x0AB90",
+          "unmapped": {
+            "+12": 2,
+            "+13": 3
+          },
+          "trail_u16": 770,
+          "trail_i16": 770,
+          "trail_hex": "0203"
+        },
+        {
+          "name": "Vital Gloves",
+          "item_id": 5,
+          "data_offset": "0x0ABC0",
+          "unmapped": {
+            "+12": 3,
+            "+13": 4
+          },
+          "trail_u16": 1027,
+          "trail_i16": 1027,
+          "trail_hex": "0304"
+        },
+        {
+          "name": "Warm Gloves",
+          "item_id": 6,
+          "data_offset": "0x0ABEC",
+          "unmapped": {
+            "+12": 6,
+            "+13": 5
+          },
+          "trail_u16": 1286,
+          "trail_i16": 1286,
+          "trail_hex": "0605"
+        },
+        {
+          "name": "Air Ring",
+          "item_id": 7,
+          "data_offset": "0x0AC18",
+          "unmapped": {
+            "+12": 7,
+            "+13": 6
+          },
+          "trail_u16": 1543,
+          "trail_i16": 1543,
+          "trail_hex": "0706"
+        },
+        {
+          "name": "Ring of Power",
+          "item_id": 8,
+          "data_offset": "0x0AC48",
+          "unmapped": {
+            "+12": 24,
+            "+13": 7
+          },
+          "trail_u16": 1816,
+          "trail_i16": 1816,
+          "trail_hex": "1807"
+        },
+        {
+          "name": "Ring of Defense",
+          "item_id": 9,
+          "data_offset": "0x0AC78",
+          "unmapped": {
+            "+12": 28,
+            "+13": 8
+          },
+          "trail_u16": 2076,
+          "trail_i16": 2076,
+          "trail_hex": "1c08"
+        },
+        {
+          "name": "Ring of Speed",
+          "item_id": 10,
+          "data_offset": "0x0ACA8",
+          "unmapped": {
+            "+12": 22,
+            "+13": 9
+          },
+          "trail_u16": 2326,
+          "trail_i16": 2326,
+          "trail_hex": "1609"
+        },
+        {
+          "name": "Ring of Magic",
+          "item_id": 11,
+          "data_offset": "0x0ACD8",
+          "unmapped": {
+            "+12": 26,
+            "+13": 10
+          },
+          "trail_u16": 2586,
+          "trail_i16": 2586,
+          "trail_hex": "1a0a"
+        },
+        {
+          "name": "Dokapon Ring",
+          "item_id": 12,
+          "data_offset": "0x0AD08",
+          "unmapped": {
+            "+12": 31,
+            "+13": 11
+          },
+          "trail_u16": 2847,
+          "trail_i16": 2847,
+          "trail_hex": "1f0b"
+        },
+        {
+          "name": "Squid Ring",
+          "item_id": 13,
+          "data_offset": "0x0AD34",
+          "unmapped": {
+            "+12": 9,
+            "+13": 12
+          },
+          "trail_u16": 3081,
+          "trail_i16": 3081,
+          "trail_hex": "090c"
+        },
+        {
+          "name": "Angel Ring",
+          "item_id": 14,
+          "data_offset": "0x0AD60",
+          "unmapped": {
+            "+12": 23,
+            "+13": 13
+          },
+          "trail_u16": 3351,
+          "trail_i16": 3351,
+          "trail_hex": "170d"
+        },
+        {
+          "name": "Fire Bracelet",
+          "item_id": 15,
+          "data_offset": "0x0AD90",
+          "unmapped": {
+            "+12": 12,
+            "+13": 14
+          },
+          "trail_u16": 3596,
+          "trail_i16": 3596,
+          "trail_hex": "0c0e"
+        },
+        {
+          "name": "Ice Bracelet",
+          "item_id": 16,
+          "data_offset": "0x0ADC0",
+          "unmapped": {
+            "+12": 13,
+            "+13": 15
+          },
+          "trail_u16": 3853,
+          "trail_i16": 3853,
+          "trail_hex": "0d0f"
+        },
+        {
+          "name": "Elec Bracelet",
+          "item_id": 17,
+          "data_offset": "0x0ADF0",
+          "unmapped": {
+            "+12": 14,
+            "+13": 16
+          },
+          "trail_u16": 4110,
+          "trail_i16": 4110,
+          "trail_hex": "0e10"
+        },
+        {
+          "name": "Wind Bracelet",
+          "item_id": 18,
+          "data_offset": "0x0AE20",
+          "unmapped": {
+            "+12": 15,
+            "+13": 17
+          },
+          "trail_u16": 4367,
+          "trail_i16": 4367,
+          "trail_hex": "0f11"
+        },
+        {
+          "name": "Crystal Choker",
+          "item_id": 19,
+          "data_offset": "0x0AE50",
+          "unmapped": {
+            "+12": 25,
+            "+13": 18
+          },
+          "trail_u16": 4633,
+          "trail_i16": 4633,
+          "trail_hex": "1912"
+        },
+        {
+          "name": "Mirror Necklace",
+          "item_id": 20,
+          "data_offset": "0x0AE80",
+          "unmapped": {
+            "+12": 29,
+            "+13": 19
+          },
+          "trail_u16": 4893,
+          "trail_i16": 4893,
+          "trail_hex": "1d13"
+        },
+        {
+          "name": "Dodge Necklace",
+          "item_id": 21,
+          "data_offset": "0x0AEB0",
+          "unmapped": {
+            "+12": 19,
+            "+13": 20
+          },
+          "trail_u16": 5139,
+          "trail_i16": 5139,
+          "trail_hex": "1314"
+        },
+        {
+          "name": "Angel Choker",
+          "item_id": 22,
+          "data_offset": "0x0AEE0",
+          "unmapped": {
+            "+12": 30,
+            "+13": 21
+          },
+          "trail_u16": 5406,
+          "trail_i16": 5406,
+          "trail_hex": "1e15"
+        },
+        {
+          "name": "Galoshes",
+          "item_id": 23,
+          "data_offset": "0x0AF0C",
+          "unmapped": {
+            "+12": 8,
+            "+13": 22
+          },
+          "trail_u16": 5640,
+          "trail_i16": 5640,
+          "trail_hex": "0816"
+        },
+        {
+          "name": "Heart Slippers",
+          "item_id": 24,
+          "data_offset": "0x0AF3C",
+          "unmapped": {
+            "+12": 18,
+            "+13": 23
+          },
+          "trail_u16": 5906,
+          "trail_i16": 5906,
+          "trail_hex": "1217"
+        },
+        {
+          "name": "Hero Boots",
+          "item_id": 25,
+          "data_offset": "0x0AF68",
+          "unmapped": {
+            "+12": 17,
+            "+13": 24
+          },
+          "trail_u16": 6161,
+          "trail_i16": 6161,
+          "trail_hex": "1118"
+        },
+        {
+          "name": "Gold Shoes",
+          "item_id": 26,
+          "data_offset": "0x0AF94",
+          "unmapped": {
+            "+12": 16,
+            "+13": 25
+          },
+          "trail_u16": 6416,
+          "trail_i16": 6416,
+          "trail_hex": "1019"
+        },
+        {
+          "name": "Leopard Bandana",
+          "item_id": 27,
+          "data_offset": "0x0AFC4",
+          "unmapped": {
+            "+12": 21,
+            "+13": 26
+          },
+          "trail_u16": 6677,
+          "trail_i16": 6677,
+          "trail_hex": "151a"
+        },
+        {
+          "name": "Zebra Bandana",
+          "item_id": 28,
+          "data_offset": "0x0AFF4",
+          "unmapped": {
+            "+12": 27,
+            "+13": 27
+          },
+          "trail_u16": 6939,
+          "trail_i16": 6939,
+          "trail_hex": "1b1b"
+        },
+        {
+          "name": "Nice Guy Badge",
+          "item_id": 29,
+          "data_offset": "0x0B024",
+          "unmapped": {
+            "+12": 11,
+            "+13": 28
+          },
+          "trail_u16": 7179,
+          "trail_i16": 7179,
+          "trail_hex": "0b1c"
+        },
+        {
+          "name": "Wallace Badge",
+          "item_id": 30,
+          "data_offset": "0x0B054",
+          "unmapped": {
+            "+12": 20,
+            "+13": 29
+          },
+          "trail_u16": 7444,
+          "trail_i16": 7444,
+          "trail_hex": "141d"
+        },
+        {
+          "name": "Criminal Studs",
+          "item_id": 31,
+          "data_offset": "0x0B084",
+          "unmapped": {
+            "+12": 10,
+            "+13": 30
+          },
+          "trail_u16": 7690,
+          "trail_i16": 7690,
+          "trail_hex": "0a1e"
+        },
+        {
+          "name": "Dokapon Crown",
+          "item_id": 32,
+          "data_offset": "0x0B0B4",
+          "unmapped": {
+            "+12": 60,
+            "+13": 31
+          },
+          "trail_u16": 7996,
+          "trail_i16": 7996,
+          "trail_hex": "3c1f"
+        },
+        {
+          "name": "Overlord's Crown",
+          "item_id": 33,
+          "data_offset": "0x0B0E8",
+          "unmapped": {
+            "+12": 66,
+            "+13": 32
+          },
+          "trail_u16": 8258,
+          "trail_i16": 8258,
+          "trail_hex": "4220"
+        }
+      ],
+      "columns": {
+        "+12": {
+          "count": 33,
+          "distinct": 33,
+          "min": 1,
+          "max": 66,
+          "nonzero_count": 33,
+          "top": [
+            [
+              1,
+              1
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              5,
+              1
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              3,
+              1
+            ],
+            [
+              6,
+              1
+            ],
+            [
+              7,
+              1
+            ],
+            [
+              24,
+              1
+            ]
+          ],
+          "kind": "byte_var"
+        },
+        "+13": {
+          "count": 33,
+          "distinct": 33,
+          "min": 0,
+          "max": 32,
+          "nonzero_count": 32,
+          "top": [
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              3,
+              1
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              5,
+              1
+            ],
+            [
+              6,
+              1
+            ],
+            [
+              7,
+              1
+            ]
+          ],
+          "kind": "byte_var"
+        },
+        "trail_u16": {
+          "count": 33,
+          "distinct": 33,
+          "min": 1,
+          "max": 8258,
+          "nonzero_count": 33,
+          "top": [
+            [
+              1,
+              1
+            ],
+            [
+              260,
+              1
+            ],
+            [
+              517,
+              1
+            ],
+            [
+              770,
+              1
+            ],
+            [
+              1027,
+              1
+            ],
+            [
+              1286,
+              1
+            ],
+            [
+              1543,
+              1
+            ],
+            [
+              1816,
+              1
+            ]
+          ],
+          "kind": "byte_var"
+        }
+      }
+    }
+  },
+  "monsters": {
+    "record_size": 0,
+    "reserved_keys": [
+      "_reserved_10",
+      "_reserved_15"
+    ],
+    "entries": [
+      {
+        "name": "Rogue",
+        "self_id": 1,
+        "header_offset": "0x19DE0",
+        "stats_offset": "0x19DF0",
+        "record_size": 36,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "5000000000010100526f677565000000150007000500030001000000000013000a003c00"
+      },
+      {
+        "name": "Berserker",
+        "self_id": 2,
+        "header_offset": "0x19E04",
+        "stats_offset": "0x19E18",
+        "record_size": 40,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "5000000001020e004265727365726b6572000000a70046001f0018000400000016040100ba012201"
+      },
+      {
+        "name": "Barbarian",
+        "self_id": 3,
+        "header_offset": "0x19E2C",
+        "stats_offset": "0x19E40",
+        "record_size": 40,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "5000000002031b0042617262617269616e0000005d015d004000400019000000160e150050092e06"
+      },
+      {
+        "name": "Bandit",
+        "self_id": 4,
+        "header_offset": "0x19E54",
+        "stats_offset": "0x19E64",
+        "record_size": 36,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "500000000304010042616e64697400001200040004001400040000000004130008005000"
+      },
+      {
+        "name": "Halfling",
+        "self_id": 5,
+        "header_offset": "0x19E78",
+        "stats_offset": "0x19E8C",
+        "record_size": 40,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "500000000405080048616c666c696e670000000060001e0016002c00070000001400140098009001"
+      },
+      {
+        "name": "Assassin",
+        "self_id": 6,
+        "header_offset": "0x19EA0",
+        "stats_offset": "0x19EB4",
+        "record_size": 40,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "5000000005060700417373617373696e000000005c001c0018002000080000000d0112006c00cc01"
+      },
+      {
+        "name": "Ninja",
+        "self_id": 7,
+        "header_offset": "0x19EC8",
+        "stats_offset": "0x19ED8",
+        "record_size": 36,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "50000000060721004e696e6a61000000380179006d005f00330000000d031c003c076706"
+      },
+      {
+        "name": "Magician",
+        "self_id": 8,
+        "header_offset": "0x19EEC",
+        "stats_offset": "0x19F00",
+        "record_size": 40,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "50000000070808004d6167696369616e00000000640018001800100014000000010804008b005e01"
+      },
+      {
+        "name": "Summoner",
+        "self_id": 9,
+        "header_offset": "0x19F14",
+        "stats_offset": "0x19F28",
+        "record_size": 40,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "5000000008090c0053756d6d6f6e65720000000080002300200014001e000000040904005001d002"
+      },
+      {
+        "name": "Wizard",
+        "self_id": 10,
+        "header_offset": "0x19F3C",
+        "stats_offset": "0x19F4C",
+        "record_size": 36,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "50000000090a2d0057697a6172640000c801850091002e007e0000000f100d00870e530b"
+      },
+      {
+        "name": "Gnome",
+        "self_id": 11,
+        "header_offset": "0x19F60",
+        "stats_offset": "0x19F70",
+        "record_size": 36,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "500000000a0b0e00476e6f6d6500000092003b003c000a000900000014021300d0017003"
+      },
+      {
+        "name": "Dwarf",
+        "self_id": 12,
+        "header_offset": "0x19F84",
+        "stats_offset": "0x19F94",
+        "record_size": 36,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "500000000b0c11004477617266000000ad004e00510009000e000000040401007602b004"
+      },
+      {
+        "name": "Kobold",
+        "self_id": 13,
+        "header_offset": "0x19FA8",
+        "stats_offset": "0x19FB8",
+        "record_size": 36,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "500000000c0d01004b6f626f6c6400000f00050002000200020000001601010006000a00"
+      },
+      {
+        "name": "Kobold King",
+        "self_id": 14,
+        "header_offset": "0x19FCC",
+        "stats_offset": "0x19FE0",
+        "record_size": 40,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "500000000d0e05004b6f626f6c64204b696e67002f000c0012000800070000000101010040009400"
+      },
+      {
+        "name": "Goblin",
+        "self_id": 15,
+        "header_offset": "0x19FF4",
+        "stats_offset": "0x1A004",
+        "record_size": 36,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "500000000e0f0500476f626c696e00003c0018000e00030005000000000e01003d00a700"
+      },
+      {
+        "name": "Orc",
+        "self_id": 16,
+        "header_offset": "0x1A018",
+        "stats_offset": "0x1A024",
+        "record_size": 32,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "500000000f1006004f7263004c001e0010000500070000000001150058000901"
+      },
+      {
+        "name": "Hobgoblin",
+        "self_id": 17,
+        "header_offset": "0x1A038",
+        "stats_offset": "0x1A04C",
+        "record_size": 40,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "5000000010110a00486f62676f626c696e0000008c0035001c000a000c000000070e0100e000ec01"
+      },
+      {
+        "name": "Lizardman",
+        "self_id": 18,
+        "header_offset": "0x1A060",
+        "stats_offset": "0x1A074",
+        "record_size": 40,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "50000000111206004c697a6172646d616e0000003c001a001a00080005000000000105006000e400"
+      },
+      {
+        "name": "Thunder Lizard",
+        "self_id": 19,
+        "header_offset": "0x1A088",
+        "stats_offset": "0x1A0A0",
+        "record_size": 44,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "50000000121324005468756e646572204c697a61726400001e0185007b00320040000000160203004d0a0003"
+      },
+      {
+        "name": "Wear Tiger",
+        "self_id": 20,
+        "header_offset": "0x1A0B4",
+        "stats_offset": "0x1A0C8",
+        "record_size": 40,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "5000000013140f005765617220546967657200008e003f0041001a000a000000070e0f000002aa01"
+      },
+      {
+        "name": "Dark Knight",
+        "self_id": 21,
+        "header_offset": "0x1A0DC",
+        "stats_offset": "0x1A0F0",
+        "record_size": 40,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "5000000014151a004461726b204b6e696768740009014e00560018002700000012051200ed04fd02"
+      },
+      {
+        "name": "Dullahan",
+        "self_id": 22,
+        "header_offset": "0x1A104",
+        "stats_offset": "0x1A118",
+        "record_size": 40,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "5000000015162a0044756c6c6168616e00000000c7019b00bd0020002a0000000e061d00d40d770a"
+      },
+      {
+        "name": "Troll",
+        "self_id": 23,
+        "header_offset": "0x1A12C",
+        "stats_offset": "0x1A13C",
+        "record_size": 36,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "5000000016170b0054726f6c6c000000c8003e002300080006000000000f03001f01bc00"
+      },
+      {
+        "name": "Ogre",
+        "self_id": 24,
+        "header_offset": "0x1A150",
+        "stats_offset": "0x1A160",
+        "record_size": 36,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "50000000171815004f677265000000006801620026000c000f000000000e0f00c1038f01"
+      },
+      {
+        "name": "Giant",
+        "self_id": 25,
+        "header_offset": "0x1A174",
+        "stats_offset": "0x1A184",
+        "record_size": 36,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "50000000181918004769616e74000000e0018700320006001c000000150e1c0042051401"
+      },
+      {
+        "name": "Minotaur",
+        "self_id": 26,
+        "header_offset": "0x1A198",
+        "stats_offset": "0x1A1AC",
+        "record_size": 40,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "50000000191a28004d696e6f7461757200000000a802cb006400240038000000000d1c00ca0ccf07"
+      },
+      {
+        "name": "Cyclops",
+        "self_id": 27,
+        "header_offset": "0x1A1C0",
+        "stats_offset": "0x1A1D0",
+        "record_size": 36,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "500000001a1b2c004379636c6f7073003403d400780024002a00000015101c000b0ff308"
+      },
+      {
+        "name": "Heckhound",
+        "self_id": 28,
+        "header_offset": "0x1A1E4",
+        "stats_offset": "0x1A1F8",
+        "record_size": 40,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "500000001b1c14004865636b686f756e64000000dc0042003600200029000000070425000203e601"
+      },
+      {
+        "name": "Fenrir",
+        "self_id": 29,
+        "header_offset": "0x1A20C",
+        "stats_offset": "0x1A21C",
+        "record_size": 36,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "500000001c1d260046656e72697200006e0179006e003a0046000000090b0f00800ac604"
+      },
+      {
+        "name": "Cerberus",
+        "self_id": 30,
+        "header_offset": "0x1A230",
+        "stats_offset": "0x1A244",
+        "record_size": 40,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "500000001d1e3600436572626572757300000000bc019d008c007a0078000000130f2b00bd16ac12"
+      },
+      {
+        "name": "Gorgon",
+        "self_id": 31,
+        "header_offset": "0x1A258",
+        "stats_offset": "0x1A268",
+        "record_size": 36,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "500000001e1f2300476f72676f6e00005e018c0076002000410000000e050d0045096106"
+      },
+      {
+        "name": "Behemoth",
+        "self_id": 32,
+        "header_offset": "0x1A27C",
+        "stats_offset": "0x1A290",
+        "record_size": 40,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "500000001f203400426568656d6f746800000000e703b400a10037006a000000120d2c0080136d10"
+      },
+      {
+        "name": "Treasure Hawk",
+        "self_id": 33,
+        "header_offset": "0x1A2A4",
+        "stats_offset": "0x1A2BC",
+        "record_size": 44,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "50000000202114005472656173757265204861776b000000d4003c00200066000f000000120f140092022c01"
+      },
+      {
+        "name": "Gryffon",
+        "self_id": 34,
+        "header_offset": "0x1A2D0",
+        "stats_offset": "0x1A2E0",
+        "record_size": 36,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "500000002122190047727966666f6e00f2004c005a0032002d000000010f28004405ef04"
+      },
+      {
+        "name": "Sphynx",
+        "self_id": 35,
+        "header_offset": "0x1A2F4",
+        "stats_offset": "0x1A304",
+        "record_size": 36,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "5000000022232600537068796e78000078018800780028005a00000010092500c60bd408"
+      },
+      {
+        "name": "Manticore",
+        "self_id": 36,
+        "header_offset": "0x1A318",
+        "stats_offset": "0x1A32C",
+        "record_size": 40,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "50000000232427004d616e7469636f7265000000aa01bb00750020005400000008072a00360ce108"
+      },
+      {
+        "name": "Chimera",
+        "self_id": 37,
+        "header_offset": "0x1A340",
+        "stats_offset": "0x1A350",
+        "record_size": 36,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "50000000242526004368696d65726100900196006400280046000000120d2500720b7206"
+      },
+      {
+        "name": "King Chimera",
+        "self_id": 38,
+        "header_offset": "0x1A364",
+        "stats_offset": "0x1A37C",
+        "record_size": 44,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "5000000025262a004b696e67204368696d657261000000004002aa008000320052000000090c2a00190e4a0b"
+      },
+      {
+        "name": "Salamander",
+        "self_id": 39,
+        "header_offset": "0x1A390",
+        "stats_offset": "0x1A3A4",
+        "record_size": 40,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "500000002627250053616c616d616e64657200003c017f008a0020003800000002052700580ad007"
+      },
+      {
+        "name": "Basilisk",
+        "self_id": 40,
+        "header_offset": "0x1A3B8",
+        "stats_offset": "0x1A3CC",
+        "record_size": 40,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "5000000027282900426173696c69736b000000000602a600a3003000420000000b0211002b0d710a"
+      },
+      {
+        "name": "Cockatrice",
+        "self_id": 41,
+        "header_offset": "0x1A3E0",
+        "stats_offset": "0x1A3F4",
+        "record_size": 40,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "5000000028291700436f636b61747269636500009c0054005600190012000000010711005f05a501"
+      },
+      {
+        "name": "Roc",
+        "self_id": 42,
+        "header_offset": "0x1A408",
+        "stats_offset": "0x1A414",
+        "record_size": 32,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "50000000292a1a00526f6300d000610058003a001a0000000b032800d3067206"
+      },
+      {
+        "name": "Phoenix",
+        "self_id": 43,
+        "header_offset": "0x1A428",
+        "stats_offset": "0x1A438",
+        "record_size": 36,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "500000002a2b2c0050686f656e697800fa019700870047005f00000002032b00380edc0b"
+      },
+      {
+        "name": "Bat",
+        "self_id": 44,
+        "header_offset": "0x1A44C",
+        "stats_offset": "0x1A458",
+        "record_size": 32,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "500000002b2c02004261740018000e000c0010000800000000000b0016000f00"
+      },
+      {
+        "name": "Demon Bat",
+        "self_id": 45,
+        "header_offset": "0x1A46C",
+        "stats_offset": "0x1A480",
+        "record_size": 40,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "500000002c2d0b0044656d6f6e204261740000007c002b001c0018000c00000015000b000f015d00"
+      },
+      {
+        "name": "Dragon",
+        "self_id": 46,
+        "header_offset": "0x1A494",
+        "stats_offset": "0x1A4A4",
+        "record_size": 36,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "500000002d2e2d00447261676f6e0000a802a500960030002a0000000c0525002c0f140f"
+      },
+      {
+        "name": "Zombie Dragon",
+        "self_id": 47,
+        "header_offset": "0x1A4B8",
+        "stats_offset": "0x1A4D0",
+        "record_size": 44,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "500000002e2f2f005a6f6d62696520447261676f6e0000007202b90058001800a600000013092a0009126c02"
+      },
+      {
+        "name": "Elder Dragon",
+        "self_id": 48,
+        "header_offset": "0x1A4E4",
+        "stats_offset": "0x1A4FC",
+        "record_size": 44,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "500000002f303500456c64657220447261676f6e000000005c03c80084002e007c0000000f0e2a0020151e11"
+      },
+      {
+        "name": "Tiamat",
+        "self_id": 49,
+        "header_offset": "0x1A510",
+        "stats_offset": "0x1A520",
+        "record_size": 36,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "5000000030313e005469616d617400001a04db00c3004400830000000f062700c31e983a"
+      },
+      {
+        "name": "Scorpion-G",
+        "self_id": 50,
+        "header_offset": "0x1A534",
+        "stats_offset": "0x1A548",
+        "record_size": 40,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "500000003132040053636f7270696f6e2d47000018000c0020000c000300000000000b002b002e00"
+      },
+      {
+        "name": "Sea Scorpion",
+        "self_id": 51,
+        "header_offset": "0x1A55C",
+        "stats_offset": "0x1A574",
+        "record_size": 44,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "50000000323307005365612053636f7270696f6e0000000056001a0028000c000700000000000b006a005c00"
+      },
+      {
+        "name": "Spider-G",
+        "self_id": 52,
+        "header_offset": "0x1A588",
+        "stats_offset": "0x1A59C",
+        "record_size": 40,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "50000000333405005370696465722d47000000002b00140010000e000200000000000b003a003f00"
+      },
+      {
+        "name": "Tarantula",
+        "self_id": 53,
+        "header_offset": "0x1A5B0",
+        "stats_offset": "0x1A5C4",
+        "record_size": 40,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "5000000034351700546172616e74756c61000000a9004e003a002c001400000000000c0056041101"
+      },
+      {
+        "name": "Crawler",
+        "self_id": 54,
+        "header_offset": "0x1A5D8",
+        "stats_offset": "0x1A5E8",
+        "record_size": 36,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "5000000035360a00437261776c65720080003b00240008000500000000002c00d200aa00"
+      },
+      {
+        "name": "Worm",
+        "self_id": 55,
+        "header_offset": "0x1A5FC",
+        "stats_offset": "0x1A60C",
+        "record_size": 36,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "5000000036371300576f726d0000000004014700440010000c000000000010001202e601"
+      },
+      {
+        "name": "Pixie",
+        "self_id": 56,
+        "header_offset": "0x1A620",
+        "stats_offset": "0x1A630",
+        "record_size": 36,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "5000000037380200506978696500000017000600040010000a000000110f060011004400"
+      },
+      {
+        "name": "Fairie",
+        "self_id": 57,
+        "header_offset": "0x1A644",
+        "stats_offset": "0x1A654",
+        "record_size": 36,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "5000000038390300466169726965000020000a000800180014000000070806001d006400"
+      },
+      {
+        "name": "Sylph",
+        "self_id": 58,
+        "header_offset": "0x1A668",
+        "stats_offset": "0x1A678",
+        "record_size": 36,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "50000000393a0f0053796c706800000092002b0028002a001e0000000a112800e2010402"
+      },
+      {
+        "name": "Unseelie",
+        "self_id": 59,
+        "header_offset": "0x1A68C",
+        "stats_offset": "0x1A6A0",
+        "record_size": 40,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "500000003a3b2100556e7365656c6965000000001d01690077004d0060000000080c0e00a408ca07"
+      },
+      {
+        "name": "Dryad",
+        "self_id": 60,
+        "header_offset": "0x1A6B4",
+        "stats_offset": "0x1A6C4",
+        "record_size": 36,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "500000003b3c0e0044727961640000007800370030000a0012000000110a0000a0014001"
+      },
+      {
+        "name": "Treant",
+        "self_id": 61,
+        "header_offset": "0x1A6D8",
+        "stats_offset": "0x1A6E8",
+        "record_size": 36,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "500000003c3d1900547265616e740000dc005900560018002e0000000a0210001a054d02"
+      },
+      {
+        "name": "Ent",
+        "self_id": 62,
+        "header_offset": "0x1A6FC",
+        "stats_offset": "0x1A708",
+        "record_size": 32,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "500000003d3e2b00456e7400a9019900dc0020005800000011050000020db00a"
+      },
+      {
+        "name": "Mycopath",
+        "self_id": 63,
+        "header_offset": "0x1A71C",
+        "stats_offset": "0x1A730",
+        "record_size": 40,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "500000003e3f06004d79636f70617468000000004d001c00120004000800000014000b006200a100"
+      },
+      {
+        "name": "Fungalore",
+        "self_id": 64,
+        "header_offset": "0x1A744",
+        "stats_offset": "0x1A758",
+        "record_size": 40,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "500000003f40110046756e67616c6f7265000000bd00450037000f001100000011020c002c026801"
+      },
+      {
+        "name": "Wisp",
+        "self_id": 65,
+        "header_offset": "0x1A76C",
+        "stats_offset": "0x1A77C",
+        "record_size": 36,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "500000004041030057697370000000001e000a0006000a00100000000404000018003c00"
+      },
+      {
+        "name": "Shade",
+        "self_id": 66,
+        "header_offset": "0x1A790",
+        "stats_offset": "0x1A7A0",
+        "record_size": 36,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "5000000041420c0053686164650000008d0027002000140018000000110d000030016a01"
+      },
+      {
+        "name": "Killer Fish",
+        "self_id": 67,
+        "header_offset": "0x1A7B4",
+        "stats_offset": "0x1A7C8",
+        "record_size": 40,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "50000000424303004b696c6c65722046697368001d0018000c00140002000000000026001a003400"
+      },
+      {
+        "name": "Gunfish",
+        "self_id": 68,
+        "header_offset": "0x1A7DC",
+        "stats_offset": "0x1A7EC",
+        "record_size": 36,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "500000004344090047756e66697368006c0024001c0020000a00000000002600a9007400"
+      },
+      {
+        "name": "Merman",
+        "self_id": 69,
+        "header_offset": "0x1A800",
+        "stats_offset": "0x1A810",
+        "record_size": 36,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "50000000444504004d65726d616e00001f0010000c000c000a000000070426002e00ba00"
+      },
+      {
+        "name": "Kelpie",
+        "self_id": 70,
+        "header_offset": "0x1A824",
+        "stats_offset": "0x1A834",
+        "record_size": 36,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "50000000454609004b656c7069650000780028001c0014000e000000110f2600b4007101"
+      },
+      {
+        "name": "Mermaid",
+        "self_id": 71,
+        "header_offset": "0x1A848",
+        "stats_offset": "0x1A858",
+        "record_size": 36,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "50000000464706004d65726d616964002a00140010000a001800000011080e004400c600"
+      },
+      {
+        "name": "Celine",
+        "self_id": 72,
+        "header_offset": "0x1A86C",
+        "stats_offset": "0x1A87C",
+        "record_size": 36,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "5000000047481b0043656c696e650000b6004800520024003400000005110e00ac04d702"
+      },
+      {
+        "name": "Undine",
+        "self_id": 73,
+        "header_offset": "0x1A890",
+        "stats_offset": "0x1A8A0",
+        "record_size": 36,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "5000000048492500556e64696e6500002c0164007400350046000000080826006b056c03"
+      },
+      {
+        "name": "Sea Serpent",
+        "self_id": 74,
+        "header_offset": "0x1A8B4",
+        "stats_offset": "0x1A8C8",
+        "record_size": 40,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "50000000494a26005365612053657270656e740030029a004800240042000000080d2600b3050601"
+      },
+      {
+        "name": "Leviathan",
+        "self_id": 75,
+        "header_offset": "0x1A8DC",
+        "stats_offset": "0x1A8F0",
+        "record_size": 40,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "500000004a4b31004c657669617468616e0000008203be00910034005600000017062900a310790e"
+      },
+      {
+        "name": "Hydra",
+        "self_id": 76,
+        "header_offset": "0x1A904",
+        "stats_offset": "0x1A914",
+        "record_size": 36,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "500000004b4c29004879647261000000d002aa00c80030004000000005061000440cea09"
+      },
+      {
+        "name": "Squilla",
+        "self_id": 77,
+        "header_offset": "0x1A928",
+        "stats_offset": "0x1A938",
+        "record_size": 36,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "500000004c4d2700537175696c6c61005802ae00700024004c00000008042900000e6204"
+      },
+      {
+        "name": "Kraken",
+        "self_id": 78,
+        "header_offset": "0x1A94C",
+        "stats_offset": "0x1A95C",
+        "record_size": 36,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "500000004d4e2d004b72616b656e00007203d4007e00220021000000120d290008124606"
+      },
+      {
+        "name": "Skeleton",
+        "self_id": 79,
+        "header_offset": "0x1A970",
+        "stats_offset": "0x1A984",
+        "record_size": 40,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "500000004e4f0300536b656c65746f6e0000000024001e0010000600080000001000060020000a00"
+      },
+      {
+        "name": "Red Bones",
+        "self_id": 80,
+        "header_offset": "0x1A998",
+        "stats_offset": "0x1A9AC",
+        "record_size": 40,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "500000004f500d0052656420426f6e6573000000c4003b002800140014000000140006007e012400"
+      },
+      {
+        "name": "Bone Knight",
+        "self_id": 81,
+        "header_offset": "0x1A9C0",
+        "stats_offset": "0x1A9D4",
+        "record_size": 40,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "5000000050512500426f6e65204b6e6967687400f601840072003600410000000d1203008f0c7302"
+      },
+      {
+        "name": "Zombie",
+        "self_id": 82,
+        "header_offset": "0x1A9E8",
+        "stats_offset": "0x1A9F8",
+        "record_size": 36,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "50000000515205005a6f6d626965000028002000080002000200000000070c0044005200"
+      },
+      {
+        "name": "Wight",
+        "self_id": 83,
+        "header_offset": "0x1AA0C",
+        "stats_offset": "0x1AA1C",
+        "record_size": 36,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "5000000052530c005769676874000000a8002a002800080015000000100c000050012501"
+      },
+      {
+        "name": "Ghoul",
+        "self_id": 84,
+        "header_offset": "0x1AA30",
+        "stats_offset": "0x1AA40",
+        "record_size": 36,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "500000005354190047686f756c000000ec005900680014002200000000070c00ca04a700"
+      },
+      {
+        "name": "Mummy",
+        "self_id": 85,
+        "header_offset": "0x1AA54",
+        "stats_offset": "0x1AA64",
+        "record_size": 36,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "50000000545526004d756d6d79000000830172007e002a004c00000010070f00ac0bc407"
+      },
+      {
+        "name": "Golem",
+        "self_id": 86,
+        "header_offset": "0x1AA78",
+        "stats_offset": "0x1AA88",
+        "record_size": 36,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "5000000055563700476f6c656d000000b202200139010a000c0000000d03030080163200"
+      },
+      {
+        "name": "Iron Golem",
+        "self_id": 87,
+        "header_offset": "0x1AA9C",
+        "stats_offset": "0x1AAB0",
+        "record_size": 40,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "5000000056573b0049726f6e20476f6c656d0000c0033401720108000d0000000e122c00c41a5014"
+      },
+      {
+        "name": "Wraith",
+        "self_id": 88,
+        "header_offset": "0x1AAC4",
+        "stats_offset": "0x1AAD4",
+        "record_size": 36,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "50000000575818005772616974680000d0004c004800140032000000150b0600bb048701"
+      },
+      {
+        "name": "Doppelganger",
+        "self_id": 89,
+        "header_offset": "0x1AAE8",
+        "stats_offset": "0x1AB00",
+        "record_size": 44,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "5000000058591a00446f7070656c67616e67657200000000c80053005e000e003c00000012122300df050100"
+      },
+      {
+        "name": "Lich",
+        "self_id": 90,
+        "header_offset": "0x1AB14",
+        "stats_offset": "0x1AB24",
+        "record_size": 36,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "50000000595a2f004c6963680000000010029000900033009800000013120d009b10bc0c"
+      },
+      {
+        "name": "Ghost",
+        "self_id": 91,
+        "header_offset": "0x1AB38",
+        "stats_offset": "0x1AB48",
+        "record_size": 36,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "500000005a5b0b0047686f737400000070000c0034000c001a000000100c0500d3000100"
+      },
+      {
+        "name": "Spirit",
+        "self_id": 92,
+        "header_offset": "0x1AB5C",
+        "stats_offset": "0x1AB6C",
+        "record_size": 36,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "500000005b5c1b0053706972697400001a014700790019003a000000140a0000d2053c00"
+      },
+      {
+        "name": "Specter",
+        "self_id": 93,
+        "header_offset": "0x1AB80",
+        "stats_offset": "0x1AB90",
+        "record_size": 36,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "500000005c5d270053706563746572003c017f008500240048000000140c0000a40cce09"
+      },
+      {
+        "name": "Ghast",
+        "self_id": 94,
+        "header_offset": "0x1ABA4",
+        "stats_offset": "0x1ABB4",
+        "record_size": 36,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "500000005d5e060047686173740000006000160016000400160000000401000060007c00"
+      },
+      {
+        "name": "Death Cloud",
+        "self_id": 95,
+        "header_offset": "0x1ABC8",
+        "stats_offset": "0x1ABDC",
+        "record_size": 40,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "500000005e5f1800446561746820436c6f756400c50044005d001200410000000b0b1d00a4041502"
+      },
+      {
+        "name": "Flame Eater",
+        "self_id": 96,
+        "header_offset": "0x1ABF0",
+        "stats_offset": "0x1AC04",
+        "record_size": 40,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "500000005f602800466c616d6520456174657200b4018f0098001d006b000000020e2700dc0b4c09"
+      },
+      {
+        "name": "Imp",
+        "self_id": 97,
+        "header_offset": "0x1AC18",
+        "stats_offset": "0x1AC24",
+        "record_size": 32,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "5000000060610200496d700018001000060006000c000000160100000e007800"
+      },
+      {
+        "name": "Gremlin",
+        "self_id": 98,
+        "header_offset": "0x1AC38",
+        "stats_offset": "0x1AC48",
+        "record_size": 36,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "50000000616204004772656d6c696e002600140008000800100000001508050028004e00"
+      },
+      {
+        "name": "Incubus",
+        "self_id": 99,
+        "header_offset": "0x1AC5C",
+        "stats_offset": "0x1AC6C",
+        "record_size": 36,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "5000000062631700496e637562757300d3004c0028001f0035000000150a0e00aa036803"
+      },
+      {
+        "name": "Gargoyle",
+        "self_id": 100,
+        "header_offset": "0x1AC80",
+        "stats_offset": "0x1AC94",
+        "record_size": 40,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "5000000063641200476172676f796c6500000000d2004600600010001800000001020600b6028201"
+      },
+      {
+        "name": "Night Gaunt",
+        "self_id": 101,
+        "header_offset": "0x1ACA8",
+        "stats_offset": "0x1ACBC",
+        "record_size": 40,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "5000000064651f004e69676874204761756e74006a016600680020003600000010080f003f07fa02"
+      },
+      {
+        "name": "Demon",
+        "self_id": 102,
+        "header_offset": "0x1ACD0",
+        "stats_offset": "0x1ACE0",
+        "record_size": 36,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "500000006566320044656d6f6e0000002b028e00960049008400000009091d000912a00f"
+      },
+      {
+        "name": "Arch Demon",
+        "self_id": 103,
+        "header_offset": "0x1ACF4",
+        "stats_offset": "0x1AD08",
+        "record_size": 40,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "5000000066673900417263682044656d6f6e00003602ad00a5004b0090000000030a2b007318e015"
+      },
+      {
+        "name": "Pazuzu",
+        "self_id": 104,
+        "header_offset": "0x1AD1C",
+        "stats_offset": "0x1AD2C",
+        "record_size": 36,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "5000000067683c0050617a757a7500009a02ba00ae004800910000000c101d00c91bee18"
+      },
+      {
+        "name": "Demon's Guard",
+        "self_id": 126,
+        "header_offset": "0x1AD40",
+        "stats_offset": "0x1AD58",
+        "record_size": 44,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "50000000687e410044656d6f6e27732047756172640000000280008001810280008000000f122c00d43050c3"
+      },
+      {
+        "name": "Ifrit",
+        "self_id": 105,
+        "header_offset": "0x1AD6C",
+        "stats_offset": "0x1AD7C",
+        "record_size": 36,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "5000000069692e0049667269740000005802a3007d002c006e000000020d2700930e370b"
+      },
+      {
+        "name": "Fire Genie",
+        "self_id": 106,
+        "header_offset": "0x1AD90",
+        "stats_offset": "0x1ADA4",
+        "record_size": 40,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "500000006a6a3000466972652047656e69650000b6029a00870034008200000014102b00ed100c0b"
+      },
+      {
+        "name": "Banshee",
+        "self_id": 107,
+        "header_offset": "0x1ADB8",
+        "stats_offset": "0x1ADC8",
+        "record_size": 36,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "500000006b6b0b0042616e73686565008200290020000d00100000000a110e00fa005402"
+      },
+      {
+        "name": "Succubus",
+        "self_id": 108,
+        "header_offset": "0x1ADDC",
+        "stats_offset": "0x1ADF0",
+        "record_size": 40,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "500000006c6c25005375636375627573000000004d01800074002c0050000000061104000f092808"
+      },
+      {
+        "name": "Medusa",
+        "self_id": 109,
+        "header_offset": "0x1AE04",
+        "stats_offset": "0x1AE14",
+        "record_size": 36,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "500000006d6d18004d65647573610000c6004800580018002e00000002051100fc04d403"
+      },
+      {
+        "name": "Lamia",
+        "self_id": 110,
+        "header_offset": "0x1AE28",
+        "stats_offset": "0x1AE38",
+        "record_size": 36,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "500000006e6e22004c616d6961000000480175007a001e004000000006110400ac075406"
+      },
+      {
+        "name": "Naga",
+        "self_id": 111,
+        "header_offset": "0x1AE4C",
+        "stats_offset": "0x1AE5C",
+        "record_size": 36,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "500000006f6f27004e61676100000000b0019400960028004c0000000b0310000109f707"
+      },
+      {
+        "name": "Giant Eyeball",
+        "self_id": 112,
+        "header_offset": "0x1AE70",
+        "stats_offset": "0x1AE88",
+        "record_size": 44,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "50000000707007004769616e742045796562616c6c0000006c0016001400100014000000040c050074007800"
+      },
+      {
+        "name": "Gazer",
+        "self_id": 113,
+        "header_offset": "0x1AE9C",
+        "stats_offset": "0x1AEAC",
+        "record_size": 36,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "500000007171150047617a6572000000d80042004800180032000000050e04001e058901"
+      },
+      {
+        "name": "Slime",
+        "self_id": 114,
+        "header_offset": "0x1AEC0",
+        "stats_offset": "0x1AED0",
+        "record_size": 36,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "5000000072721000536c696d6500000076004a00460002000e00000014070b008f02c700"
+      },
+      {
+        "name": "Jelly",
+        "self_id": 115,
+        "header_offset": "0x1AEE4",
+        "stats_offset": "0x1AEF4",
+        "record_size": 36,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "50000000737324004a656c6c79000000a40182003c0014006e000000170b0b0005091802"
+      },
+      {
+        "name": "Grey Goo",
+        "self_id": 116,
+        "header_offset": "0x1AF08",
+        "stats_offset": "0x1AF1C",
+        "record_size": 40,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "5000000074741e004772657920476f6f00000000400166003c00200042000000170c0c008707d403"
+      },
+      {
+        "name": "Gel Splatter",
+        "self_id": 117,
+        "header_offset": "0x1AF30",
+        "stats_offset": "0x1AF48",
+        "record_size": 44,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "500000007575310047656c2053706c6174746572000000000c007b006e015e01bd00000006122e00f91190d0"
+      },
+      {
+        "name": "Rico Jr.",
+        "self_id": 118,
+        "header_offset": "0x1AF5C",
+        "stats_offset": "0x1AF70",
+        "record_size": 40,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "50000000767680005269636f204a722e000000000080008000800080008000000c091c0000000cfe"
+      },
+      {
+        "name": "Overlord Rico",
+        "self_id": 119,
+        "header_offset": "0x1AF84",
+        "stats_offset": "0x1AF9C",
+        "record_size": 44,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "5000000077773c004f7665726c6f7264205269636f000000dc050301c3006000a8000000030b2e000a1ae02e"
+      },
+      {
+        "name": "Overlord Rico",
+        "self_id": 120,
+        "header_offset": "0x1AFB0",
+        "stats_offset": "0x1AFC8",
+        "record_size": 44,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "50000000787850004f7665726c6f7264205269636f000000100e4401e1007800c200000003122e00000068c5"
+      },
+      {
+        "name": "Comacho",
+        "self_id": 121,
+        "header_offset": "0x1AFDC",
+        "stats_offset": "0x1AFEC",
+        "record_size": 36,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "5000000079798200436f6d6163686f00058105810581058105810000000b1c0000000000"
+      },
+      {
+        "name": "Clonus",
+        "self_id": 255,
+        "header_offset": "0x1B000",
+        "stats_offset": "0x1B010",
+        "record_size": 36,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "500000007affa000436c6f6e757300000082008200820082008200008080800000000000"
+      },
+      {
+        "name": "Clonus",
+        "self_id": 255,
+        "header_offset": "0x1B024",
+        "stats_offset": "0x1B034",
+        "record_size": 36,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "500000007bffa100436c6f6e757300000182018201820182018200008181800000000000"
+      },
+      {
+        "name": "Clonus",
+        "self_id": 255,
+        "header_offset": "0x1B048",
+        "stats_offset": "0x1B058",
+        "record_size": 36,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "500000007cffa200436c6f6e757300000282028202820282028200008282800000000000"
+      },
+      {
+        "name": "Clonus",
+        "self_id": 255,
+        "header_offset": "0x1B06C",
+        "stats_offset": "0x1B07C",
+        "record_size": 36,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "500000007dffa300436c6f6e757300000382038203820382038200008383800000000000"
+      },
+      {
+        "name": "Wabbit",
+        "self_id": 122,
+        "header_offset": "0x1B090",
+        "stats_offset": "0x1B0A0",
+        "record_size": 36,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "500000007e7a80005761626269740000008400840084008400840000110615002c0118fc"
+      },
+      {
+        "name": "Wallace",
+        "self_id": 123,
+        "header_offset": "0x1B0B4",
+        "stats_offset": "0x1B0C4",
+        "record_size": 36,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "500000007f7b920057616c6c6163650000800080008000800080000013060c00102748f4"
+      },
+      {
+        "name": "Chimpy",
+        "self_id": 124,
+        "header_offset": "0x1B0D8",
+        "stats_offset": "0x1B0E8",
+        "record_size": 36,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "50000000807c01004368696d707900000a0001000100148101000000000015000a006400"
+      },
+      {
+        "name": "Robo-Sassin",
+        "self_id": 125,
+        "header_offset": "0x1B0FC",
+        "stats_offset": "0x1B110",
+        "record_size": 40,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "50000000817d9300526f626f2d53617373696e0005810581058105810581000003101c00204e90e8"
+      },
+      {
+        "name": "Wabbit",
+        "self_id": 122,
+        "header_offset": "0x1B124",
+        "stats_offset": "0x1B134",
+        "record_size": 36,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "50000000827a80005761626269740000008400840084008400840000110615002c0118fc"
+      },
+      {
+        "name": "Skeleton",
+        "self_id": 255,
+        "header_offset": "0x1B148",
+        "stats_offset": "0x1B15C",
+        "record_size": 40,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "5000000083ff8100536b656c65746f6e00000000028002800280028002800000100006006810b80b"
+      },
+      {
+        "name": "Red Bones",
+        "self_id": 255,
+        "header_offset": "0x1B170",
+        "stats_offset": "0x1B184",
+        "record_size": 40,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "5000000084ff810052656420426f6e6573000000028002800280028002800000140006006810b80b"
+      },
+      {
+        "name": "Dwarf",
+        "self_id": 255,
+        "header_offset": "0x1B198",
+        "stats_offset": "0x1B1A8",
+        "record_size": 36,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "5000000085ff81004477617266000000028002800280028002800000040401006810b80b"
+      },
+      {
+        "name": "Squilla",
+        "self_id": 255,
+        "header_offset": "0x1B1BC",
+        "stats_offset": "0x1B1CC",
+        "record_size": 36,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "5000000086ff8100537175696c6c6100008000800080008000800000080429006810b80b"
+      },
+      {
+        "name": "Unseelie",
+        "self_id": 255,
+        "header_offset": "0x1B1E0",
+        "stats_offset": "0x1B1F4",
+        "record_size": 40,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "5000000087ff8100556e7365656c696500000000008000800080008000800000080c0e006810b80b"
+      },
+      {
+        "name": "Rico Jr.",
+        "self_id": 118,
+        "header_offset": "0x1B208",
+        "stats_offset": "0x1B21C",
+        "record_size": 40,
+        "reserved": {
+          "_reserved_10": 0,
+          "_reserved_15": 0
+        },
+        "raw_hex": "50000000887680005269636f204a722e000000000080008000800080008000000c091c0000000cfe"
+      }
+    ],
+    "columns": {
+      "_reserved_10": {
+        "count": 137,
+        "distinct": 1,
+        "min": 0,
+        "max": 0,
+        "nonzero_count": 0,
+        "top": [
+          [
+            0,
+            137
+          ]
+        ],
+        "kind": "constant"
+      },
+      "_reserved_15": {
+        "count": 137,
+        "distinct": 1,
+        "min": 0,
+        "max": 0,
+        "nonzero_count": 0,
+        "top": [
+          [
+            0,
+            137
+          ]
+        ],
+        "kind": "constant"
+      }
+    }
+  }
+}

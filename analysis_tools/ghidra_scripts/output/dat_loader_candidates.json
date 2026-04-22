@@ -1,0 +1,79 @@
+{
+  "program": "DkkStm.exe",
+  "image_base": "0x140000000",
+  "searches": {
+    "STAGEBASE_EN.DAT": {
+      "string_hits": [
+        {
+          "addr": "1404ba768",
+          "value": "STAGEBASE_EN.DAT"
+        }
+      ],
+      "referencing_functions": [
+        {
+          "name": "FUN_1402a2240",
+          "entry": "0x1402A2240",
+          "size": 655
+        }
+      ]
+    },
+    "stageBase_EN.DAT": {
+      "string_hits": [
+        {
+          "addr": "1404ba768",
+          "value": "STAGEBASE_EN.DAT"
+        }
+      ],
+      "referencing_functions": [
+        {
+          "name": "FUN_1402a2240",
+          "entry": "0x1402A2240",
+          "size": 655
+        }
+      ]
+    },
+    "STAGEBASE_JP.DAT": {
+      "string_hits": [],
+      "referencing_functions": []
+    },
+    "Data_eng.cpk": {
+      "string_hits": [
+        {
+          "addr": "1404af9f8",
+          "value": "Data_eng.cpk"
+        }
+      ],
+      "referencing_functions": []
+    },
+    "CommonData.cpk": {
+      "string_hits": [
+        {
+          "addr": "1404af9c0",
+          "value": "CommonData.cpk"
+        }
+      ],
+      "referencing_functions": [
+        {
+          "name": "FUN_14003a190",
+          "entry": "0x14003A190",
+          "size": 2352
+        }
+      ]
+    },
+    "Data.cpk": {
+      "string_hits": [
+        {
+          "addr": "1404af9c0",
+          "value": "CommonData.cpk"
+        }
+      ],
+      "referencing_functions": [
+        {
+          "name": "FUN_14003a190",
+          "entry": "0x14003A190",
+          "size": 2352
+        }
+      ]
+    }
+  }
+}

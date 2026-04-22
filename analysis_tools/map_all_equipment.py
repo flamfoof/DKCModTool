@@ -24,10 +24,12 @@ Entry Structure (all equipment types):
     uint8      sub_rank          byte 0: internal ranking/tier
     uint8      preferred_job     byte 1: 0=None,1=Warrior,2=Magician,3=Thief,4=Cleric,5=Acrobat,6=Monk,7=Ninja,8=RoboKnight
     uint8      effect_chance     byte 2: activation % (0=none, 0x0C=12%, 0x19=25%, 0x32=50%, 0x64=100%)
-    uint8      effect_type       byte 3: effect category ID
+    uint8      rarity_tier       byte 3: acquisition tier (0=common store, 1=uncommon store,
+                                   2=rare store, 3=special/locked box, 4=rare drop, 5=ultimate)
+    NOTE: The specific effect (Zapper, Sleep, etc.) is hardcoded per item ID in the game engine.
     --- Shields & Accessories ---
     uint8      effect_chance     byte 0: activation %
-    uint8      effect_type       byte 1: effect category ID
+    uint8      rarity_tier       byte 1: acquisition tier (same scale as weapons)
     uint8      reserved          byte 2: always 0
     uint8      reserved          byte 3: always 0
     --- Common (bytes 4-19) ---
@@ -246,7 +248,7 @@ def decode_weapon_entry(entry):
         "preferred_job": JOB_NAMES.get(meta[1], f"unknown_{meta[1]}"),
         "preferred_job_id": meta[1],
         "effect_chance": meta[2],
-        "effect_type": meta[3],
+        "rarity_tier": meta[3],
         "attack": s[0],
         "defense": s[1],
         "magic": s[2],
@@ -262,7 +264,7 @@ def decode_shield_entry(entry):
     s = entry["raw_stats"]
     return {
         "effect_chance": meta[0],
-        "effect_type": meta[1],
+        "rarity_tier": meta[1],
         "attack": s[1],   # AT is in position 1 for shields
         "defense": s[0],  # DF is in position 0 for shields
         "magic": s[2],
@@ -278,7 +280,7 @@ def decode_accessory_entry(entry):
     s = entry["raw_stats"]
     return {
         "effect_chance": meta[0],
-        "effect_type": meta[1],
+        "rarity_tier": meta[1],
         "attack": s[0],
         "defense": s[1],
         "magic": s[2],
@@ -394,6 +396,8 @@ def main():
             "shield_stat_order": "Shields store DF in stat position 0 and AT in position 1 (swapped vs weapons).",
             "dynamic_stats": "Items with dynamic_stats=true have computed stats. DO NOT overwrite their stat values.",
             "effect_chance": "Activation percentage: 0=none, 12=12%, 25=25%, 33=33%, 50=50%, 100=always.",
+            "rarity_tier": "Acquisition tier: 0=common store, 1=uncommon store, 2=rare store, 3=special (locked box/casino), 4=rare drop, 5=ultimate (darkling/hero).",
+            "effects_note": "The specific effect each item triggers (Zapper, Sleep, etc.) is hardcoded per item ID in the game engine. Only effect_chance (activation %) is patchable.",
             "name_max_len": "Maximum name length (chars) before data block is corrupted. Shorter names are OK.",
             "offsets": "All offsets are hex addresses in stageBase_EN.DAT file."
         },
@@ -438,7 +442,7 @@ def main():
             "speed": decoded["speed"],
             "hp": decoded["hp"],
             "effect_chance": decoded["effect_chance"],
-            "effect_type": decoded["effect_type"],
+            "rarity_tier": decoded["rarity_tier"],
             "sub_rank": decoded["sub_rank"],
             "dynamic_stats": is_dynamic,
             "effect_description": effect_desc,
@@ -455,7 +459,7 @@ def main():
             "hp": decoded["hp"],
             "price": entry["price"],
             "effect_chance": decoded["effect_chance"],
-            "effect_type": decoded["effect_type"],
+            "rarity_tier": decoded["rarity_tier"],
             "preferred_job": decoded["preferred_job"],
             "name_offset": f"0x{entry['name_offset']:05X}",
             "data_offset": f"0x{entry['data_offset']:05X}",
@@ -500,7 +504,7 @@ def main():
             "speed": decoded["speed"],
             "hp": decoded["hp"],
             "effect_chance": decoded["effect_chance"],
-            "effect_type": decoded["effect_type"],
+            "rarity_tier": decoded["rarity_tier"],
             "dynamic_stats": is_dynamic,
             "effect_description": effect_desc,
             "locations": locations,
@@ -515,7 +519,7 @@ def main():
             "hp": decoded["hp"],
             "price": entry["price"],
             "effect_chance": decoded["effect_chance"],
-            "effect_type": decoded["effect_type"],
+            "rarity_tier": decoded["rarity_tier"],
             "name_offset": f"0x{entry['name_offset']:05X}",
             "data_offset": f"0x{entry['data_offset']:05X}",
             "name_max_len": entry["name_max_len"],
@@ -561,7 +565,7 @@ def main():
             "speed": decoded["speed"],
             "hp": decoded["hp"],
             "effect_chance": decoded["effect_chance"],
-            "effect_type": decoded["effect_type"],
+            "rarity_tier": decoded["rarity_tier"],
             "dynamic_stats": is_dynamic,
             "effect_description": effect_desc,
             "locations": locations,
@@ -576,7 +580,7 @@ def main():
             "hp": decoded["hp"],
             "price": entry["price"],
             "effect_chance": decoded["effect_chance"],
-            "effect_type": decoded["effect_type"],
+            "rarity_tier": decoded["rarity_tier"],
             "accessory_type": acc_type,
             "name_offset": f"0x{entry['name_offset']:05X}",
             "data_offset": f"0x{entry['data_offset']:05X}",

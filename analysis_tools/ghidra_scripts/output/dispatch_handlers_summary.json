@@ -1,0 +1,180 @@
+{
+  "table_base": "0x1404A5F58",
+  "handlers": [
+    {
+      "tag": 0,
+      "entry_ea": "0x1404A5F58",
+      "handler_ea": "0x14002E030",
+      "handler_name": "FUN_14002e030",
+      "function_known": true,
+      "output_file": "handler_00_14002E030_FUN_14002e030.c",
+      "size_bytes": 3,
+      "heuristics": {
+        "has_loop": false,
+        "has_malloc": false,
+        "call_count": 1,
+        "param1_field_writes": []
+      }
+    },
+    {
+      "tag": 1,
+      "entry_ea": "0x1404A5F70",
+      "handler_ea": "0x1402A27D0",
+      "handler_name": "UNK_1402A27D0",
+      "function_known": false,
+      "output_file": "handler_01_1402A27D0_UNKFN.asm",
+      "size_bytes": 5,
+      "heuristics": {
+        "disasm_lines": 5
+      }
+    },
+    {
+      "tag": 2,
+      "entry_ea": "0x1404A5F88",
+      "handler_ea": "0x1402A27E0",
+      "handler_name": "UNK_1402A27E0",
+      "function_known": false,
+      "output_file": "handler_02_1402A27E0_UNKFN.asm",
+      "size_bytes": 11,
+      "heuristics": {
+        "disasm_lines": 11
+      }
+    },
+    {
+      "tag": 3,
+      "entry_ea": "0x1404A5FA0",
+      "handler_ea": "0x1402A2830",
+      "handler_name": "UNK_1402A2830",
+      "function_known": false,
+      "output_file": "handler_03_1402A2830_UNKFN.asm",
+      "size_bytes": 10,
+      "heuristics": {
+        "disasm_lines": 10
+      }
+    },
+    {
+      "tag": 4,
+      "entry_ea": "0x1404A5FB8",
+      "handler_ea": "0x1402A2850",
+      "handler_name": "UNK_1402A2850",
+      "function_known": false,
+      "output_file": "handler_04_1402A2850_UNKFN.asm",
+      "size_bytes": 2,
+      "heuristics": {
+        "disasm_lines": 2
+      }
+    },
+    {
+      "tag": 5,
+      "entry_ea": "0x1404A5FD0",
+      "handler_ea": "0x1402A2860",
+      "handler_name": "FUN_1402a2860",
+      "function_known": true,
+      "output_file": "handler_05_1402A2860_FUN_1402a2860.c",
+      "size_bytes": 676,
+      "heuristics": {
+        "has_loop": true,
+        "has_malloc": false,
+        "call_count": 18,
+        "param1_field_writes": []
+      }
+    },
+    {
+      "tag": 6,
+      "entry_ea": "0x1404A5FE8",
+      "handler_ea": "0x1402A5D30",
+      "handler_name": "FUN_1402a5d30",
+      "function_known": true,
+      "output_file": "handler_06_1402A5D30_FUN_1402a5d30.c",
+      "size_bytes": 178,
+      "heuristics": {
+        "has_loop": true,
+        "has_malloc": false,
+        "call_count": 6,
+        "param1_field_writes": [
+          "0x10"
+        ]
+      }
+    },
+    {
+      "tag": 7,
+      "entry_ea": "0x1404A6000",
+      "handler_ea": "0x1402A5DF0",
+      "handler_name": "FUN_1402a5df0",
+      "function_known": true,
+      "output_file": "handler_07_1402A5DF0_FUN_1402a5df0.c",
+      "size_bytes": 27,
+      "heuristics": {
+        "has_loop": false,
+        "has_malloc": false,
+        "call_count": 2,
+        "param1_field_writes": []
+      }
+    },
+    {
+      "tag": 8,
+      "entry_ea": "0x1404A6018",
+      "handler_ea": "0x1402A5E10",
+      "handler_name": "UNK_1402A5E10",
+      "function_known": false,
+      "output_file": "handler_08_1402A5E10_UNKFN.asm",
+      "size_bytes": 26,
+      "heuristics": {
+        "disasm_lines": 26
+      }
+    },
+    {
+      "tag": 9,
+      "entry_ea": "0x1404A6030",
+      "handler_ea": "0x1402A5EB0",
+      "handler_name": "UNK_1402A5EB0",
+      "function_known": false,
+      "output_file": "handler_09_1402A5EB0_UNKFN.asm",
+      "size_bytes": 12,
+      "heuristics": {
+        "disasm_lines": 12
+      }
+    },
+    {
+      "tag": 10,
+      "entry_ea": "0x1404A6048",
+      "handler_ea": "0x1402A5EF0",
+      "handler_name": "UNK_1402A5EF0",
+      "function_known": false,
+      "output_file": "handler_10_1402A5EF0_UNKFN.asm",
+      "size_bytes": 7,
+      "heuristics": {
+        "disasm_lines": 7
+      }
+    },
+    {
+      "tag": 11,
+      "entry_ea": "0x1404A6060",
+      "handler_ea": "0x1402A5F10",
+      "handler_name": "UNK_1402A5F10",
+      "function_known": false,
+      "output_file": "handler_11_1402A5F10_UNKFN.asm",
+      "size_bytes": 7,
+      "heuristics": {
+        "disasm_lines": 7
+      }
+    },
+    {
+      "tag": 12,
+      "entry_ea": "0x1404A6078",
+      "handler_ea": "0x1402A5F30",
+      "handler_name": "FUN_1402a5f30",
+      "function_known": true,
+      "output_file": "handler_12_1402A5F30_FUN_1402a5f30.c",
+      "size_bytes": 53,
+      "heuristics": {
+        "has_loop": false,
+        "has_malloc": false,
+        "call_count": 2,
+        "param1_field_writes": [
+          "0x18"
+        ]
+      }
+    }
+  ]
+}
